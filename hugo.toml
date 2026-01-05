@@ -5,7 +5,7 @@ theme = 'linkpage'
 
 # Google Analytics - replace with your actual tracking ID
 [services.googleAnalytics]
-  ID = 'G-XXXXXXXXXX'
+  ID = 'G-9Y9Y7SXSL2'
 
 [params]
   description = "Building community through cycling in Washington County, Oregon"
