@@ -1,11 +1,13 @@
 /**
- * Ride Westside - Event filtering and Past Rides toggle
+ * Ride Westside - Event filtering and collapsible sections
  */
 
 interface EventElement {
   element: HTMLAnchorElement;
   date: Date;
 }
+
+const DAYS_THRESHOLD = 90;
 
 function parseEventDate(dateStr: string): Date | null {
   // Parse dates like "January 12, 2026"
@@ -19,17 +21,22 @@ function parseEventDate(dateStr: string): Date | null {
 function initEventFiltering(): void {
   const eventsSection = document.querySelector('[data-section="events"]');
   const pastSection = document.querySelector('[data-section="past-events"]');
+  const futureSection = document.querySelector('[data-section="future-events"]');
 
-  if (!eventsSection || !pastSection) {
+  if (!eventsSection) {
     return;
   }
 
   const eventLinks = eventsSection.querySelectorAll<HTMLAnchorElement>('.link-button[data-date]');
   const now = new Date();
-  now.setHours(0, 0, 0, 0); // Compare dates only, not times
+  now.setHours(0, 0, 0, 0);
+
+  const futureThreshold = new Date(now);
+  futureThreshold.setDate(futureThreshold.getDate() + DAYS_THRESHOLD);
 
   const pastEvents: EventElement[] = [];
   const upcomingEvents: EventElement[] = [];
+  const futureEvents: EventElement[] = [];
 
   eventLinks.forEach((link) => {
     const dateStr = link.getAttribute('data-date');
@@ -40,28 +47,50 @@ function initEventFiltering(): void {
 
     if (eventDate < now) {
       pastEvents.push({ element: link, date: eventDate });
+    } else if (eventDate > futureThreshold) {
+      futureEvents.push({ element: link, date: eventDate });
     } else {
       upcomingEvents.push({ element: link, date: eventDate });
     }
   });
 
   // Move past events to past section
-  const pastContainer = pastSection.querySelector('.past-events-container');
-  if (pastContainer && pastEvents.length > 0) {
-    // Sort past events by date descending (most recent first)
-    pastEvents.sort((a, b) => b.date.getTime() - a.date.getTime());
+  if (pastSection) {
+    const pastContainer = pastSection.querySelector('.collapsible-container');
+    if (pastContainer && pastEvents.length > 0) {
+      // Sort past events by date descending (most recent first)
+      pastEvents.sort((a, b) => b.date.getTime() - a.date.getTime());
 
-    pastEvents.forEach(({ element }) => {
-      pastContainer.appendChild(element);
-    });
+      pastEvents.forEach(({ element }) => {
+        pastContainer.appendChild(element);
+      });
 
-    // Show the past events section
-    pastSection.classList.add('has-events');
+      pastSection.classList.add('has-events');
 
-    // Update the count
-    const countEl = pastSection.querySelector('.past-events-count');
-    if (countEl) {
-      countEl.textContent = `(${pastEvents.length})`;
+      const countEl = pastSection.querySelector('.section-count');
+      if (countEl) {
+        countEl.textContent = `(${pastEvents.length})`;
+      }
+    }
+  }
+
+  // Move future events to future section
+  if (futureSection) {
+    const futureContainer = futureSection.querySelector('.collapsible-container');
+    if (futureContainer && futureEvents.length > 0) {
+      // Sort future events by date ascending (soonest first)
+      futureEvents.sort((a, b) => a.date.getTime() - b.date.getTime());
+
+      futureEvents.forEach(({ element }) => {
+        futureContainer.appendChild(element);
+      });
+
+      futureSection.classList.add('has-events');
+
+      const countEl = futureSection.querySelector('.section-count');
+      if (countEl) {
+        countEl.textContent = `(${futureEvents.length})`;
+      }
     }
   }
 
@@ -74,28 +103,31 @@ function initEventFiltering(): void {
   }
 }
 
-function initPastEventsToggle(): void {
-  const toggle = document.querySelector<HTMLButtonElement>('.past-events-toggle');
-  const container = document.querySelector('.past-events-container');
+function initCollapsibleToggles(): void {
+  const toggles = document.querySelectorAll<HTMLButtonElement>('.collapsible-toggle');
 
-  if (!toggle || !container) {
-    return;
-  }
+  toggles.forEach((toggle) => {
+    const containerId = toggle.getAttribute('aria-controls');
+    if (!containerId) return;
 
-  toggle.addEventListener('click', () => {
-    const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', String(!isExpanded));
-    container.classList.toggle('expanded');
+    const container = document.getElementById(containerId);
+    if (!container) return;
 
-    const icon = toggle.querySelector('.toggle-icon');
-    if (icon) {
-      icon.textContent = isExpanded ? '+' : '-';
-    }
+    toggle.addEventListener('click', () => {
+      const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!isExpanded));
+      container.classList.toggle('expanded');
+
+      const icon = toggle.querySelector('.toggle-icon');
+      if (icon) {
+        icon.textContent = isExpanded ? '+' : '-';
+      }
+    });
   });
 }
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   initEventFiltering();
-  initPastEventsToggle();
+  initCollapsibleToggles();
 });

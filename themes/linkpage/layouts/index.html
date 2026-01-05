@@ -53,15 +53,28 @@
     {{ end }}
 </section>
 
-<!-- Past Events Section (hidden by default, populated by JS) -->
-<section class="link-section past-events-section" data-section="past-events">
-    <button class="past-events-toggle" aria-expanded="false" aria-controls="past-events-container">
+<!-- Future Events Section (hidden by default, populated by JS) -->
+<section class="link-section collapsible-section" data-section="future-events">
+    <button class="collapsible-toggle" aria-expanded="false" aria-controls="future-events-container">
         <h2 class="section-title">
-            Past Rides <span class="past-events-count"></span>
+            Later This Year <span class="section-count"></span>
             <span class="toggle-icon">+</span>
         </h2>
     </button>
-    <div class="past-events-container" id="past-events-container">
+    <div class="collapsible-container" id="future-events-container">
+        <!-- Future events will be moved here by JavaScript -->
+    </div>
+</section>
+
+<!-- Past Events Section (hidden by default, populated by JS) -->
+<section class="link-section collapsible-section" data-section="past-events">
+    <button class="collapsible-toggle" aria-expanded="false" aria-controls="past-events-container">
+        <h2 class="section-title">
+            Past Rides <span class="section-count"></span>
+            <span class="toggle-icon">+</span>
+        </h2>
+    </button>
+    <div class="collapsible-container" id="past-events-container">
         <!-- Past events will be moved here by JavaScript -->
     </div>
 </section>
