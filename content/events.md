@@ -7,6 +7,10 @@ title: "Upcoming Events"
 #
 # Events are displayed in the order listed below.
 events:
+  - title: "12/26 Test Past Ride"
+    date: "December 26, 2025"
+    url: "https://example.com/test-past-ride"
+
   - title: "1/12 Bike Happy Hour"
     date: "January 12, 2026"
     url: "https://shift2bikes.org/calendar/event-23092"

@@ -159,11 +159,23 @@ body {
 
 .past-events-toggle {
     width: 100%;
-    background: none;
+    background: transparent;
     border: none;
     cursor: pointer;
     padding: 0;
     margin: 0;
+    font: inherit;
+    color: inherit;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.past-events-toggle:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
+    border-radius: 4px;
 }
 
 .past-events-toggle .section-title {
@@ -172,11 +184,10 @@ body {
     justify-content: center;
     gap: 0.5rem;
     margin-bottom: 0;
-    transition: color 0.2s ease;
 }
 
 .past-events-toggle:hover .section-title {
-    color: var(--text-primary);
+    opacity: 0.8;
 }
 
 .past-events-count {
@@ -185,16 +196,8 @@ body {
 }
 
 .toggle-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: var(--button-bg);
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: transform 0.2s ease;
+    font-size: 0.75rem;
+    opacity: 0.7;
 }
 
 .past-events-container {
@@ -205,7 +208,7 @@ body {
 }
 
 .past-events-container.expanded {
-    max-height: 2000px;
+    max-height: 5000px;
     margin-top: 1rem;
 }
 
