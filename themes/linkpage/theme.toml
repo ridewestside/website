@@ -1,0 +1,11 @@
+# Theme metadata
+name = "LinkPage"
+license = "MIT"
+licenselink = "https://github.com/ridewestside/website/blob/main/LICENSE"
+description = "A simple linktree-style theme for Hugo"
+tags = ["links", "simple", "responsive"]
+features = ["google-analytics"]
+min_version = "0.112.0"
+
+[author]
+  name = "Ride Westside"

@@ -1,0 +1,23 @@
+baseURL = 'https://beta.ridewestside.org/'
+languageCode = 'en-us'
+title = 'Ride Westside'
+theme = 'linkpage'
+
+# Google Analytics - replace with your actual tracking ID
+[services.googleAnalytics]
+  ID = 'G-XXXXXXXXXX'
+
+[params]
+  description = "Ride Westside - Building community through cycling in Washington County, Oregon"
+  author = "Ride Westside"
+
+  # Social media links
+  [params.social]
+    instagram = "https://instagram.com/ride_westside"
+    facebook = "https://www.facebook.com/profile.php?id=100094262499529"
+    bluesky = "https://bsky.app/profile/ridewestside.bsky.social"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Site.Title }}</title>
+    <meta name="description" content="{{ .Site.Params.description }}">
+
+    <!-- Google Analytics -->
+    {{ if .Site.Config.Services.GoogleAnalytics.ID }}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Config.Services.GoogleAnalytics.ID }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ .Site.Config.Services.GoogleAnalytics.ID }}');
+
+      // Track link clicks
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a[data-track]').forEach(function(link) {
+          link.addEventListener('click', function(e) {
+            gtag('event', 'click', {
+              'event_category': 'link',
+              'event_label': this.getAttribute('data-track'),
+              'transport_type': 'beacon'
+            });
+          });
+        });
+      });
+    </script>
+    {{ end }}
+
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        {{ block "main" . }}{{ end }}
+    </main>
+</body>
+</html>
