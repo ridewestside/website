@@ -125,6 +125,22 @@ func extractLinks(dir string) ([]string, error) {
 	return links, nil
 }
 
+// skipDomains contains domains with aggressive bot protection that return
+// errors to automated checkers but work fine in browsers
+var skipDomains = []string{
+	"facebook.com",
+	"www.facebook.com",
+}
+
+func shouldSkipDomain(url string) bool {
+	for _, domain := range skipDomains {
+		if strings.Contains(url, domain) {
+			return true
+		}
+	}
+	return false
+}
+
 func checkLinksParallel(links []string) []deadLink {
 	var (
 		deadLinks []deadLink
@@ -150,6 +166,12 @@ func checkLinksParallel(links []string) []deadLink {
 			semaphore <- struct{}{}
 			defer func() { <-semaphore }()
 
+			// Skip domains with aggressive bot protection
+			if shouldSkipDomain(url) {
+				fmt.Printf("  ⊘ %s (skipped - bot protection)\n", url)
+				return
+			}
+
 			status := checkLink(client, url)
 			if status != "" {
 				mu.Lock()
@@ -167,26 +189,22 @@ func checkLinksParallel(links []string) []deadLink {
 }
 
 func checkLink(client *http.Client, url string) string {
-	req, err := http.NewRequest("HEAD", url, nil)
+	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		return fmt.Sprintf("invalid URL: %v", err)
 	}
 
-	req.Header.Set("User-Agent", "Mozilla/5.0 (compatible; LinkChecker/1.0)")
+	// Use a realistic browser User-Agent to avoid being blocked
+	req.Header.Set("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+	req.Header.Set("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
+	req.Header.Set("Accept-Language", "en-US,en;q=0.5")
 
 	resp, err := client.Do(req)
 	if err != nil {
-		// Try GET if HEAD fails (some servers don't support HEAD)
-		req.Method = "GET"
-		resp, err = client.Do(req)
-		if err != nil {
-			return fmt.Sprintf("request failed: %v", err)
-		}
-		defer resp.Body.Close()
-		io.Copy(io.Discard, resp.Body)
-	} else {
-		defer resp.Body.Close()
+		return fmt.Sprintf("request failed: %v", err)
 	}
+	defer resp.Body.Close()
+	io.Copy(io.Discard, resp.Body)
 
 	// Consider 2xx and 3xx as valid
 	if resp.StatusCode >= 400 {
