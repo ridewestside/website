@@ -8,7 +8,7 @@ theme = 'linkpage'
   ID = 'G-XXXXXXXXXX'
 
 [params]
-  description = "Ride Westside - Building community through cycling in Washington County, Oregon"
+  description = "Building community through cycling in Washington County, Oregon"
   author = "Ride Westside"
 
   # Social media links
@@ -16,6 +16,7 @@ theme = 'linkpage'
     instagram = "https://instagram.com/ride_westside"
     facebook = "https://www.facebook.com/profile.php?id=100094262499529"
     bluesky = "https://bsky.app/profile/ridewestside.bsky.social"
+    github = "https://github.com/ridewestside/website"
 
 [markup]
   [markup.goldmark]
