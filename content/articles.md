@@ -18,7 +18,4 @@ articles:
   - source: "BikePortland - June 20, 2024"
     url: "https://bikeportland.org/2024/06/20/near-notorious-tualatin-valley-hwy-even-alternate-bike-routes-arent-all-that-great-387789"
     quote: "Surprisingly sublime cycle tracks were the only bright spot."
-
-  - source: "Beaverton Valley Times - July 11, 2023"
-    url: "https://www.beavertonvalleytimes.com/news/washington_county/better-biking-in-washington-county-its-these-riders-dream/article_7a355517-9beb-5eed-9ac2-98260011ef63.html"
 ---
