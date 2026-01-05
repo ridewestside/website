@@ -1,5 +1,8 @@
 # Hugo build output
 /public/
+
+# Claude Code local state
+.claude/
 /resources/_gen/
 
 # Hugo cache

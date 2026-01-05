@@ -57,7 +57,23 @@ Place your logo image at `static/images/logo.png` (recommended size: 192x192px).
 
 ## Local Development
 
-Install Hugo (https://gohugo.io/installation/), then:
+This project uses [mise](https://mise.jdx.dev/) to manage Go and tool dependencies.
+
+```bash
+mise install          # Install Go and mage
+mise exec -- mage -l  # List available tasks
+```
+
+### Available Tasks
+
+| Task | Description |
+|------|-------------|
+| `mage build` | Build the Hugo site |
+| `mage serve` | Start the Hugo development server |
+| `mage checkLinks` | Check for dead links in the site |
+| `mage clean` | Remove the public directory |
+
+Or use Hugo directly:
 
 ```bash
 hugo server -D
