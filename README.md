@@ -57,10 +57,10 @@ Place your logo image at `static/images/logo.png` (recommended size: 192x192px).
 
 ## Local Development
 
-This project uses [mise](https://mise.jdx.dev/) to manage Go and tool dependencies.
+This project uses [mise](https://mise.jdx.dev/) to manage Go, Node.js, and tool dependencies.
 
 ```bash
-mise install          # Install Go and mage
+mise install          # Install Go, Node.js, mage, esbuild, typescript
 mise exec -- mage -l  # List available tasks
 ```
 
@@ -68,15 +68,18 @@ mise exec -- mage -l  # List available tasks
 
 | Task | Description |
 |------|-------------|
-| `mage build` | Build the Hugo site |
-| `mage serve` | Start the Hugo development server |
+| `mage build` | Build TypeScript and Hugo site |
+| `mage buildts` | Compile TypeScript only |
+| `mage serve` | Start Hugo dev server (builds TS first) |
+| `mage dev` | Development mode with Hugo server |
+| `mage watch` | Watch TypeScript files for changes |
 | `mage checkLinks` | Check for dead links in the site |
 | `mage clean` | Remove the public directory |
 
-Or use Hugo directly:
-
+For development, run in two terminals:
 ```bash
-hugo server -D
+mise exec -- mage watch  # Terminal 1: watch TypeScript
+mise exec -- mage serve  # Terminal 2: Hugo server
 ```
 
 Visit http://localhost:1313 to preview changes.
