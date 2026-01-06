@@ -101,6 +101,39 @@ function saveFilterState(state: FilterState): void {
   }
 }
 
+/**
+ * Add location display to event cards
+ */
+function addLocationDisplay(card: HTMLElement): void {
+  const startLoc = card.getAttribute("data-start");
+  const endLoc = card.getAttribute("data-end");
+
+  // Build location text
+  let locationText = "";
+  if (startLoc && endLoc) {
+    locationText = `${startLoc} → ${endLoc}`;
+  } else if (startLoc) {
+    locationText = startLoc;
+  } else if (endLoc) {
+    locationText = endLoc;
+  }
+
+  // If we have location text, add it to the card
+  if (locationText) {
+    const linkButton = card.querySelector(".link-button");
+    if (linkButton) {
+      // Check if we already added a location span
+      let locationSpan = linkButton.querySelector(".link-location");
+      if (!locationSpan) {
+        locationSpan = document.createElement("span");
+        locationSpan.className = "link-location";
+        linkButton.appendChild(locationSpan);
+      }
+      locationSpan.textContent = locationText;
+    }
+  }
+}
+
 function initEventFiltering(): void {
   const eventsSection = document.querySelector('[data-section="events"]');
   const pastSection = document.querySelector('[data-section="past-events"]');
@@ -141,8 +174,9 @@ function initEventFiltering(): void {
   // Sort upcoming events by date ascending (soonest first)
   upcomingEvents.sort((a, b) => a.date.getTime() - b.date.getTime());
 
-  // Re-append upcoming events in sorted order
+  // Add location displays and re-append upcoming events in sorted order
   upcomingEvents.forEach(({ element }) => {
+    addLocationDisplay(element);
     eventsSection.appendChild(element);
   });
 
@@ -154,6 +188,7 @@ function initEventFiltering(): void {
       pastEvents.sort((a, b) => b.date.getTime() - a.date.getTime());
 
       pastEvents.forEach(({ element }) => {
+        addLocationDisplay(element);
         pastContainer.appendChild(element);
       });
 
@@ -176,6 +211,7 @@ function initEventFiltering(): void {
       futureEvents.sort((a, b) => a.date.getTime() - b.date.getTime());
 
       futureEvents.forEach(({ element }) => {
+        addLocationDisplay(element);
         futureContainer.appendChild(element);
       });
 
