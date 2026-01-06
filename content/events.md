@@ -4,6 +4,7 @@ title: "Upcoming Events"
 # - title: The name of the event
 # - date: When the event takes place (optional, for display)
 # - url: Link to the event details
+# - route: (optional) RideWithGPS route URL
 #
 # Events are displayed in the order listed below.
 events:
@@ -14,6 +15,7 @@ events:
   - title: "1/12 Post-Bike Happy Hour Ride"
     date: "January 12, 2026"
     url: "https://shift2bikes.org/calendar/event-23116"
+    route: "https://ridewithgps.com/routes/12345"
 
   - title: "1/26 Bike Happy Hour"
     date: "January 26, 2026"
@@ -22,6 +24,7 @@ events:
   - title: "1/26 Post-Bike Happy Hour Ride"
     date: "January 26, 2026"
     url: "https://shift2bikes.org/calendar/event-23117"
+    route: "https://ridewithgps.com/routes/12345"
 
   - title: "2/9 Bike Happy Hour"
     date: "February 9, 2026"
@@ -30,6 +33,7 @@ events:
   - title: "2/9 Post-Bike Happy Hour Ride"
     date: "February 9, 2026"
     url: "https://shift2bikes.org/calendar/event-23118"
+    route: "https://ridewithgps.com/routes/12345"
 
   - title: "2/23 Bike Happy Hour"
     date: "February 23, 2026"
@@ -38,6 +42,7 @@ events:
   - title: "2/23 Post-Bike Happy Hour Ride"
     date: "February 23, 2026"
     url: "https://shift2bikes.org/calendar/event-23119"
+    route: "https://ridewithgps.com/routes/12345"
 
   - title: "3/9 Bike Happy Hour"
     date: "March 9, 2026"
@@ -46,6 +51,7 @@ events:
   - title: "3/9 Post-Bike Happy Hour Ride"
     date: "March 9, 2026"
     url: "https://shift2bikes.org/calendar/event-23120"
+    route: "https://ridewithgps.com/routes/12345"
 
   - title: "3/23 Bike Happy Hour"
     date: "March 23, 2026"
@@ -54,6 +60,7 @@ events:
   - title: "3/23 Post-Bike Happy Hour Ride"
     date: "March 23, 2026"
     url: "https://shift2bikes.org/calendar/event-23121"
+    route: "https://ridewithgps.com/routes/12345"
 
   - title: "4/13 Bike Happy Hour"
     date: "April 13, 2026"

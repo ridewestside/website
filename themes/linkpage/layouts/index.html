@@ -40,16 +40,58 @@
     {{ end }}
 </div>
 
+<!-- About Section -->
+{{ $about := .Site.GetPage "/about" }}
+{{ if $about }}
+<section class="link-section about-section">
+    <h2 class="section-title">About Us</h2>
+    <div class="about-content">
+        {{ $about.Content }}
+    </div>
+    {{ with $about.Params.gallery }}
+    <div class="gallery">
+        {{ range . }}
+        <div class="gallery-item">
+            {{ if eq .type "image" }}
+            <img src="{{ .src | relURL }}" alt="{{ .alt }}" loading="lazy">
+            {{ else if eq .type "youtube" }}
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/{{ .id }}" frameborder="0" allowfullscreen loading="lazy"></iframe>
+            </div>
+            {{ else if eq .type "vimeo" }}
+            <div class="video-container">
+                <iframe src="https://player.vimeo.com/video/{{ .id }}" frameborder="0" allowfullscreen loading="lazy"></iframe>
+            </div>
+            {{ end }}
+            {{ with .caption }}<p class="gallery-caption">{{ . }}</p>{{ end }}
+        </div>
+        {{ end }}
+    </div>
+    {{ end }}
+</section>
+{{ end }}
+
 <!-- Upcoming Events Section -->
 {{ $events := .Site.GetPage "/events" }}
 {{ if $events }}
 <section class="link-section" data-section="events">
     <h2 class="section-title">Upcoming Rides</h2>
     {{ range $events.Params.events }}
-    <a href="{{ .url }}" target="_blank" rel="noopener" class="link-button" data-track="event-{{ .title | urlize }}" data-date="{{ .date }}">
-        <span class="link-title">{{ .title }}</span>
-        {{ with .date }}<span class="link-subtitle">{{ . }}</span>{{ end }}
-    </a>
+    {{ $event := . }}
+    <div class="event-card" data-date="{{ .date }}">
+        <a href="{{ .url }}" target="_blank" rel="noopener" class="link-button" data-track="event-{{ .title | urlize }}">
+            <span class="link-title">{{ .title }}</span>
+            {{ with .date }}<span class="link-subtitle">{{ . }}</span>{{ end }}
+        </a>
+        {{ with .route }}
+        <a href="{{ . }}" target="_blank" rel="noopener" class="route-button" data-track="route-{{ $event.title | urlize }}">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            Route
+        </a>
+        {{ end }}
+    </div>
     {{ end }}
 </section>
 

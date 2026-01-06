@@ -3,7 +3,7 @@
  */
 
 interface EventElement {
-  element: HTMLAnchorElement;
+  element: HTMLElement;
   date: Date;
 }
 
@@ -27,7 +27,7 @@ function initEventFiltering(): void {
     return;
   }
 
-  const eventLinks = eventsSection.querySelectorAll<HTMLAnchorElement>('.link-button[data-date]');
+  const eventCards = eventsSection.querySelectorAll<HTMLElement>('.event-card[data-date]');
   const now = new Date();
   now.setHours(0, 0, 0, 0);
 
@@ -38,19 +38,19 @@ function initEventFiltering(): void {
   const upcomingEvents: EventElement[] = [];
   const futureEvents: EventElement[] = [];
 
-  eventLinks.forEach((link) => {
-    const dateStr = link.getAttribute('data-date');
+  eventCards.forEach((card) => {
+    const dateStr = card.getAttribute('data-date');
     if (!dateStr) return;
 
     const eventDate = parseEventDate(dateStr);
     if (!eventDate) return;
 
     if (eventDate < now) {
-      pastEvents.push({ element: link, date: eventDate });
+      pastEvents.push({ element: card, date: eventDate });
     } else if (eventDate > futureThreshold) {
-      futureEvents.push({ element: link, date: eventDate });
+      futureEvents.push({ element: card, date: eventDate });
     } else {
-      upcomingEvents.push({ element: link, date: eventDate });
+      upcomingEvents.push({ element: card, date: eventDate });
     }
   });
 
