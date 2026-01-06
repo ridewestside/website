@@ -98,6 +98,13 @@ body {
     transform: translateY(-2px);
 }
 
+.social-icon-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
 /* Link Sections */
 .link-section {
     margin-bottom: 2rem;
