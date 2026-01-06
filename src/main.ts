@@ -7,6 +7,11 @@ interface EventElement {
   date: Date;
 }
 
+interface FilterState {
+  start: string;
+  end: string;
+}
+
 const DAYS_THRESHOLD = 90;
 
 function parseEventDate(dateStr: string): Date | null {
@@ -126,8 +131,93 @@ function initCollapsibleToggles(): void {
   });
 }
 
+function initLocationFilters(): void {
+  const startSelect = document.getElementById('filter-start') as HTMLSelectElement | null;
+  const endSelect = document.getElementById('filter-end') as HTMLSelectElement | null;
+  const clearButton = document.getElementById('filter-clear') as HTMLButtonElement | null;
+
+  if (!startSelect || !endSelect) {
+    return;
+  }
+
+  const allEventCards = document.querySelectorAll<HTMLElement>('.event-card[data-start], .event-card[data-end]');
+
+  // Collect unique start and end locations
+  const startLocations = new Set<string>();
+  const endLocations = new Set<string>();
+
+  allEventCards.forEach((card) => {
+    const start = card.getAttribute('data-start');
+    const end = card.getAttribute('data-end');
+    if (start) startLocations.add(start);
+    if (end) endLocations.add(end);
+  });
+
+  // Populate dropdowns
+  const sortedStarts = Array.from(startLocations).sort();
+  const sortedEnds = Array.from(endLocations).sort();
+
+  sortedStarts.forEach((loc) => {
+    const option = document.createElement('option');
+    option.value = loc;
+    option.textContent = loc;
+    startSelect.appendChild(option);
+  });
+
+  sortedEnds.forEach((loc) => {
+    const option = document.createElement('option');
+    option.value = loc;
+    option.textContent = loc;
+    endSelect.appendChild(option);
+  });
+
+  const filterState: FilterState = { start: '', end: '' };
+
+  function applyFilters(): void {
+    allEventCards.forEach((card) => {
+      const cardStart = card.getAttribute('data-start') || '';
+      const cardEnd = card.getAttribute('data-end') || '';
+
+      const matchesStart = !filterState.start || cardStart === filterState.start;
+      const matchesEnd = !filterState.end || cardEnd === filterState.end;
+
+      if (matchesStart && matchesEnd) {
+        card.classList.remove('filtered-out');
+      } else {
+        card.classList.add('filtered-out');
+      }
+    });
+
+    // Show/hide clear button
+    if (clearButton) {
+      clearButton.style.display = (filterState.start || filterState.end) ? 'block' : 'none';
+    }
+  }
+
+  startSelect.addEventListener('change', () => {
+    filterState.start = startSelect.value;
+    applyFilters();
+  });
+
+  endSelect.addEventListener('change', () => {
+    filterState.end = endSelect.value;
+    applyFilters();
+  });
+
+  if (clearButton) {
+    clearButton.addEventListener('click', () => {
+      filterState.start = '';
+      filterState.end = '';
+      startSelect.value = '';
+      endSelect.value = '';
+      applyFilters();
+    });
+  }
+}
+
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   initEventFiltering();
   initCollapsibleToggles();
+  initLocationFilters();
 });
