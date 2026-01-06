@@ -138,6 +138,14 @@ function initEventFiltering(): void {
     }
   });
 
+  // Sort upcoming events by date ascending (soonest first)
+  upcomingEvents.sort((a, b) => a.date.getTime() - b.date.getTime());
+
+  // Re-append upcoming events in sorted order
+  upcomingEvents.forEach(({ element }) => {
+    eventsSection.appendChild(element);
+  });
+
   // Move past events to past section
   if (pastSection) {
     const pastContainer = pastSection.querySelector(".collapsible-container");
