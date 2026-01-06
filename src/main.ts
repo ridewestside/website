@@ -111,7 +111,8 @@ function addLocationDisplay(card: HTMLElement): void {
   // Build location text
   let locationText = "";
   if (startLoc && endLoc) {
-    locationText = `${startLoc} → ${endLoc}`;
+    // If start and end are the same, only show once
+    locationText = startLoc === endLoc ? startLoc : `${startLoc} → ${endLoc}`;
   } else if (startLoc) {
     locationText = startLoc;
   } else if (endLoc) {
