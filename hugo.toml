@@ -16,6 +16,7 @@ theme = 'linkpage'
     instagram = "https://instagram.com/ride_westside"
     facebook = "https://www.facebook.com/profile.php?id=100094262499529"
     bluesky = "https://bsky.app/profile/ridewestside.bsky.social"
+    ridewithgps = "https://ridewithgps.com/organizations/14703-ride-westside/home"
     github = "https://github.com/ridewestside/website"
 
 [markup]
