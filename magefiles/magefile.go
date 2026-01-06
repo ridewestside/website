@@ -26,8 +26,15 @@ func Build() error {
 	return sh.RunV("hugo", "--gc", "--minify")
 }
 
+// InstallNpmDeps installs npm dependencies
+func InstallNpmDeps() error {
+	fmt.Println("Installing npm dependencies...")
+	return sh.RunV("npm", "install")
+}
+
 // BuildTS compiles TypeScript to JavaScript
 func BuildTS() error {
+	mg.Deps(InstallNpmDeps)
 	fmt.Println("Compiling TypeScript...")
 
 	// Ensure output directory exists

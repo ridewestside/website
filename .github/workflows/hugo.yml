@@ -36,6 +36,28 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install esbuild
+        run: npm install -g esbuild
+
+      - name: Build TypeScript
+        run: |
+          mkdir -p themes/linkpage/static/js
+          esbuild src/main.ts \
+            --bundle \
+            --minify \
+            --sourcemap \
+            --target=es2020 \
+            --outfile=themes/linkpage/static/js/main.js
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
