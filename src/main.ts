@@ -370,9 +370,80 @@ function initLocationFilters(): void {
   }
 }
 
+/**
+ * Initialize share buttons for event cards
+ */
+function initShareButtons(): void {
+  const shareButtons =
+    document.querySelectorAll<HTMLButtonElement>(".share-button");
+
+  shareButtons.forEach((button) => {
+    button.addEventListener("click", async () => {
+      const title = button.getAttribute("data-event-title") || "Event";
+      const date = button.getAttribute("data-event-date") || "";
+      const url = button.getAttribute("data-event-url") || "";
+
+      const shareText = `${title}${date ? `\n${date}` : ""}\n${url}`;
+
+      // Check if native share is supported
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: title,
+            text: date,
+            url: url,
+          });
+        } catch (err) {
+          // User cancelled or share failed
+          if ((err as Error).name !== "AbortError") {
+            console.warn("Share failed:", err);
+            // Fallback to clipboard
+            await copyToClipboard(shareText, button);
+          }
+        }
+      } else {
+        // Fallback to clipboard for browsers without native share
+        await copyToClipboard(shareText, button);
+      }
+    });
+  });
+}
+
+/**
+ * Copy text to clipboard and provide visual feedback
+ */
+async function copyToClipboard(
+  text: string,
+  button: HTMLButtonElement,
+): Promise<void> {
+  try {
+    await navigator.clipboard.writeText(text);
+
+    // Visual feedback
+    button.classList.add("copied");
+    const originalIcon = button.innerHTML;
+
+    // Show checkmark icon
+    button.innerHTML = `
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+      </svg>
+    `;
+
+    // Reset after 2 seconds
+    setTimeout(() => {
+      button.classList.remove("copied");
+      button.innerHTML = originalIcon;
+    }, 2000);
+  } catch (err) {
+    console.error("Failed to copy to clipboard:", err);
+  }
+}
+
 // Initialize when DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
   initEventFiltering();
   initCollapsibleToggles();
   initLocationFilters();
+  initShareButtons();
 });
