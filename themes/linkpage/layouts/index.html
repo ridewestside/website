@@ -76,6 +76,8 @@
 </section>
 {{ end }}
 
+<hr />
+
 <!-- Upcoming Events Section -->
 {{ $events := .Site.GetPage "/events" }}
 {{ if $events }}
@@ -96,23 +98,33 @@
     <button id="filter-clear" class="filter-clear" style="display: none;">Clear filters</button>
 </div>
 
+<hr />
+
 <section class="link-section" data-section="events">
     <h2 class="section-title">Upcoming Rides</h2>
     {{ range $events.Params.events }}
     {{ $event := . }}
     <div class="event-card" data-date="{{ .date }}" data-start="{{ .start }}" data-end="{{ .end }}">
-        <a href="{{ .url }}" target="_blank" rel="noopener" class="link-button" data-track="event-{{ .title | urlize }}">
+        <div class="event-info">
             <span class="link-title">{{ .title }}</span>
             {{ with .date }}<span class="link-subtitle">{{ . }}</span>{{ end }}
-        </a>
-        {{ with .route }}
-        <a href="{{ . }}" target="_blank" rel="noopener" class="route-button" data-track="route-{{ $event.title | urlize }}">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-            </svg>
-            Route
-        </a>
-        {{ end }}
+        </div>
+        <div class="event-actions">
+            <a href="{{ .url }}" target="_blank" rel="noopener" class="event-button" data-track="event-{{ .title | urlize }}">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                    <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                </svg>
+                View Event
+            </a>
+            {{ with .route }}
+            <a href="{{ . }}" target="_blank" rel="noopener" class="route-button" data-track="route-{{ $event.title | urlize }}">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                Route
+            </a>
+            {{ end }}
+        </div>
     </div>
     {{ end }}
 </section>

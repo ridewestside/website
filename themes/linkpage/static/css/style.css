@@ -188,6 +188,20 @@ body {
     display: none !important;
 }
 
+/* Horizontal Rules */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--accent-color),
+        transparent
+    );
+    margin: 2.5rem 0;
+    opacity: 0.3;
+}
+
 /* Link Sections */
 .link-section {
     margin-bottom: 2rem;
@@ -413,36 +427,95 @@ body {
 /* Event Cards with Route */
 .event-card {
     display: flex;
-    gap: 0.5rem;
+    align-items: center;
+    gap: 1rem;
     margin-bottom: 0.75rem;
+    padding: 1rem 1.5rem;
+    background: var(--button-bg);
+    border: 1px solid var(--button-border);
+    border-radius: 12px;
+    transition: border-color 0.2s ease;
 }
 
-.event-card .link-button {
+.event-card:hover {
+    border-color: rgba(74, 222, 128, 0.3);
+}
+
+.event-info {
     flex: 1;
-    margin-bottom: 0;
+    min-width: 0;
+}
+
+.event-info .link-title {
+    display: block;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.event-info .link-subtitle {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+    font-style: italic;
+}
+
+.event-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.event-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1rem;
+    background: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--bg-gradient-start);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.event-button:hover {
+    background: #22c55e;
+    border-color: #22c55e;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(74, 222, 128, 0.3);
+}
+
+.event-button svg {
+    flex-shrink: 0;
 }
 
 .route-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.25rem;
-    padding: 0 1rem;
-    background: var(--button-bg);
+    gap: 0.4rem;
+    padding: 0.6rem 1rem;
+    background: transparent;
     border: 1px solid var(--button-border);
-    border-radius: 12px;
+    border-radius: 8px;
     text-decoration: none;
     color: var(--text-secondary);
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 500;
     transition: all 0.2s ease;
     white-space: nowrap;
 }
 
 .route-button:hover {
-    background: var(--accent-color);
-    color: var(--bg-gradient-start);
-    border-color: var(--accent-color);
+    background: var(--button-hover);
+    color: var(--text-primary);
+    border-color: var(--button-border);
 }
 
 .route-button svg {
