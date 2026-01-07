@@ -383,16 +383,21 @@ function initShareButtons(): void {
       const date = button.getAttribute("data-event-date") || "";
       const url = button.getAttribute("data-event-url") || "";
 
+      const shareData = {
+        title: title,
+        text: date,
+        url: url,
+      };
+
       const shareText = `${title}${date ? `\n${date}` : ""}\n${url}`;
 
-      // Check if native share is supported
-      if (navigator.share) {
+      // Check if native share is supported and can share this data
+      if (
+        navigator.share &&
+        (!navigator.canShare || navigator.canShare(shareData))
+      ) {
         try {
-          await navigator.share({
-            title: title,
-            text: date,
-            url: url,
-          });
+          await navigator.share(shareData);
         } catch (err) {
           // User cancelled or share failed
           if ((err as Error).name !== "AbortError") {
