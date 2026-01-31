@@ -3,10 +3,6 @@ languageCode = 'en-us'
 title = 'Ride Westside'
 theme = 'linkpage'
 
-# Google Analytics - replace with your actual tracking ID
-[services.googleAnalytics]
-  ID = 'G-9Y9Y7SXSL2'
-
 [params]
   description = "Building community through cycling"
   author = "Ride Westside"
