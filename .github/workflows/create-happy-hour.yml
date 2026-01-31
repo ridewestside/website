@@ -1,0 +1,49 @@
+name: Create Bike Happy Hour Event
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Event date (MM/DD or MM/DD/YYYY)"
+        required: true
+        type: string
+      route:
+        description: "RideWithGPS route URL (optional)"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  create-event:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install tsx
+        run: npm install -g tsx
+
+      - name: Create Shift2Bikes event and update events.md
+        id: create
+        env:
+          EVENT_TYPE: happy-hour
+          EVENT_DATE: ${{ inputs.date }}
+          EVENT_START: Beaverton
+          EVENT_END: Beaverton
+          EVENT_ROUTE: ${{ inputs.route }}
+        run: tsx .github/scripts/create-event.ts
+
+      - name: Commit and push updated events.md
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/events.md
+          git commit -m "Add ${{ inputs.date }} Bike Happy Hour event to events.md"
+          git push
