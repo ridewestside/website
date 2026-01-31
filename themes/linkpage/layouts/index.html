@@ -167,7 +167,7 @@
 <section class="link-section">
     <h2 class="section-title">Read About Us!</h2>
     {{ range $articles.Params.articles }}
-    <a href="{{ .url }}" target="_blank" rel="noopener" class="link-button" data-goatcounter-click="{{ with urls.Parse $.Site.BaseURL }}{{ .Host }}{{ end }}-{{ .source | urlize }}-ext-{{ .url }}">
+    <a href="{{ .url }}" target="_blank" rel="noopener" class="link-button" data-goatcounter-click="{{ with urls.Parse $.Site.BaseURL }}{{ .Host }}{{ end }}-article-ext-{{ .url }}">
         <span class="link-title">{{ .source }}</span>
         {{ with .quote }}<span class="link-subtitle">"{{ . }}"</span>{{ end }}
     </a>
