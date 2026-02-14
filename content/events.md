@@ -10,6 +10,7 @@ title: "Upcoming Events"
 #
 # Events are displayed in the order listed below.
 events:
+  # Beaverton Bike Happy Hours
   - title: "1/12 Bike Happy Hour"
     date: "January 12, 2026"
     url: "https://shift2bikes.org/calendar/event-23092"
@@ -48,47 +49,6 @@ events:
     route: "https://ridewithgps.com/routes/12345"
     start: "Beaverton"
     end: "Beaverton"
-
-  - title: "3/1 Hillsboro to Beaverton Adventure"
-    date: "March 1, 2026"
-    url: "https://shift2bikes.org/calendar/event-test001"
-    route: "https://ridewithgps.com/routes/12345"
-    start: "Hillsboro"
-    end: "Beaverton"
-
-  - title: "3/8 Tigard Loop Ride"
-    date: "March 8, 2026"
-    url: "https://shift2bikes.org/calendar/event-test002"
-    route: "https://ridewithgps.com/routes/12345"
-    start: "Tigard"
-    end: "Tigard"
-
-  - title: "3/15 Aloha to Tualatin Route"
-    date: "March 15, 2026"
-    url: "https://shift2bikes.org/calendar/event-test003"
-    route: "https://ridewithgps.com/routes/12345"
-    start: "Aloha"
-    end: "Tualatin"
-
-  - title: "3/22 Cedar Hills Explorer"
-    date: "March 22, 2026"
-    url: "https://shift2bikes.org/calendar/event-test004"
-    route: "https://ridewithgps.com/routes/12345"
-    start: "Cedar Hills"
-    end: "Hillsboro"
-
-  - title: "3/29 Beaverton to Tigard Cruise"
-    date: "March 29, 2026"
-    url: "https://shift2bikes.org/calendar/event-test005"
-    route: "https://ridewithgps.com/routes/12345"
-    start: "Beaverton"
-    end: "Tigard"
-
-  - title: "4/5 Tualatin Starting Point Ride"
-    date: "April 5, 2026"
-    url: "https://shift2bikes.org/calendar/event-test006"
-    route: "https://ridewithgps.com/routes/12345"
-    start: "Tualatin"
 
   - title: "4/12 Cedar Hills Destination Ride"
     date: "April 12, 2026"
