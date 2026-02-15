@@ -424,4 +424,13 @@ events:
     date: "December 15, 2026"
     start: "Tigard"
     end: "Tigard"
+
+  # Memes
+  - title: "The 67 ride (test)"
+    date: "February 21, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-23298"
+    start: "Beaverton"
+    end: "Hillsboro"
+    
+  # Critical Mass
 ---
