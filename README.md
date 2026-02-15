@@ -1,6 +1,6 @@
 # Ride Westside Website
 
-A Hugo-powered link page for Ride Westside, automatically deployed to GitHub Pages at [beta.ridewestside.org](https://beta.ridewestside.org).
+A Hugo-powered link page for Ride Westside, automatically deployed to GitHub Pages at [ridewestside.org](https://ridewestside.org).
 
 ## Managing Content
 
