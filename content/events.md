@@ -32,7 +32,7 @@ events:
   - title: "1/26 Post-Bike Happy Hour Ride"
     date: "January 26, 2026"
     url: "https://shift2bikes.org/calendar/event-23117"
-    route: "https://ridewithgps.com/routes/12345"
+    #route: "https://ridewithgps.com/routes/12345"
     start: "Beaverton"
     end: "Beaverton"
 
@@ -45,7 +45,7 @@ events:
   - title: "2/9 Post-Bike Happy Hour Ride"
     date: "February 9, 2026"
     url: "https://shift2bikes.org/calendar/event-23118"
-    route: "https://ridewithgps.com/routes/12345"
+    #route: "https://ridewithgps.com/routes/12345"
     start: "Beaverton"
     end: "Beaverton"
 
@@ -58,7 +58,7 @@ events:
   - title: "2/23 Post-Bike Happy Hour Ride"
     date: "February 23, 2026"
     url: "https://shift2bikes.org/calendar/event-23119"
-    route: "https://ridewithgps.com/routes/12345"
+    #route: "https://ridewithgps.com/routes/12345"
     start: "Beaverton"
     end: "Beaverton"
 
@@ -71,7 +71,7 @@ events:
   - title: "3/9 Post-Bike Happy Hour Ride"
     date: "March 9, 2026"
     url: "https://shift2bikes.org/calendar/event-23120"
-    route: "https://ridewithgps.com/routes/12345"
+    #route: "https://ridewithgps.com/routes/12345"
     start: "Beaverton"
     end: "Beaverton"
 
@@ -84,7 +84,7 @@ events:
   - title: "3/23 Post-Bike Happy Hour Ride"
     date: "March 23, 2026"
     url: "https://shift2bikes.org/calendar/event-23121"
-    route: "https://ridewithgps.com/routes/12345"
+    #route: "https://ridewithgps.com/routes/12345"
     start: "Beaverton"
     end: "Beaverton"
 
