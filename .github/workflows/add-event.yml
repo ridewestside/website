@@ -74,13 +74,41 @@ on:
         required: false
         type: string
       event_start:
-        description: "Start location for events.md (default: Beaverton)"
+        description: "Start location"
         required: false
-        type: string
+        type: choice
+        default: "Beaverton"
+        options:
+          - Beaverton
+          - Tigard
+          - Hillsboro
+          - Aloha
+          - Cedar Hills
+          - Cedar Mill
+          - Tualatin
+          - Garden Home
+          - Raleigh Hills
+          - West Portland
+          - Forest Grove
+          - Cornelius
       event_end:
-        description: "End location for events.md (default: Beaverton)"
+        description: "End location"
         required: false
-        type: string
+        type: choice
+        default: "Beaverton"
+        options:
+          - Beaverton
+          - Tigard
+          - Hillsboro
+          - Aloha
+          - Cedar Hills
+          - Cedar Mill
+          - Tualatin
+          - Garden Home
+          - Raleigh Hills
+          - West Portland
+          - Forest Grove
+          - Cornelius
       event_section:
         description: "Insert after YAML comment section (optional, e.g. 'Beaverton Bike Happy Hours')"
         required: false
