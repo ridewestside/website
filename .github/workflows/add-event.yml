@@ -1,0 +1,135 @@
+name: Add Event
+
+on:
+  workflow_dispatch:
+    inputs:
+      event_type:
+        description: "Event type"
+        required: true
+        type: choice
+        options:
+          - beaverton
+          - tigard
+          - custom
+      event_date:
+        description: "Event date (MM/DD or MM/DD/YYYY)"
+        required: true
+        type: string
+      shift_mode:
+        description: "Shift2Bikes integration"
+        required: true
+        type: choice
+        options:
+          - skip
+          - create
+          - existing
+      shift_url:
+        description: "Existing Shift2Bikes URL (only if shift_mode=existing)"
+        required: false
+        type: string
+      route:
+        description: "RideWithGPS route URL (optional)"
+        required: false
+        type: string
+      # Custom event fields (ignored for beaverton/tigard)
+      event_title:
+        description: "Event title (custom only)"
+        required: false
+        type: string
+      event_details:
+        description: "Event description (custom only)"
+        required: false
+        type: string
+      event_time:
+        description: "Start time HH:MM:SS 24h (custom only, default 10:00:00)"
+        required: false
+        type: string
+      event_time_details:
+        description: "Display time e.g. '10am to 2pm' (custom only)"
+        required: false
+        type: string
+      event_venue:
+        description: "Venue name (custom only)"
+        required: false
+        type: string
+      event_address:
+        description: "Address (custom only)"
+        required: false
+        type: string
+      event_area:
+        description: "Area code (custom only, default W)"
+        required: false
+        type: choice
+        default: "W"
+        options:
+          - W
+          - NW
+          - SW
+          - N
+          - NE
+          - SE
+          - E
+      event_loc_details:
+        description: "Location details (custom only, optional)"
+        required: false
+        type: string
+      event_start:
+        description: "Start location for events.md (default: Beaverton)"
+        required: false
+        type: string
+      event_end:
+        description: "End location for events.md (default: Beaverton)"
+        required: false
+        type: string
+      event_section:
+        description: "Insert after YAML comment section (optional, e.g. 'Beaverton Bike Happy Hours')"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  add-event:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+
+      - name: Install Mage
+        run: go install github.com/magefile/mage@latest
+
+      - name: Run AddEvent
+        env:
+          EVENT_TYPE: ${{ inputs.event_type }}
+          EVENT_DATE: ${{ inputs.event_date }}
+          EVENT_SHIFT_MODE: ${{ inputs.shift_mode }}
+          EVENT_SHIFT_URL: ${{ inputs.shift_url }}
+          EVENT_ROUTE: ${{ inputs.route }}
+          EVENT_TITLE: ${{ inputs.event_title }}
+          EVENT_DETAILS: ${{ inputs.event_details }}
+          EVENT_TIME: ${{ inputs.event_time }}
+          EVENT_TIME_DETAILS: ${{ inputs.event_time_details }}
+          EVENT_VENUE: ${{ inputs.event_venue }}
+          EVENT_ADDRESS: ${{ inputs.event_address }}
+          EVENT_AREA: ${{ inputs.event_area }}
+          EVENT_LOC_DETAILS: ${{ inputs.event_loc_details }}
+          EVENT_START: ${{ inputs.event_start }}
+          EVENT_END: ${{ inputs.event_end }}
+          EVENT_SECTION: ${{ inputs.event_section }}
+          EVENT_CONFIRM: "yes"
+        run: mage addEvent
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/events.md
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git commit -m "Add event: ${{ inputs.event_type }} ${{ inputs.event_date }}"
+          git push
