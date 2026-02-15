@@ -90,12 +90,4 @@ The site automatically deploys to GitHub Pages when changes are pushed to the `m
 
 ### DNS Configuration
 
-For the custom domain to work, configure your DNS with:
-
-- **CNAME record**: `beta` pointing to `ridewestside.github.io`
-
-Or for apex domain, add A records pointing to GitHub's IPs:
-- 185.199.108.153
-- 185.199.109.153
-- 185.199.110.153
-- 185.199.111.153
+Cloudflare: A, AAAA, and CNAME records as required by GitHub docs.
