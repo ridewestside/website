@@ -20,7 +20,6 @@ events:
   - title: "1/12 Post-Bike Happy Hour Ride"
     date: "January 12, 2026"
     url: "https://shift2bikes.org/calendar/event-23116"
-    route: "https://ridewithgps.com/routes/12345"
     start: "Beaverton"
     end: "Beaverton"
 
@@ -49,19 +48,6 @@ events:
     route: "https://ridewithgps.com/routes/12345"
     start: "Beaverton"
     end: "Beaverton"
-
-  - title: "4/12 Cedar Hills Destination Ride"
-    date: "April 12, 2026"
-    url: "https://shift2bikes.org/calendar/event-test007"
-    route: "https://ridewithgps.com/routes/12345"
-    end: "Cedar Hills"
-
-  - title: "4/19 Grand Westside Tour"
-    date: "April 19, 2026"
-    url: "https://shift2bikes.org/calendar/event-test008"
-    route: "https://ridewithgps.com/routes/12345"
-    start: "Hillsboro"
-    end: "Tualatin"
 
   - title: "2/23 Bike Happy Hour"
     date: "February 23, 2026"
