@@ -238,7 +238,16 @@ func checkLinksParallel(links []string) []deadLink {
 	return deadLinks
 }
 
+// shift2bikes event URL pattern: https://shift2bikes.org/calendar/event-XXXXX
+var shift2bikesEventRegex = regexp.MustCompile(`^https?://shift2bikes\.org/calendar/event-(\d+)`)
+
 func checkLink(client *http.Client, url string) string {
+	// For shift2bikes event pages, check the API directly since the
+	// page is a client-side SPA that won't show errors in raw HTML
+	if m := shift2bikesEventRegex.FindStringSubmatch(url); m != nil {
+		return checkShift2bikesEvent(client, m[1])
+	}
+
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		return fmt.Sprintf("invalid URL: %v", err)
@@ -259,6 +268,28 @@ func checkLink(client *http.Client, url string) string {
 	// Consider 2xx and 3xx as valid
 	if resp.StatusCode >= 400 {
 		return fmt.Sprintf("HTTP %d", resp.StatusCode)
+	}
+
+	return ""
+}
+
+func checkShift2bikesEvent(client *http.Client, eventID string) string {
+	apiURL := "https://shift2bikes.org/api/events.php?id=" + eventID
+	req, err := http.NewRequest("GET", apiURL, nil)
+	if err != nil {
+		return fmt.Sprintf("invalid URL: %v", err)
+	}
+	req.Header.Set("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+
+	resp, err := client.Do(req)
+	if err != nil {
+		return fmt.Sprintf("request failed: %v", err)
+	}
+	defer resp.Body.Close()
+	io.Copy(io.Discard, resp.Body)
+
+	if resp.StatusCode >= 400 {
+		return fmt.Sprintf("shift2bikes event %s is invalid (API returned HTTP %d)", eventID, resp.StatusCode)
 	}
 
 	return ""
