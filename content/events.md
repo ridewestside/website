@@ -433,4 +433,11 @@ events:
     end: "Hillsboro"
     
   # Critical Mass
+  # Festivals
+  - title: "Bike Beaverton"
+    date: "May 3, 2026"
+    url: "https://www.bikebeaverton.org/"
+    start: "Beaverton"
+    end: "Beaverton"
+
 ---
