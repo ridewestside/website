@@ -707,3 +707,125 @@ func printSocialTemplates(entry eventEntry) {
 	fmt.Println("#BikeHappyHour #RideWestside")
 	fmt.Println("=================================")
 }
+
+// --- Recurring events ---
+
+// AddRecurringEvents generates recurring happy hour events for a given year.
+// Idempotent: skips events whose titles already exist in events.md.
+//
+// Usage: mage addRecurringEvents 2027
+func AddRecurringEvents(year int) error {
+	eventsPath := "content/events.md"
+
+	existing, err := existingTitles(eventsPath)
+	if err != nil {
+		return err
+	}
+
+	fmt.Printf("Generating recurring events for %d...\n", year)
+
+	added, skipped := 0, 0
+
+	// Beaverton Happy Hours: 2nd and 4th Monday
+	fmt.Println("\nBeaverton Happy Hours:")
+	for month := time.January; month <= time.December; month++ {
+		for _, n := range []int{2, 4} {
+			d := nthWeekday(year, month, time.Monday, n)
+			if d.IsZero() {
+				continue
+			}
+			short := fmt.Sprintf("%d/%d", int(d.Month()), d.Day())
+			entry := eventEntry{
+				Title: fmt.Sprintf("%s Bike Happy Hour", short),
+				Date:  d.Format("January 2, 2006"),
+				Start: "Beaverton",
+				End:   "Beaverton",
+			}
+			if existing[entry.Title] {
+				fmt.Printf("  = %s (%s) already exists, skipped\n", entry.Title, entry.Date)
+				skipped++
+				continue
+			}
+			if err := appendEventToFile(eventsPath, entry, "# Beaverton Bike Happy Hours"); err != nil {
+				return fmt.Errorf("failed to add %s: %w", entry.Title, err)
+			}
+			existing[entry.Title] = true
+			fmt.Printf("  + %s (%s)\n", entry.Title, entry.Date)
+			added++
+		}
+	}
+
+	// Tigard Happy Hours: 1st and 3rd Tuesday
+	fmt.Println("\nTigard Happy Hours:")
+	for month := time.January; month <= time.December; month++ {
+		for _, n := range []int{1, 3} {
+			d := nthWeekday(year, month, time.Tuesday, n)
+			if d.IsZero() {
+				continue
+			}
+			short := fmt.Sprintf("%d/%d", int(d.Month()), d.Day())
+			entry := eventEntry{
+				Title: fmt.Sprintf("%s Tigard Happy Hour", short),
+				Date:  d.Format("January 2, 2006"),
+				Start: "Tigard",
+				End:   "Tigard",
+			}
+			if existing[entry.Title] {
+				fmt.Printf("  = %s (%s) already exists, skipped\n", entry.Title, entry.Date)
+				skipped++
+				continue
+			}
+			if err := appendEventToFile(eventsPath, entry, "# Tigard Happy Hours"); err != nil {
+				return fmt.Errorf("failed to add %s: %w", entry.Title, err)
+			}
+			existing[entry.Title] = true
+			fmt.Printf("  + %s (%s)\n", entry.Title, entry.Date)
+			added++
+		}
+	}
+
+	fmt.Printf("\nAdded %d events, skipped %d.\n", added, skipped)
+	return nil
+}
+
+// nthWeekday returns the nth occurrence of a weekday in the given month/year.
+// Returns zero time if the nth occurrence doesn't exist in that month.
+func nthWeekday(year int, month time.Month, weekday time.Weekday, n int) time.Time {
+	// Start at the 1st of the month
+	first := time.Date(year, month, 1, 0, 0, 0, 0, time.Local)
+
+	// Find the first occurrence of the target weekday
+	offset := int(weekday) - int(first.Weekday())
+	if offset < 0 {
+		offset += 7
+	}
+	firstOccurrence := first.AddDate(0, 0, offset)
+
+	// Jump to the nth occurrence
+	target := firstOccurrence.AddDate(0, 0, (n-1)*7)
+
+	// Verify it's still in the same month
+	if target.Month() != month {
+		return time.Time{}
+	}
+	return target
+}
+
+// existingTitles reads events.md and returns a set of all event titles.
+func existingTitles(path string) (map[string]bool, error) {
+	content, err := os.ReadFile(path)
+	if err != nil {
+		return nil, err
+	}
+
+	titles := make(map[string]bool)
+	titleRegex := regexp.MustCompile(`^\s*-\s*title:\s*"([^"]+)"`)
+
+	for _, line := range strings.Split(string(content), "\n") {
+		if m := titleRegex.FindStringSubmatch(line); m != nil {
+			titles[m[1]] = true
+		}
+	}
+
+	return titles, nil
+}

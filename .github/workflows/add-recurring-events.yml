@@ -1,0 +1,56 @@
+name: Add Recurring Events
+
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: "Year to generate events for (e.g. 2027)"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  add-recurring-events:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+
+      - name: Install Mage
+        run: go install github.com/magefile/mage@latest
+
+      - name: Generate recurring events
+        run: mage addRecurringEvents ${{ inputs.year }}
+
+      - name: Create PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/events.md
+          git diff --cached --quiet && echo "No changes to commit (all events already exist)" && exit 0
+
+          BRANCH="add-recurring-events/${{ inputs.year }}-${{ github.run_id }}"
+          git checkout -b "$BRANCH"
+          git commit -m "Add recurring events for ${{ inputs.year }}"
+          git push origin "$BRANCH"
+
+          gh pr create \
+            --title "Add recurring events for ${{ inputs.year }}" \
+            --body "Generated recurring happy hour events for ${{ inputs.year }} via workflow by @${{ github.actor }}.
+
+          Beaverton Happy Hours: 2nd and 4th Monday
+          Tigard Happy Hours: 1st and 3rd Tuesday
+
+          Events that already existed were skipped (idempotent)." \
+            --base main \
+            --head "$BRANCH"
