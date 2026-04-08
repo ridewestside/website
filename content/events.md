@@ -425,6 +425,13 @@ events:
     start: "Tigard"
     end: "Tigard"
 
+  # Ride to ride
+  - title: "4/11 The Ladds 500 R2R"
+    date: "April 11, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-23431"
+    start: "Beaverton"
+    end: "Ladd's Addition"
+
   # Memes
   - title: "The 67 ride (test)"
     date: "February 21, 2026"
