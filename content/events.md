@@ -443,7 +443,7 @@ events:
   # Festivals
   - title: "Bike Beaverton"
     date: "May 3, 2026"
-    url: "https://www.bikebeaverton.org/"
+    url: "https://beavertonoregon.gov/508/Bike-Beaverton-Event"
     start: "Beaverton"
     end: "Beaverton"
 
