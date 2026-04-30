@@ -112,7 +112,7 @@ events:
     start: "Beaverton"
     end: "Beaverton"
 
-  - title: "5/2 Beaverton Foodie Bike Ride"
+  - title: "5/2 Beaverton Foodie Bike Ride (not a RWS ride)"
     date: "May 2, 2026"
     url: "https://www.shift2bikes.org/calendar/event-23576"
     start: "Beaverton"
