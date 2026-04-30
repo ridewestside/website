@@ -115,12 +115,13 @@ func AddEvent() error {
 // --- Data structures ---
 
 type eventEntry struct {
-	Title string
-	Date  string // display format: "January 2, 2026"
-	URL   string
-	Route string
-	Start string
-	End   string
+	Title        string
+	Date         string // display format: "January 2, 2026"
+	URL          string
+	Route        string
+	Start        string
+	End          string
+	StartAddress string // specific street address for map navigation
 }
 
 type shift2bikesPayload struct {
@@ -336,10 +337,11 @@ func collectBeavertonHappyHour() (eventEntry, *shift2bikesPayload, error) {
 	}
 
 	entry := eventEntry{
-		Title: fmt.Sprintf("%s Bike Happy Hour", d.short),
-		Date:  d.display,
-		Start: "Beaverton",
-		End:   "Beaverton",
+		Title:        fmt.Sprintf("%s Bike Happy Hour", d.short),
+		Date:         d.display,
+		Start:        "Beaverton",
+		End:          "Beaverton",
+		StartAddress: "4250 SW Rose Biggi Ave, Beaverton, OR",
 	}
 
 	payload := &shift2bikesPayload{
@@ -593,6 +595,9 @@ func formatEventYAML(entry eventEntry) string {
 	}
 	fmt.Fprintf(&b, "    start: %q\n", entry.Start)
 	fmt.Fprintf(&b, "    end: %q", entry.End)
+	if entry.StartAddress != "" {
+		fmt.Fprintf(&b, "\n    start_address: %q", entry.StartAddress)
+	}
 	return b.String()
 }
 
@@ -736,10 +741,11 @@ func AddRecurringEvents(year int) error {
 			}
 			short := fmt.Sprintf("%d/%d", int(d.Month()), d.Day())
 			entry := eventEntry{
-				Title: fmt.Sprintf("%s Bike Happy Hour", short),
-				Date:  d.Format("January 2, 2006"),
-				Start: "Beaverton",
-				End:   "Beaverton",
+				Title:        fmt.Sprintf("%s Bike Happy Hour", short),
+				Date:         d.Format("January 2, 2006"),
+				Start:        "Beaverton",
+				End:          "Beaverton",
+				StartAddress: "4250 SW Rose Biggi Ave, Beaverton, OR",
 			}
 			if existing[entry.Title] {
 				fmt.Printf("  = %s (%s) already exists, skipped\n", entry.Title, entry.Date)

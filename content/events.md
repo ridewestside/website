@@ -16,6 +16,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23092"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "1/12 Post-Bike Happy Hour Ride"
@@ -30,6 +31,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23093"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "1/26 Post-Bike Happy Hour Ride"
@@ -45,6 +47,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23094"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "2/9 Post-Bike Happy Hour Ride"
@@ -60,6 +63,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23095"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "2/23 Post-Bike Happy Hour Ride"
@@ -75,6 +79,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23096"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "3/9 Post-Bike Happy Hour Ride"
@@ -90,6 +95,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23097"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "3/23 Post-Bike Happy Hour Ride"
@@ -105,6 +111,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23098"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "4/13 Post-Bike Happy Hour Ride"
@@ -119,6 +126,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23099"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "4/27 Post-Bike Happy Hour Ride"
@@ -140,6 +148,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23100"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "5/11 Post-Bike Happy Hour Ride"
@@ -154,6 +163,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23101"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "5/25 Post-Bike Happy Hour Ride"
@@ -168,6 +178,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23102"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "6/8 Post-Bike Happy Hour Ride"
@@ -182,6 +193,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23103"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "6/22 Post-Bike Happy Hour Ride"
@@ -196,6 +208,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23104"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "7/13 Post-Bike Happy Hour Ride"
@@ -210,6 +223,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23105"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "7/27 Post-Bike Happy Hour Ride"
@@ -224,6 +238,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23106"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "8/10 Post-Bike Happy Hour Ride"
@@ -238,6 +253,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23107"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "8/24 Post-Bike Happy Hour Ride"
@@ -252,6 +268,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23108"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "9/14 Post-Bike Happy Hour Ride"
@@ -266,6 +283,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23109"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "9/28 Post-Bike Happy Hour Ride"
@@ -280,6 +298,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23110"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "10/12 Post-Bike Happy Hour Ride"
@@ -294,6 +313,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23111"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "10/26 Post-Bike Happy Hour Ride"
@@ -308,6 +328,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23112"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "11/9 Post-Bike Happy Hour Ride"
@@ -322,6 +343,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23113"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "11/23 Post-Bike Happy Hour Ride"
@@ -336,6 +358,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23114"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "12/14 Post-Bike Happy Hour Ride"
@@ -350,6 +373,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23115"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
   - title: "12/28 Post-Bike Happy Hour Ride"

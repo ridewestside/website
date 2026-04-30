@@ -19,7 +19,7 @@ const DAYS_THRESHOLD = 90;
 const FILTER_STORAGE_KEY = "ridewestside:filters";
 const SETTINGS_STORAGE_KEY = "ridewestside:settings";
 
-type MapProvider = "auto" | "apple" | "google" | "osm";
+type MapProvider = "auto" | "apple" | "google" | "osm" | "komoot" | "ridewithgps";
 
 interface Settings {
   mapProvider: MapProvider;
@@ -55,6 +55,13 @@ function getMapUrl(location: string): string {
     return `https://www.google.com/maps/search/?api=1&query=${encoded}`;
   } else if (mapProvider === "osm") {
     return `https://www.openstreetmap.org/search?query=${encoded}`;
+  } else if (mapProvider === "komoot") {
+    // Komoot doesn't support location-by-address in URLs; opens the route planner
+    // The Komoot app on iOS/Android intercepts komoot.com links via Universal Links
+    return `https://www.komoot.com/plan/cycling`;
+  } else if (mapProvider === "ridewithgps") {
+    // RideWithGPS similarly doesn't support address URLs; opens the route creator
+    return `https://ridewithgps.com/routes/new`;
   }
   // auto: pick best for the platform
   const ua = navigator.userAgent;
@@ -163,22 +170,23 @@ function saveFilterState(state: FilterState): void {
 }
 
 function addMapButton(card: HTMLElement): void {
-  const startLoc = card.getAttribute("data-start");
-  if (!startLoc) return;
+  const address = card.getAttribute("data-start-address");
+  if (!address) return;
 
+  const startName = card.getAttribute("data-start") || address;
   const actions = card.querySelector(".event-actions");
   if (!actions) return;
 
   const btn = document.createElement("button");
   btn.className = "map-button";
-  btn.setAttribute("aria-label", `Navigate to ${startLoc}`);
-  btn.title = `Navigate to ${startLoc}`;
+  btn.setAttribute("aria-label", `Navigate to ${startName}`);
+  btn.title = `Navigate to ${startName}`;
   btn.innerHTML = `<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
     <path d="M21 3L3 10.53v.98l6.84 2.65L12.48 21h.98L21 3z"/>
   </svg>`;
 
   btn.addEventListener("click", () => {
-    window.open(getMapUrl(startLoc), "_blank", "noopener,noreferrer");
+    window.open(getMapUrl(address), "_blank", "noopener,noreferrer");
   });
 
   const shareBtn = actions.querySelector(".share-button");
