@@ -1,0 +1,7 @@
+[build]
+  command = "npm install && npx esbuild src/main.ts --bundle --minify --sourcemap --target=es2020 --outfile=themes/linkpage/static/js/main.js && hugo --gc --minify"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.140.1"
+  TZ = "America/Los_Angeles"
