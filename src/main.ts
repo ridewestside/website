@@ -19,7 +19,7 @@ const DAYS_THRESHOLD = 90;
 const FILTER_STORAGE_KEY = "ridewestside:filters";
 const SETTINGS_STORAGE_KEY = "ridewestside:settings";
 
-type MapProvider = "auto" | "apple" | "google" | "osm" | "komoot" | "ridewithgps";
+type MapProvider = "auto" | "apple" | "google" | "osm";
 
 interface Settings {
   mapProvider: MapProvider;
@@ -55,13 +55,6 @@ function getMapUrl(location: string): string {
     return `https://www.google.com/maps/search/?api=1&query=${encoded}`;
   } else if (mapProvider === "osm") {
     return `https://www.openstreetmap.org/search?query=${encoded}`;
-  } else if (mapProvider === "komoot") {
-    // Komoot doesn't support location-by-address in URLs; opens the route planner
-    // The Komoot app on iOS/Android intercepts komoot.com links via Universal Links
-    return `https://www.komoot.com/plan/cycling`;
-  } else if (mapProvider === "ridewithgps") {
-    // RideWithGPS similarly doesn't support address URLs; opens the route creator
-    return `https://ridewithgps.com/routes/new`;
   }
   // auto: pick best for the platform
   const ua = navigator.userAgent;
