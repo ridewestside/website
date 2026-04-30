@@ -17,6 +17,54 @@ interface FilterState {
 
 const DAYS_THRESHOLD = 90;
 const FILTER_STORAGE_KEY = "ridewestside:filters";
+const SETTINGS_STORAGE_KEY = "ridewestside:settings";
+
+type MapProvider = "auto" | "apple" | "google" | "osm";
+
+interface Settings {
+  mapProvider: MapProvider;
+}
+
+function loadSettings(): Settings {
+  try {
+    const stored = localStorage.getItem(SETTINGS_STORAGE_KEY);
+    if (stored) {
+      const parsed = JSON.parse(stored) as Partial<Settings>;
+      return { mapProvider: parsed.mapProvider || "auto" };
+    }
+  } catch {
+    // ignore
+  }
+  return { mapProvider: "auto" };
+}
+
+function saveSettings(settings: Settings): void {
+  try {
+    localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(settings));
+  } catch {
+    // ignore
+  }
+}
+
+function getMapUrl(location: string): string {
+  const { mapProvider } = loadSettings();
+  const encoded = encodeURIComponent(location);
+  if (mapProvider === "apple") {
+    return `https://maps.apple.com/?q=${encoded}`;
+  } else if (mapProvider === "google") {
+    return `https://www.google.com/maps/search/?api=1&query=${encoded}`;
+  } else if (mapProvider === "osm") {
+    return `https://www.openstreetmap.org/search?query=${encoded}`;
+  }
+  // auto: pick best for the platform
+  const ua = navigator.userAgent;
+  if (/iPhone|iPad|iPod/i.test(ua)) {
+    return `https://maps.apple.com/?q=${encoded}`;
+  } else if (/Android/i.test(ua)) {
+    return `https://www.google.com/maps/search/?api=1&query=${encoded}`;
+  }
+  return `https://www.openstreetmap.org/search?query=${encoded}`;
+}
 
 /**
  * Parse event date string using date-fns
@@ -114,6 +162,75 @@ function saveFilterState(state: FilterState): void {
   }
 }
 
+function addMapButton(card: HTMLElement): void {
+  const startLoc = card.getAttribute("data-start");
+  if (!startLoc) return;
+
+  const actions = card.querySelector(".event-actions");
+  if (!actions) return;
+
+  const btn = document.createElement("button");
+  btn.className = "map-button";
+  btn.setAttribute("aria-label", `Navigate to ${startLoc}`);
+  btn.title = `Navigate to ${startLoc}`;
+  btn.innerHTML = `<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+    <path d="M21 3L3 10.53v.98l6.84 2.65L12.48 21h.98L21 3z"/>
+  </svg>`;
+
+  btn.addEventListener("click", () => {
+    window.open(getMapUrl(startLoc), "_blank", "noopener,noreferrer");
+  });
+
+  const shareBtn = actions.querySelector(".share-button");
+  if (shareBtn) {
+    actions.insertBefore(btn, shareBtn);
+  } else {
+    actions.appendChild(btn);
+  }
+}
+
+function initSettings(): void {
+  const openBtn = document.getElementById("settings-open");
+  const modal = document.getElementById("settings-modal");
+  const closeBtn = document.getElementById("settings-close");
+  const providerSelect = document.getElementById(
+    "settings-map-provider",
+  ) as HTMLSelectElement | null;
+
+  if (!openBtn || !modal) return;
+
+  const settings = loadSettings();
+  if (providerSelect) {
+    providerSelect.value = settings.mapProvider;
+  }
+
+  function openModal(): void {
+    modal!.removeAttribute("hidden");
+    closeBtn?.focus();
+  }
+
+  function closeModal(): void {
+    modal!.setAttribute("hidden", "");
+    openBtn!.focus();
+  }
+
+  openBtn.addEventListener("click", openModal);
+  closeBtn?.addEventListener("click", closeModal);
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modal.hasAttribute("hidden")) closeModal();
+  });
+
+  providerSelect?.addEventListener("change", () => {
+    settings.mapProvider = providerSelect.value as MapProvider;
+    saveSettings(settings);
+  });
+}
+
 /**
  * Add location display to event cards
  */
@@ -190,6 +307,7 @@ function initEventFiltering(): void {
   // Add location displays and re-append upcoming events in sorted order
   upcomingEvents.forEach(({ element }) => {
     addLocationDisplay(element);
+    addMapButton(element);
     eventsSection.appendChild(element);
   });
 
@@ -202,6 +320,7 @@ function initEventFiltering(): void {
 
       pastEvents.forEach(({ element }) => {
         addLocationDisplay(element);
+        addMapButton(element);
         pastContainer.appendChild(element);
       });
 
@@ -225,6 +344,7 @@ function initEventFiltering(): void {
 
       futureEvents.forEach(({ element }) => {
         addLocationDisplay(element);
+        addMapButton(element);
         futureContainer.appendChild(element);
       });
 
@@ -527,4 +647,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initCollapsibleToggles();
   initFilters();
   initShareButtons();
+  initSettings();
 });
