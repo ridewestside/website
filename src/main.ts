@@ -12,6 +12,7 @@ interface EventElement {
 interface FilterState {
   start: string;
   end: string;
+  tag: string;
 }
 
 const DAYS_THRESHOLD = 90;
@@ -47,11 +48,14 @@ function loadFilterState(): FilterState {
   const urlStart = urlParams.get("start");
   const urlEnd = urlParams.get("end");
 
+  const urlTag = urlParams.get("tag");
+
   // If URL has filters, use those
-  if (urlStart !== null || urlEnd !== null) {
+  if (urlStart !== null || urlEnd !== null || urlTag !== null) {
     return {
       start: urlStart || "",
       end: urlEnd || "",
+      tag: urlTag || "",
     };
   }
 
@@ -59,15 +63,19 @@ function loadFilterState(): FilterState {
   try {
     const stored = localStorage.getItem(FILTER_STORAGE_KEY);
     if (stored) {
-      const parsed = JSON.parse(stored) as FilterState;
-      return parsed;
+      const parsed = JSON.parse(stored) as Partial<FilterState>;
+      return {
+        start: parsed.start || "",
+        end: parsed.end || "",
+        tag: parsed.tag || "",
+      };
     }
   } catch (e) {
     console.warn("Failed to load filter state from localStorage:", e);
   }
 
   // Default empty filters
-  return { start: "", end: "" };
+  return { start: "", end: "", tag: "" };
 }
 
 /**
@@ -92,6 +100,11 @@ function saveFilterState(state: FilterState): void {
     url.searchParams.set("end", state.end);
   } else {
     url.searchParams.delete("end");
+  }
+  if (state.tag) {
+    url.searchParams.set("tag", state.tag);
+  } else {
+    url.searchParams.delete("tag");
   }
 
   // Update URL without adding to history if nothing changed
@@ -121,14 +134,13 @@ function addLocationDisplay(card: HTMLElement): void {
 
   // If we have location text, add it to the card
   if (locationText) {
-    const linkButton = card.querySelector(".link-button");
-    if (linkButton) {
-      // Check if we already added a location span
-      let locationSpan = linkButton.querySelector(".link-location");
+    const eventInfo = card.querySelector(".event-info");
+    if (eventInfo) {
+      let locationSpan = eventInfo.querySelector(".link-location");
       if (!locationSpan) {
         locationSpan = document.createElement("span");
         locationSpan.className = "link-location";
-        linkButton.appendChild(locationSpan);
+        eventInfo.appendChild(locationSpan);
       }
       locationSpan.textContent = locationText;
     }
@@ -259,12 +271,21 @@ function initCollapsibleToggles(): void {
   });
 }
 
-function initLocationFilters(): void {
+function getCardTags(card: HTMLElement): string[] {
+  return (card.getAttribute("data-tags") || "")
+    .split(" ")
+    .filter(Boolean);
+}
+
+function initFilters(): void {
   const startSelect = document.getElementById(
     "filter-start",
   ) as HTMLSelectElement | null;
   const endSelect = document.getElementById(
     "filter-end",
+  ) as HTMLSelectElement | null;
+  const tagSelect = document.getElementById(
+    "filter-tag",
   ) as HTMLSelectElement | null;
   const clearButton = document.getElementById(
     "filter-clear",
@@ -274,22 +295,22 @@ function initLocationFilters(): void {
     return;
   }
 
-  const allEventCards = document.querySelectorAll<HTMLElement>(
-    ".event-card[data-start], .event-card[data-end]",
-  );
+  const allEventCards = document.querySelectorAll<HTMLElement>(".event-card");
 
-  // Collect unique start and end locations
+  // Collect unique start locations, end locations, and tags
   const startLocations = new Set<string>();
   const endLocations = new Set<string>();
+  const allTags = new Set<string>();
 
   allEventCards.forEach((card) => {
     const start = card.getAttribute("data-start");
     const end = card.getAttribute("data-end");
     if (start) startLocations.add(start);
     if (end) endLocations.add(end);
+    getCardTags(card).forEach((t) => allTags.add(t));
   });
 
-  // Populate dropdowns
+  // Populate start/end dropdowns
   const sortedStarts = Array.from(startLocations).sort();
   const sortedEnds = Array.from(endLocations).sort();
 
@@ -307,6 +328,18 @@ function initLocationFilters(): void {
     endSelect.appendChild(option);
   });
 
+  // Populate tag dropdown
+  if (tagSelect) {
+    Array.from(allTags)
+      .sort()
+      .forEach((tag) => {
+        const option = document.createElement("option");
+        option.value = tag;
+        option.textContent = tag;
+        tagSelect.appendChild(option);
+      });
+  }
+
   // Load initial filter state from URL or localStorage
   const filterState: FilterState = loadFilterState();
 
@@ -317,27 +350,49 @@ function initLocationFilters(): void {
   if (filterState.end && sortedEnds.includes(filterState.end)) {
     endSelect.value = filterState.end;
   }
+  if (filterState.tag && tagSelect && allTags.has(filterState.tag)) {
+    tagSelect.value = filterState.tag;
+  }
+
+  function updateTagChipActiveState(): void {
+    document
+      .querySelectorAll<HTMLButtonElement>(".event-tag")
+      .forEach((chip) => {
+        chip.classList.toggle(
+          "active",
+          !!filterState.tag &&
+            chip.getAttribute("data-tag") === filterState.tag,
+        );
+      });
+  }
 
   function applyFilters(): void {
     allEventCards.forEach((card) => {
       const cardStart = card.getAttribute("data-start") || "";
       const cardEnd = card.getAttribute("data-end") || "";
+      const cardTags = getCardTags(card);
 
       const matchesStart =
         !filterState.start || cardStart === filterState.start;
       const matchesEnd = !filterState.end || cardEnd === filterState.end;
+      const matchesTag =
+        !filterState.tag || cardTags.includes(filterState.tag);
 
-      if (matchesStart && matchesEnd) {
+      if (matchesStart && matchesEnd && matchesTag) {
         card.classList.remove("filtered-out");
       } else {
         card.classList.add("filtered-out");
       }
     });
 
+    updateTagChipActiveState();
+
     // Show/hide clear button
     if (clearButton) {
       clearButton.style.display =
-        filterState.start || filterState.end ? "block" : "none";
+        filterState.start || filterState.end || filterState.tag
+          ? "block"
+          : "none";
     }
 
     // Save state to localStorage and URL
@@ -345,7 +400,7 @@ function initLocationFilters(): void {
   }
 
   // Apply filters on page load if state was restored
-  if (filterState.start || filterState.end) {
+  if (filterState.start || filterState.end || filterState.tag) {
     applyFilters();
   }
 
@@ -359,12 +414,33 @@ function initLocationFilters(): void {
     applyFilters();
   });
 
+  if (tagSelect) {
+    tagSelect.addEventListener("change", () => {
+      filterState.tag = tagSelect.value;
+      applyFilters();
+    });
+  }
+
+  // Tag chips: clicking toggles that tag as the active filter
+  document
+    .querySelectorAll<HTMLButtonElement>(".event-tag")
+    .forEach((chip) => {
+      chip.addEventListener("click", () => {
+        const tag = chip.getAttribute("data-tag") || "";
+        filterState.tag = filterState.tag === tag ? "" : tag;
+        if (tagSelect) tagSelect.value = filterState.tag;
+        applyFilters();
+      });
+    });
+
   if (clearButton) {
     clearButton.addEventListener("click", () => {
       filterState.start = "";
       filterState.end = "";
+      filterState.tag = "";
       startSelect.value = "";
       endSelect.value = "";
+      if (tagSelect) tagSelect.value = "";
       applyFilters();
     });
   }
@@ -449,6 +525,6 @@ async function copyToClipboard(
 document.addEventListener("DOMContentLoaded", () => {
   initEventFiltering();
   initCollapsibleToggles();
-  initLocationFilters();
+  initFilters();
   initShareButtons();
 });

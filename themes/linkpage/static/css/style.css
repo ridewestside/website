@@ -259,6 +259,37 @@ hr {
     opacity: 0.85;
 }
 
+/* Event Tag Chips */
+.event-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: 0.45rem;
+}
+
+.event-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.18rem 0.55rem;
+    font-size: 0.72rem;
+    font-weight: 500;
+    font-family: inherit;
+    background: rgba(74, 222, 128, 0.08);
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    border-radius: 999px;
+    color: var(--accent-color);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+}
+
+.event-tag:hover,
+.event-tag.active {
+    background: var(--accent-color);
+    color: var(--bg-gradient-start);
+    border-color: var(--accent-color);
+}
+
 /* Collapsible Sections (Past/Future Events) */
 .collapsible-section {
     display: none;
