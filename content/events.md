@@ -112,6 +112,12 @@ events:
     start: "Beaverton"
     end: "Beaverton"
 
+  - title: "5/2 Beaverton Foodie Bike Ride"
+    date: "May 2, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-23576"
+    start: "Beaverton"
+    end: "Beaverton"
+
   - title: "5/11 Bike Happy Hour"
     date: "May 11, 2026"
     url: "https://shift2bikes.org/calendar/event-23100"
