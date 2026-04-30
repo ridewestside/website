@@ -432,7 +432,7 @@ events:
     start: "Beaverton"
     end: "Ladd's Addition"
 
-  # Andi's Rides
+  # Causes
   - title: "5/2 Andi's Ride 1 - Supporting a Peer for Mental Health Month"
     date: "May 2, 2026"
     url: "https://www.shift2bikes.org/calendar/event-23669"
