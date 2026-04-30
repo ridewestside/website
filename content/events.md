@@ -432,6 +432,13 @@ events:
     start: "Beaverton"
     end: "Ladd's Addition"
 
+  # Andi's Rides
+  - title: "5/2 Andi's Ride 1 - Supporting a Peer for Mental Health Month"
+    date: "May 2, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-23669"
+    start: "Quatama"
+    end: "Quatama"
+
   # Memes
   - title: "The 67 ride (test)"
     date: "February 21, 2026"
