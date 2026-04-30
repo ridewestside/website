@@ -49,30 +49,37 @@
 {{ $about := .Site.GetPage "/about" }}
 {{ if $about }}
 <section class="link-section about-section">
-    <h2 class="section-title">About Us</h2>
-    <div class="about-content">
-        {{ $about.Content }}
-    </div>
-    {{ with $about.Params.gallery }}
-    <div class="gallery">
-        {{ range . }}
-        <div class="gallery-item">
-            {{ if eq .type "image" }}
-            <img src="{{ .src | relURL }}" alt="{{ .alt }}" loading="lazy">
-            {{ else if eq .type "youtube" }}
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/{{ .id }}" frameborder="0" allowfullscreen loading="lazy"></iframe>
-            </div>
-            {{ else if eq .type "vimeo" }}
-            <div class="video-container">
-                <iframe src="https://player.vimeo.com/video/{{ .id }}" frameborder="0" allowfullscreen loading="lazy"></iframe>
+    <button class="collapsible-toggle" aria-expanded="false" aria-controls="about-content-container">
+        <h2 class="section-title">
+            About Us
+            <span class="toggle-icon">+</span>
+        </h2>
+    </button>
+    <div class="collapsible-container" id="about-content-container">
+        <div class="about-content">
+            {{ $about.Content }}
+        </div>
+        {{ with $about.Params.gallery }}
+        <div class="gallery">
+            {{ range . }}
+            <div class="gallery-item">
+                {{ if eq .type "image" }}
+                <img src="{{ .src | relURL }}" alt="{{ .alt }}" loading="lazy">
+                {{ else if eq .type "youtube" }}
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/{{ .id }}" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                </div>
+                {{ else if eq .type "vimeo" }}
+                <div class="video-container">
+                    <iframe src="https://player.vimeo.com/video/{{ .id }}" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                </div>
+                {{ end }}
+                {{ with .caption }}<p class="gallery-caption">{{ . }}</p>{{ end }}
             </div>
             {{ end }}
-            {{ with .caption }}<p class="gallery-caption">{{ . }}</p>{{ end }}
         </div>
         {{ end }}
     </div>
-    {{ end }}
 </section>
 {{ end }}
 
