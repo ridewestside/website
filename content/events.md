@@ -112,6 +112,12 @@ events:
     start: "Beaverton"
     end: "Beaverton"
 
+  - title: "5/2 Beaverton Foodie Bike Ride (not a RWS ride)"
+    date: "May 2, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-23576"
+    start: "Beaverton"
+    end: "Beaverton"
+
   - title: "5/11 Bike Happy Hour"
     date: "May 11, 2026"
     url: "https://shift2bikes.org/calendar/event-23100"
@@ -431,6 +437,13 @@ events:
     url: "https://www.shift2bikes.org/calendar/event-23431"
     start: "Beaverton"
     end: "Ladd's Addition"
+
+  # Causes
+  - title: "5/2 Andi's Ride 1 - Supporting a Peer for Mental Health Month"
+    date: "May 2, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-23669"
+    start: "Quatama"
+    end: "Quatama"
 
   # Memes
   - title: "The 67 ride (test)"
