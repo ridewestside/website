@@ -544,6 +544,15 @@ events:
     end: "Quatama"
     tags: [ride, cause]
 
+  # Special Rides
+  - title: "5/17 Pittock Mansion / Council Crest Double Feature"
+    date: "May 17, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-23680"
+    route: "https://ridewithgps.com/routes/54568652"
+    start: "Beaverton"
+    end: "Beaverton"
+    tags: [ride, challenging]
+
   # Memes
   - title: "The 67 ride (test)"
     date: "February 21, 2026"
