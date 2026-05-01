@@ -551,6 +551,7 @@ events:
     route: "https://ridewithgps.com/routes/54568652"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "12725 SW Millikan Way, Beaverton, OR 97005"
     tags: [ride, challenging]
 
   # Memes
