@@ -620,6 +620,7 @@ hr {
     color: var(--text-secondary);
     cursor: pointer;
     font-family: inherit;
+    text-decoration: none;
     transition: all 0.2s ease;
 }
 
