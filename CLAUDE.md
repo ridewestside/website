@@ -2,7 +2,28 @@
 
 ## Project Overview
 
-Hugo static site for Ride Westside, a Portland westside cycling community. Deployed to GitHub Pages at https://beta.ridewestside.org/.
+Hugo static site for Ride Westside, a Portland westside cycling community focused on rides originating from the Beaverton / Tigard / Hillsboro area. Deployed to GitHub Pages at https://beta.ridewestside.org/.
+
+The site is a single-page link hub: social icons, an About section, a filterable upcoming events list, and a press section. All dynamic behavior (event sorting, filtering, map buttons, share buttons) runs client-side via compiled TypeScript. There is no backend.
+
+### How Events Appear on the Frontend
+
+JavaScript reads each event card's `data-date` attribute on page load and sorts events into three sections:
+
+- **Upcoming Rides** — events from today through the next 90 days, sorted soonest first
+- **Later This Year** — events more than 90 days out, collapsed by default
+- **Past Rides** — events before today, sorted most-recent first, collapsed by default
+
+Each card renders:
+- Title and date
+- Location display (`Start` or `Start → End` if different)
+- Tag chips (clickable — clicking a chip sets that tag as the active filter)
+- **View Event** button (requires `url`)
+- **Route** button (requires `route`)
+- **Navigate** button (requires `start_address`) — opens address in map app
+- **Share** button — native share sheet or clipboard fallback
+
+Filters (Start, End, Tag) persist across page loads via `localStorage` and URL query params (`?start=Beaverton&tag=ride`).
 
 ## Build & Dev Commands
 
@@ -49,15 +70,58 @@ events:
     url: "https://shift2bikes.org/calendar/event-23092"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
+    tags: [happy-hour]
 
   # Tigard Happy Hours - 1st and 3rd Tuesdays
   - title: "1/6 Tigard Happy Hour"
     date: "January 6, 2026"
     start: "Tigard"
     end: "Tigard"
+    tags: [happy-hour]
 ```
 
-Fields: `title` (required), `date`, `url` (optional), `route` (optional), `start`, `end`. Tigard events typically have no Shift2Bikes URL.
+### Event Fields
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `title` | Yes | Event name. Convention: `M/D EventName` prefix (e.g. `5/17 Pittock Mansion Ride`) |
+| `date` | Yes | Display date string: `"January 12, 2026"`. Used for sorting events into Upcoming / Later This Year / Past sections |
+| `url` | No | Shift2Bikes calendar URL. Renders a "View Event" button. Omit for Tigard events or events without a Shift2Bikes listing |
+| `route` | No | RideWithGPS route URL. Renders a "Route" button on the card |
+| `start` | No | Starting location name (e.g. `"Beaverton"`, `"Tigard"`, `"Quatama"`). Populates the Start filter dropdown and the location display on the card |
+| `end` | No | Ending location name. Populates the End filter dropdown. If equal to `start`, shown once; if different, shown as `Start → End` |
+| `start_address` | No | Full street address of the start location (e.g. `"12725 SW Millikan Way, Beaverton, OR 97005"`). When present, adds a navigation button that opens the address in the user's map app (Apple Maps, Google Maps, or OpenStreetMap based on device/settings) |
+| `tags` | No | YAML list of tag strings. Rendered as clickable filter chips on the card. See tag reference below |
+
+### Tags
+
+Tags appear as clickable chips on each event card and populate the Tag filter dropdown. Multiple tags are supported.
+
+| Tag | Meaning |
+|-----|---------|
+| `happy-hour` | Bike Happy Hour social event |
+| `ride` | Group ride |
+| `r2r` | Ride to Ride — the group rides to attend another event |
+| `not-rws` | Not a Ride Westside event; listed for community awareness |
+| `cause` | Charity or cause-related ride |
+| `festival` | Cycling festival or community event |
+| `challenging` | Ride with significant elevation, technical terrain, or above-average difficulty |
+
+New tags can be added freely — the frontend discovers all tags at runtime and populates the filter dropdown automatically.
+
+### events.md Sections
+
+Events are grouped by YAML comment headers. The `addEvent` wizard uses these headers to find the right insertion point. Sections in order:
+
+- `# Beaverton Bike Happy Hours` — 2nd and 4th Mondays; managed by `addRecurringEvents`
+- `# Tigard Happy Hours - 1st and 3rd Tuesdays` — 1st and 3rd Tuesdays; managed by `addRecurringEvents`
+- `# Ride to ride` — rides that travel to another event
+- `# Causes` — charity and cause rides
+- `# Special Rides` — featured or challenging rides
+- `# Memes` — test and joke events
+- `# Critical Mass` — (reserved)
+- `# Festivals` — festivals and community events
 
 ### File Manipulation
 
