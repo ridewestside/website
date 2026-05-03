@@ -1,4 +1,4 @@
-baseURL = 'https://beta.ridewestside.org/'
+baseURL = 'https://ridewestside.org/'
 languageCode = 'en-us'
 title = 'Ride Westside'
 theme = 'linkpage'
@@ -14,6 +14,19 @@ theme = 'linkpage'
     bluesky = "https://bsky.app/profile/ridewestside.bsky.social"
     ridewithgps = "https://ridewithgps.com/organizations/14703-ride-westside/home"
     github = "https://github.com/ridewestside/website"
+
+[mediaTypes]
+  [mediaTypes."text/calendar"]
+    suffixes = ["ics"]
+
+[outputFormats]
+  [outputFormats.Calendar]
+    mediaType = "text/calendar"
+    baseName = "calendar"
+    isPlainText = true
+
+[outputs]
+  home = ["HTML", "Calendar"]
 
 [markup]
   [markup.goldmark]

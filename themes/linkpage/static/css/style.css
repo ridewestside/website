@@ -623,6 +623,34 @@ hr {
     transition: all 0.2s ease;
 }
 
+/* Calendar subscription link (below events heading) */
+.calendar-subscribe-row {
+    text-align: center;
+    margin: -0.5rem 0 1rem;
+}
+
+.calendar-subscribe-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    opacity: 0.65;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.calendar-subscribe-link:hover {
+    opacity: 1;
+    color: var(--accent-color);
+}
+
+.calendar-subscribe-sep {
+    color: var(--text-secondary);
+    opacity: 0.4;
+    font-size: 0.75rem;
+}
+
 .settings-button:hover {
     background: var(--button-hover);
     color: var(--text-primary);
