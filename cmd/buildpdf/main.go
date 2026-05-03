@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"sort"
 	"strings"
 	"time"
 
@@ -63,6 +64,12 @@ func run() error {
 			upcoming = append(upcoming, e)
 		}
 	}
+
+	sort.Slice(upcoming, func(i, j int) bool {
+		ti, _ := time.Parse("January 2, 2006", upcoming[i].Date)
+		tj, _ := time.Parse("January 2, 2006", upcoming[j].Date)
+		return ti.Before(tj)
+	})
 
 	if len(upcoming) == 0 {
 		fmt.Println("BuildPDF: no upcoming events found")
