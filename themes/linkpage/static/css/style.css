@@ -645,6 +645,12 @@ hr {
     color: var(--accent-color);
 }
 
+.calendar-subscribe-sep {
+    color: var(--text-secondary);
+    opacity: 0.4;
+    font-size: 0.75rem;
+}
+
 .settings-button:hover {
     background: var(--button-hover);
     color: var(--text-primary);
