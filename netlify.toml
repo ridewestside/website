@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npx esbuild src/main.ts --bundle --minify --sourcemap --target=es2020 --outfile=themes/linkpage/static/js/main.js && hugo --gc --minify --baseURL ${DEPLOY_URL:-https://ridewestside.org}/"
+  command = "npm install && npx esbuild src/main.ts --bundle --minify --sourcemap --target=es2020 --outfile=themes/linkpage/static/js/main.js && hugo --gc --minify --baseURL ${DEPLOY_URL:-https://ridewestside.org}/ && go install github.com/magefile/mage@v1.15.0 && $(go env GOPATH)/bin/mage BuildPDF"
   publish = "public"
 
 [build.environment]
