@@ -1,4 +1,4 @@
-baseURL = 'https://beta.ridewestside.org/'
+baseURL = 'https://ridewestside.org/'
 languageCode = 'en-us'
 title = 'Ride Westside'
 theme = 'linkpage'
