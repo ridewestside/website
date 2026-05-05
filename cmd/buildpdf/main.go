@@ -19,15 +19,15 @@ const (
 	pageH      = 297.0
 	marginL    = 20.0
 	marginR    = 20.0
-	marginTop  = 40.0
+	marginTop  = 48.0 // enough room for a 24mm QR starting at y=6, divider at y=34, plus clearance
 	marginBot  = 22.0
 	contentW   = pageW - marginL - marginR // 170mm
 	evtQRSz    = 22.0                      // per-event QR code size
 	evtQRGap   = 4.0
 	textColW   = contentW - evtQRSz - evtQRGap // 144mm
 	evtQRX     = marginL + textColW + evtQRGap  // x=168mm
-	headerQRSz = 28.0
-	headerQRX  = pageW - marginR - headerQRSz // x=162mm
+	headerQRSz = 24.0
+	headerQRX  = pageW - marginR - headerQRSz // x=166mm
 )
 
 type frontMatter struct {
@@ -116,7 +116,6 @@ func run() error {
 	}
 
 	generated := time.Now().Format("January 2, 2006")
-	count := len(upcoming)
 
 	pdf := gofpdf.New("P", "mm", "A4", "")
 	pdf.SetMargins(marginL, marginTop, marginR)
@@ -132,15 +131,15 @@ func run() error {
 	}
 
 	pdf.SetHeaderFunc(func() {
-		pdf.SetFont("Helvetica", "B", 14)
+		pdf.SetFont("Helvetica", "B", 16)
 		pdf.SetTextColor(30, 30, 30)
-		pdf.SetXY(marginL, 7)
-		// Text column width stops before the QR code.
-		pdf.CellFormat(headerQRX-marginL-4, 12, "Ride Westside — Upcoming Rides", "", 0, "LM", false, 0, "")
-		pdf.Image("site-qr", headerQRX, 5, headerQRSz, headerQRSz, false, "", 0, "https://ridewestside.org")
+		pdf.SetXY(marginL, 8)
+		pdf.CellFormat(headerQRX-marginL-4, headerQRSz, "Ride Westside", "", 0, "LM", false, 0, "")
+		pdf.Image("site-qr", headerQRX, 6, headerQRSz, headerQRSz, false, "", 0, "https://ridewestside.org")
 		pdf.SetDrawColor(74, 222, 128)
 		pdf.SetLineWidth(0.5)
-		pdf.Line(marginL, marginTop-4, pageW-marginR, marginTop-4)
+		// Divider sits 8mm below the QR bottom, well above marginTop.
+		pdf.Line(marginL, 6+headerQRSz+6, pageW-marginR, 6+headerQRSz+6)
 	})
 
 	pdf.SetFooterFunc(func() {
@@ -153,11 +152,6 @@ func run() error {
 	})
 
 	pdf.AddPage()
-
-	pdf.SetFont("Helvetica", "I", 9)
-	pdf.SetTextColor(130, 130, 130)
-	pdf.CellFormat(0, 5, fmt.Sprintf("%d upcoming rides as of %s", count, generated), "", 1, "L", false, 0, "")
-	pdf.Ln(4)
 
 	for _, e := range upcoming {
 		hasQR := e.URL != "" && urlQRPNG[e.URL] != nil
@@ -257,6 +251,6 @@ func run() error {
 	if err := pdf.OutputFileAndClose(outPath); err != nil {
 		return fmt.Errorf("writing PDF: %w", err)
 	}
-	fmt.Printf("BuildPDF: wrote %d events to %s\n", count, outPath)
+	fmt.Printf("BuildPDF: wrote %d events to %s\n", len(upcoming), outPath)
 	return nil
 }
