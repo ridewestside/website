@@ -14,6 +14,22 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
+const (
+	pageW      = 210.0
+	pageH      = 297.0
+	marginL    = 20.0
+	marginR    = 20.0
+	marginTop  = 40.0
+	marginBot  = 22.0
+	contentW   = pageW - marginL - marginR // 170mm
+	evtQRSz    = 22.0                      // per-event QR code size
+	evtQRGap   = 4.0
+	textColW   = contentW - evtQRSz - evtQRGap // 144mm
+	evtQRX     = marginL + textColW + evtQRGap  // x=168mm
+	headerQRSz = 28.0
+	headerQRX  = pageW - marginR - headerQRSz // x=162mm
+)
+
 type frontMatter struct {
 	Events []event `yaml:"events"`
 }
@@ -65,9 +81,12 @@ func run() error {
 		}
 	}
 
-	sort.Slice(upcoming, func(i, j int) bool {
+	sort.SliceStable(upcoming, func(i, j int) bool {
 		ti, _ := time.Parse("January 2, 2006", upcoming[i].Date)
 		tj, _ := time.Parse("January 2, 2006", upcoming[j].Date)
+		if ti.Equal(tj) {
+			return upcoming[i].Title < upcoming[j].Title
+		}
 		return ti.Before(tj)
 	})
 
@@ -76,34 +95,58 @@ func run() error {
 		return nil
 	}
 
-	qrPNG, err := qrcode.Encode("https://ridewestside.org", qrcode.Medium, 128)
+	siteQRPNG, err := qrcode.Encode("https://ridewestside.org", qrcode.Medium, 256)
 	if err != nil {
-		return fmt.Errorf("generating QR code: %w", err)
+		return fmt.Errorf("generating site QR: %w", err)
+	}
+
+	// Pre-generate a QR PNG for each unique event URL.
+	urlQRPNG := make(map[string][]byte)
+	for _, e := range upcoming {
+		if e.URL == "" {
+			continue
+		}
+		if _, seen := urlQRPNG[e.URL]; seen {
+			continue
+		}
+		png, err := qrcode.Encode(e.URL, qrcode.Medium, 192)
+		if err == nil {
+			urlQRPNG[e.URL] = png
+		}
 	}
 
 	generated := time.Now().Format("January 2, 2006")
 	count := len(upcoming)
 
 	pdf := gofpdf.New("P", "mm", "A4", "")
-	pdf.SetMargins(20, 30, 20)
-	pdf.SetAutoPageBreak(true, 20)
-	pdf.RegisterImageOptionsReader("qr", gofpdf.ImageOptions{ImageType: "PNG"}, bytes.NewReader(qrPNG))
+	pdf.SetMargins(marginL, marginTop, marginR)
+	pdf.SetAutoPageBreak(true, marginBot)
+
+	pdf.RegisterImageOptionsReader("site-qr",
+		gofpdf.ImageOptions{ImageType: "PNG"}, bytes.NewReader(siteQRPNG))
+
+	// Register each unique URL QR under its URL as the key.
+	for url, png := range urlQRPNG {
+		pdf.RegisterImageOptionsReader(url,
+			gofpdf.ImageOptions{ImageType: "PNG"}, bytes.NewReader(png))
+	}
 
 	pdf.SetHeaderFunc(func() {
-		pdf.SetFont("Helvetica", "B", 13)
+		pdf.SetFont("Helvetica", "B", 14)
 		pdf.SetTextColor(30, 30, 30)
-		pdf.SetY(8)
-		pdf.CellFormat(160, 8, "Ride Westside - Upcoming Rides", "", 0, "L", false, 0, "")
-		pdf.Image("qr", 172, 6, 16, 16, false, "", 0, "https://ridewestside.org")
+		pdf.SetXY(marginL, 7)
+		// Text column width stops before the QR code.
+		pdf.CellFormat(headerQRX-marginL-4, 12, "Ride Westside — Upcoming Rides", "", 0, "LM", false, 0, "")
+		pdf.Image("site-qr", headerQRX, 5, headerQRSz, headerQRSz, false, "", 0, "https://ridewestside.org")
 		pdf.SetDrawColor(74, 222, 128)
-		pdf.SetLineWidth(0.4)
-		pdf.Line(20, 27, 190, 27)
+		pdf.SetLineWidth(0.5)
+		pdf.Line(marginL, marginTop-4, pageW-marginR, marginTop-4)
 	})
 
 	pdf.SetFooterFunc(func() {
 		pdf.SetY(-12)
 		pdf.SetFont("Helvetica", "I", 8)
-		pdf.SetTextColor(128, 128, 128)
+		pdf.SetTextColor(140, 140, 140)
 		pdf.CellFormat(0, 6,
 			fmt.Sprintf("Page %d  |  ridewestside.org  |  Generated %s", pdf.PageNo(), generated),
 			"", 0, "C", false, 0, "")
@@ -112,42 +155,99 @@ func run() error {
 	pdf.AddPage()
 
 	pdf.SetFont("Helvetica", "I", 9)
-	pdf.SetTextColor(120, 120, 120)
+	pdf.SetTextColor(130, 130, 130)
 	pdf.CellFormat(0, 5, fmt.Sprintf("%d upcoming rides as of %s", count, generated), "", 1, "L", false, 0, "")
 	pdf.Ln(4)
 
 	for _, e := range upcoming {
+		hasQR := e.URL != "" && urlQRPNG[e.URL] != nil
+		colW := contentW
+		if hasQR {
+			colW = textColW
+		}
+
+		// Estimate event block height so we can page-break before splitting an event.
+		estH := 6.0 + 5.0 // title + date
+		if e.Start != "" {
+			estH += 4.5
+		}
+		if len(e.Tags) > 0 {
+			estH += 4.5
+		}
+		if e.URL != "" {
+			estH += 4.5
+		}
+		if hasQR && evtQRSz > estH {
+			estH = evtQRSz
+		}
+		estH += 8.0 // bottom gap + divider
+
+		if pdf.GetY()+estH > pageH-marginBot {
+			pdf.AddPage()
+		}
+
+		startY := pdf.GetY()
+
+		// Title
 		pdf.SetFont("Helvetica", "B", 11)
 		pdf.SetTextColor(20, 20, 20)
-		pdf.MultiCell(0, 6, e.Title, "", "L", false)
+		pdf.SetX(marginL)
+		pdf.MultiCell(colW, 6, e.Title, "", "L", false)
 
+		// Date
 		pdf.SetFont("Helvetica", "", 10)
-		pdf.SetTextColor(50, 50, 50)
-		pdf.CellFormat(0, 5, e.Date, "", 1, "L", false, 0, "")
+		pdf.SetTextColor(60, 60, 60)
+		pdf.SetX(marginL)
+		pdf.CellFormat(colW, 5, e.Date, "", 1, "L", false, 0, "")
 
+		// Location
 		if e.Start != "" {
 			loc := e.Start
 			if e.End != "" && e.End != e.Start {
-				loc += " > " + e.End
+				loc += " → " + e.End
 			}
 			pdf.SetFont("Helvetica", "", 9)
-			pdf.SetTextColor(80, 80, 80)
-			pdf.CellFormat(0, 4, "Location: "+loc, "", 1, "L", false, 0, "")
+			pdf.SetTextColor(90, 90, 90)
+			pdf.SetX(marginL)
+			pdf.CellFormat(colW, 4.5, loc, "", 1, "L", false, 0, "")
 		}
 
+		// Tags
 		if len(e.Tags) > 0 {
 			pdf.SetFont("Helvetica", "I", 8)
-			pdf.SetTextColor(100, 100, 100)
-			pdf.CellFormat(0, 4, strings.Join(e.Tags, ", "), "", 1, "L", false, 0, "")
+			pdf.SetTextColor(110, 110, 110)
+			pdf.SetX(marginL)
+			pdf.CellFormat(colW, 4.5, strings.Join(e.Tags, "  ·  "), "", 1, "L", false, 0, "")
 		}
 
+		// URL
 		if e.URL != "" {
 			pdf.SetFont("Helvetica", "", 8)
-			pdf.SetTextColor(0, 80, 180)
-			pdf.CellFormat(0, 4, e.URL, "", 1, "L", false, 0, e.URL)
+			pdf.SetTextColor(0, 90, 200)
+			pdf.SetX(marginL)
+			pdf.CellFormat(colW, 4.5, e.URL, "", 1, "L", false, 0, e.URL)
 		}
 
-		pdf.Ln(5)
+		textEndY := pdf.GetY()
+
+		// Per-event QR code, vertically centered relative to the text block.
+		if hasQR {
+			qrY := startY + (textEndY-startY-evtQRSz)/2.0
+			if qrY < startY {
+				qrY = startY
+			}
+			pdf.Image(e.URL, evtQRX, qrY, evtQRSz, evtQRSz, false, "", 0, e.URL)
+			if qrY+evtQRSz > textEndY {
+				textEndY = qrY + evtQRSz
+			}
+		}
+
+		// Divider between events.
+		endY := textEndY + 4.0
+		pdf.SetDrawColor(220, 220, 220)
+		pdf.SetLineWidth(0.2)
+		pdf.Line(marginL, endY, pageW-marginR, endY)
+		pdf.SetY(endY + 4.0)
 	}
 
 	if err := os.MkdirAll("public", 0755); err != nil {
