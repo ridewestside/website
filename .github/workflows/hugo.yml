@@ -79,13 +79,6 @@ jobs:
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
 
-      - name: Generate PDF
-        env:
-          TZ: America/Los_Angeles
-        run: |
-          go install github.com/magefile/mage@v1.15.0
-          mage BuildPDF
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
