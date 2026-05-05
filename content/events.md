@@ -536,6 +536,22 @@ events:
     end: "Ladd's Addition"
     tags: [ride, r2r]
 
+  - title: "6/1 Westside R2R to Bike Summer Kickoff"
+    date: "June 1, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-23737"
+    start: "Beaverton"
+    end: "Portland"
+    start_address: "4108 SW Lombard Ave, Beaverton, OR 97005"
+    tags: [ride, r2r]
+
+  - title: "6/1 Queer Westsiders Kickoff R2R"
+    date: "June 1, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-23738"
+    start: "Sunset TC"
+    end: "Portland"
+    start_address: "10470 SW Barnes Road, Portland, OR 97225"
+    tags: [ride, r2r]
+
   # Causes
   - title: "5/2 Andi's Ride 1 - Supporting a Peer for Mental Health Month"
     date: "May 2, 2026"
@@ -562,6 +578,10 @@ events:
     end: "Hillsboro"
     tags: [ride]
 
+  - title: "6/7 The 67 Ride"
+    date: "June 7, 2026"
+    tags: [ride]
+
   # Critical Mass
   # Festivals
   - title: "Bike Beaverton"
@@ -570,5 +590,47 @@ events:
     start: "Beaverton"
     end: "Beaverton"
     tags: [festival]
+
+  - title: "5/17 SW Portland Sunday Parkways"
+    date: "May 17, 2026"
+    url: "https://www.portland.gov/sunday-parkways/southwest-event-2026"
+    start: "Portland"
+    end: "Portland"
+    tags: [festival, ride, not-rws, family-friendly]
+
+  - title: "6/1 Bike Summer Kickoff Ride"
+    date: "June 1, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-23557"
+    start: "Portland"
+    end: "Portland"
+    tags: [festival, ride, not-rws, family-friendly]
+
+  - title: "6/28 East Portland Sunday Parkways"
+    date: "June 28, 2026"
+    url: "https://www.portland.gov/sunday-parkways/east-event-2026"
+    start: "Portland"
+    end: "Portland"
+    tags: [festival, ride, not-rws, family-friendly]
+
+  - title: "8/2 North Portland Sunday Parkways"
+    date: "August 2, 2026"
+    url: "https://www.portland.gov/sunday-parkways/north-event-2026"
+    start: "Portland"
+    end: "Portland"
+    tags: [festival, ride, not-rws, family-friendly]
+
+  - title: "8/9 Providence Bridge Pedal"
+    date: "August 9, 2026"
+    url: "https://www.providence.org/lp/bridge-pedal"
+    start: "Portland"
+    end: "Portland"
+    tags: [ride, not-rws, family-friendly]
+
+  - title: "9/13 Downtown Portland Sunday Parkways"
+    date: "September 13, 2026"
+    url: "https://www.portland.gov/sunday-parkways/downtown-event-2026"
+    start: "Portland"
+    end: "Portland"
+    tags: [festival, ride, not-rws, family-friendly]
 
 ---

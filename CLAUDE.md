@@ -107,6 +107,7 @@ Tags appear as clickable chips on each event card and populate the Tag filter dr
 | `cause` | Charity or cause-related ride |
 | `festival` | Cycling festival or community event |
 | `challenging` | Ride with significant elevation, technical terrain, or above-average difficulty |
+| `family-friendly` | Explicitly welcoming to families and children |
 
 New tags can be added freely — the frontend discovers all tags at runtime and populates the filter dropdown automatically.
 
