@@ -79,6 +79,9 @@ jobs:
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
 
+      - name: Build PDF
+        run: go run ./cmd/buildpdf
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
