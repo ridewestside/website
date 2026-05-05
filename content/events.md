@@ -24,6 +24,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23116"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
   - title: "1/26 Bike Happy Hour"
@@ -40,6 +41,7 @@ events:
     #route: "https://ridewithgps.com/routes/12345"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
   - title: "2/9 Bike Happy Hour"
@@ -56,6 +58,7 @@ events:
     #route: "https://ridewithgps.com/routes/12345"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
   - title: "2/23 Bike Happy Hour"
@@ -72,6 +75,7 @@ events:
     #route: "https://ridewithgps.com/routes/12345"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
   - title: "3/9 Bike Happy Hour"
@@ -88,6 +92,7 @@ events:
     #route: "https://ridewithgps.com/routes/12345"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
   - title: "3/23 Bike Happy Hour"
@@ -104,6 +109,7 @@ events:
     #route: "https://ridewithgps.com/routes/12345"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
   - title: "4/13 Bike Happy Hour"
@@ -119,6 +125,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23122"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
   - title: "4/27 Bike Happy Hour"
@@ -134,6 +141,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23123"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
   - title: "5/2 Beaverton Foodie Bike Ride (not a RWS ride)"
@@ -141,6 +149,7 @@ events:
     url: "https://www.shift2bikes.org/calendar/event-23576"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "15655 SW Millikan Way, Beaverton, OR 97003"
     tags: [ride, not-rws]
 
   - title: "5/11 Bike Happy Hour"
@@ -156,6 +165,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23124"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
   - title: "5/25 Bike Happy Hour"
@@ -171,6 +181,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23125"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
   - title: "6/8 Bike Happy Hour"
@@ -186,6 +197,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23126"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
   - title: "6/22 Bike Happy Hour"
@@ -201,6 +213,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23127"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
   - title: "7/13 Bike Happy Hour"
@@ -216,6 +229,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23128"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
   - title: "7/27 Bike Happy Hour"
@@ -231,6 +245,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23129"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
   - title: "8/10 Bike Happy Hour"
@@ -246,6 +261,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23130"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
   - title: "8/24 Bike Happy Hour"
@@ -261,6 +277,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23131"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
   - title: "9/14 Bike Happy Hour"
@@ -276,6 +293,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23132"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
   - title: "9/28 Bike Happy Hour"
@@ -291,6 +309,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23133"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
   - title: "10/12 Bike Happy Hour"
@@ -306,6 +325,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23134"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
   - title: "10/26 Bike Happy Hour"
@@ -321,6 +341,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23135"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
   - title: "11/9 Bike Happy Hour"
@@ -336,6 +357,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23136"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
   - title: "11/23 Bike Happy Hour"
@@ -351,6 +373,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23137"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
   - title: "12/14 Bike Happy Hour"
@@ -366,6 +389,7 @@ events:
     url: "https://shift2bikes.org/calendar/event-23138"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
   - title: "12/28 Bike Happy Hour"
@@ -381,151 +405,120 @@ events:
     url: "https://shift2bikes.org/calendar/event-23139"
     start: "Beaverton"
     end: "Beaverton"
+    start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
-  # Tigard Happy Hours - 1st and 3rd Tuesdays
-  - title: "1/6 Tigard Happy Hour"
-    date: "January 6, 2026"
+  # Tigard Happy Hours - 2nd and 4th Thursdays
+  - title: "4/9 Tigard Bike Happy Hour"
+    date: "April 9, 2026"
+    url: "https://shift2bikes.org/calendar/event-23159"
     start: "Tigard"
     end: "Tigard"
+    start_address: "12562 SW Main St, Tigard, OR 97223"
     tags: [happy-hour]
 
-  - title: "1/20 Tigard Happy Hour"
-    date: "January 20, 2026"
+  - title: "4/23 Tigard Bike Happy Hour"
+    date: "April 23, 2026"
+    url: "https://shift2bikes.org/calendar/event-23160"
     start: "Tigard"
     end: "Tigard"
+    start_address: "12562 SW Main St, Tigard, OR 97223"
     tags: [happy-hour]
 
-  - title: "2/3 Tigard Happy Hour"
-    date: "February 3, 2026"
+  - title: "5/14 Tigard Bike Happy Hour"
+    date: "May 14, 2026"
+    url: "https://shift2bikes.org/calendar/event-23161"
     start: "Tigard"
     end: "Tigard"
+    start_address: "12562 SW Main St, Tigard, OR 97223"
     tags: [happy-hour]
 
-  - title: "2/17 Tigard Happy Hour"
-    date: "February 17, 2026"
+  - title: "5/28 Tigard Bike Happy Hour"
+    date: "May 28, 2026"
+    url: "https://shift2bikes.org/calendar/event-23162"
     start: "Tigard"
     end: "Tigard"
+    start_address: "12562 SW Main St, Tigard, OR 97223"
     tags: [happy-hour]
 
-  - title: "3/3 Tigard Happy Hour"
-    date: "March 3, 2026"
+  - title: "6/11 Tigard Bike Happy Hour"
+    date: "June 11, 2026"
+    url: "https://shift2bikes.org/calendar/event-23163"
     start: "Tigard"
     end: "Tigard"
+    start_address: "12562 SW Main St, Tigard, OR 97223"
     tags: [happy-hour]
 
-  - title: "3/17 Tigard Happy Hour"
-    date: "March 17, 2026"
+  - title: "6/25 Tigard Bike Happy Hour"
+    date: "June 25, 2026"
+    url: "https://shift2bikes.org/calendar/event-23164"
     start: "Tigard"
     end: "Tigard"
+    start_address: "12562 SW Main St, Tigard, OR 97223"
     tags: [happy-hour]
 
-  - title: "4/7 Tigard Happy Hour"
-    date: "April 7, 2026"
+  - title: "7/9 Tigard Bike Happy Hour"
+    date: "July 9, 2026"
+    url: "https://shift2bikes.org/calendar/event-23166"
     start: "Tigard"
     end: "Tigard"
+    start_address: "12562 SW Main St, Tigard, OR 97223"
     tags: [happy-hour]
 
-  - title: "4/21 Tigard Happy Hour"
-    date: "April 21, 2026"
+  - title: "7/23 Tigard Bike Happy Hour"
+    date: "July 23, 2026"
+    url: "https://shift2bikes.org/calendar/event-23165"
     start: "Tigard"
     end: "Tigard"
+    start_address: "12562 SW Main St, Tigard, OR 97223"
     tags: [happy-hour]
 
-  - title: "5/5 Tigard Happy Hour"
-    date: "May 5, 2026"
+  - title: "8/13 Tigard Bike Happy Hour"
+    date: "August 13, 2026"
+    url: "https://shift2bikes.org/calendar/event-23167"
     start: "Tigard"
     end: "Tigard"
+    start_address: "12562 SW Main St, Tigard, OR 97223"
     tags: [happy-hour]
 
-  - title: "5/19 Tigard Happy Hour"
-    date: "May 19, 2026"
+  - title: "8/27 Tigard Bike Happy Hour"
+    date: "August 27, 2026"
+    url: "https://shift2bikes.org/calendar/event-23168"
     start: "Tigard"
     end: "Tigard"
+    start_address: "12562 SW Main St, Tigard, OR 97223"
     tags: [happy-hour]
 
-  - title: "6/2 Tigard Happy Hour"
-    date: "June 2, 2026"
+  - title: "9/10 Tigard Bike Happy Hour"
+    date: "September 10, 2026"
+    url: "https://shift2bikes.org/calendar/event-23169"
     start: "Tigard"
     end: "Tigard"
+    start_address: "12562 SW Main St, Tigard, OR 97223"
     tags: [happy-hour]
 
-  - title: "6/16 Tigard Happy Hour"
-    date: "June 16, 2026"
+  - title: "9/24 Tigard Bike Happy Hour"
+    date: "September 24, 2026"
+    url: "https://shift2bikes.org/calendar/event-23170"
     start: "Tigard"
     end: "Tigard"
+    start_address: "12562 SW Main St, Tigard, OR 97223"
     tags: [happy-hour]
 
-  - title: "7/7 Tigard Happy Hour"
-    date: "July 7, 2026"
+  - title: "10/8 Tigard Bike Happy Hour"
+    date: "October 8, 2026"
+    url: "https://shift2bikes.org/calendar/event-23171"
     start: "Tigard"
     end: "Tigard"
+    start_address: "12562 SW Main St, Tigard, OR 97223"
     tags: [happy-hour]
 
-  - title: "7/21 Tigard Happy Hour"
-    date: "July 21, 2026"
+  - title: "10/22 Tigard Bike Happy Hour"
+    date: "October 22, 2026"
+    url: "https://shift2bikes.org/calendar/event-23172"
     start: "Tigard"
     end: "Tigard"
-    tags: [happy-hour]
-
-  - title: "8/4 Tigard Happy Hour"
-    date: "August 4, 2026"
-    start: "Tigard"
-    end: "Tigard"
-    tags: [happy-hour]
-
-  - title: "8/18 Tigard Happy Hour"
-    date: "August 18, 2026"
-    start: "Tigard"
-    end: "Tigard"
-    tags: [happy-hour]
-
-  - title: "9/1 Tigard Happy Hour"
-    date: "September 1, 2026"
-    start: "Tigard"
-    end: "Tigard"
-    tags: [happy-hour]
-
-  - title: "9/15 Tigard Happy Hour"
-    date: "September 15, 2026"
-    start: "Tigard"
-    end: "Tigard"
-    tags: [happy-hour]
-
-  - title: "10/6 Tigard Happy Hour"
-    date: "October 6, 2026"
-    start: "Tigard"
-    end: "Tigard"
-    tags: [happy-hour]
-
-  - title: "10/20 Tigard Happy Hour"
-    date: "October 20, 2026"
-    start: "Tigard"
-    end: "Tigard"
-    tags: [happy-hour]
-
-  - title: "11/3 Tigard Happy Hour"
-    date: "November 3, 2026"
-    start: "Tigard"
-    end: "Tigard"
-    tags: [happy-hour]
-
-  - title: "11/17 Tigard Happy Hour"
-    date: "November 17, 2026"
-    start: "Tigard"
-    end: "Tigard"
-    tags: [happy-hour]
-
-  - title: "12/1 Tigard Happy Hour"
-    date: "December 1, 2026"
-    start: "Tigard"
-    end: "Tigard"
-    tags: [happy-hour]
-
-  - title: "12/15 Tigard Happy Hour"
-    date: "December 15, 2026"
-    start: "Tigard"
-    end: "Tigard"
+    start_address: "12562 SW Main St, Tigard, OR 97223"
     tags: [happy-hour]
 
   # Ride to ride
@@ -534,6 +527,7 @@ events:
     url: "https://www.shift2bikes.org/calendar/event-23431"
     start: "Beaverton"
     end: "Ladd's Addition"
+    start_address: "12725 SW Millikan Way, Beaverton, OR 97005"
     tags: [ride, r2r]
 
   - title: "6/1 Westside R2R to Bike Summer Kickoff"

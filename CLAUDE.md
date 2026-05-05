@@ -73,7 +73,7 @@ events:
     start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
     tags: [happy-hour]
 
-  # Tigard Happy Hours - 1st and 3rd Tuesdays
+  # Tigard Happy Hours - 2nd and 4th Thursdays
   - title: "1/6 Tigard Happy Hour"
     date: "January 6, 2026"
     start: "Tigard"
@@ -116,7 +116,7 @@ New tags can be added freely — the frontend discovers all tags at runtime and 
 Events are grouped by YAML comment headers. The `addEvent` wizard uses these headers to find the right insertion point. Sections in order:
 
 - `# Beaverton Bike Happy Hours` — 2nd and 4th Mondays; managed by `addRecurringEvents`
-- `# Tigard Happy Hours - 1st and 3rd Tuesdays` — 1st and 3rd Tuesdays; managed by `addRecurringEvents`
+- `# Tigard Happy Hours - 2nd and 4th Thursdays` — 2nd and 4th Thursdays; managed by `addRecurringEvents`
 - `# Ride to ride` — rides that travel to another event
 - `# Causes` — charity and cause rides
 - `# Special Rides` — featured or challenging rides
@@ -135,7 +135,7 @@ events.md is edited line-by-line (not YAML-parsed) to preserve comments and form
 ## Recurring Event Schedule
 
 - **Beaverton Happy Hours**: 2nd and 4th Monday of each month
-- **Tigard Happy Hours**: 1st and 3rd Tuesday of each month
+- **Tigard Happy Hours**: 2nd and 4th Thursday of each month (Cooper Mountain Ale Works, Tigard)
 
 ## Tool Versions
 
