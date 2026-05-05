@@ -42,6 +42,12 @@ jobs:
           node-version: "20"
           cache: "npm"
 
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache-dependency-path: go.sum
+
       - name: Install dependencies
         run: npm install
 
@@ -72,6 +78,13 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+      - name: Generate PDF
+        env:
+          TZ: America/Los_Angeles
+        run: |
+          go install github.com/magefile/mage@v1.15.0
+          mage BuildPDF
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

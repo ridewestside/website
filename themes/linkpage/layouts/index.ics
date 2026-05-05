@@ -1,0 +1,27 @@
+{{- $ep := .Site.GetPage "/events" -}}
+{{- $months := dict "January" "01" "February" "02" "March" "03" "April" "04" "May" "05" "June" "06" "July" "07" "August" "08" "September" "09" "October" "10" "November" "11" "December" "12" -}}
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ride Westside//Ride Westside Events//EN
+X-WR-CALNAME:Ride Westside
+X-WR-CALDESC:Upcoming rides and events from Ride Westside Portland
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+{{- range $ep.Params.events }}
+{{- if .date }}
+{{- $parts := split .date " " }}
+{{- $month := index $months (index $parts 0) }}
+{{- $day := index $parts 1 | replaceRE "," "" | int }}
+{{- $year := index $parts 2 }}
+{{- if and $month $year }}
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:{{ $year }}{{ $month }}{{ printf "%02d" $day }}
+SUMMARY:{{ replaceRE `;` `\;` (replaceRE `,` `\,` (replaceRE `\\` `\\\\` .title)) }}{{ with .start_address }}
+LOCATION:{{ replaceRE `;` `\;` (replaceRE `,` `\,` (replaceRE `\\` `\\\\` .)) }}{{ end }}{{ with .url }}
+URL:{{ . }}{{ end }}
+UID:{{ $year }}{{ $month }}{{ printf "%02d" $day }}-{{ .title | urlize }}@ridewestside.org
+END:VEVENT
+{{ end }}
+{{- end }}
+{{- end }}
+END:VCALENDAR

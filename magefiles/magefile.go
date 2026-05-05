@@ -12,11 +12,14 @@ import (
 
 var Default = Build
 
-// Build builds TypeScript and Hugo site
+// Build builds TypeScript, Hugo site, and PDF
 func Build() error {
 	mg.Deps(BuildTS)
 	fmt.Println("Building Hugo site...")
-	return sh.RunV("hugo", "--gc", "--minify")
+	if err := sh.RunV("hugo", "--gc", "--minify"); err != nil {
+		return err
+	}
+	return BuildPDF()
 }
 
 // InstallNpmDeps installs npm dependencies
