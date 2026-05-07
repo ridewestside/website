@@ -585,6 +585,15 @@ events:
     url: "https://www.shift2bikes.org/calendar/event-23669"
     start: "Quatama"
     end: "Quatama"
+    start_address: "NW 205th Ave & NW Quatama Rd, Hillsboro, OR 97124"
+    tags: [ride, cause]
+
+  - title: "5/10 Andi's Ride 2 - Supporting a Peer for Mental Health Month"
+    date: "May 10, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-23787"
+    start: "Quatama"
+    end: "Quatama"
+    start_address: "NW 205th Ave & NW Quatama Rd, Hillsboro, OR 97124"
     tags: [ride, cause]
 
   - title: "5/17 Pittock Mansion / Council Crest Double Feature"
