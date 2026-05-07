@@ -93,11 +93,14 @@ def format_event(event) -> str:
     location = get_field(event, "location").replace("\n", ", ").strip()
     contact = get_field(event, "contact")
     description = get_field(event, "description")
+    url = get_field(event, "url")
     lines = [f"  {summary}  [{local}]"]
     if location:
         lines.append(f"    Location:    {location}")
     if contact:
         lines.append(f"    Contact:     {contact}")
+    if url:
+        lines.append(f"    URL:         {url}")
     if description:
         short = description.replace("\\n", " ").replace("\n", " ").strip()
         if len(short) > 200:
