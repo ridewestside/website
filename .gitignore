@@ -3,6 +3,7 @@
 
 # Claude Code local state
 .claude/
+!.claude/commands/
 /resources/_gen/
 
 # Hugo cache
