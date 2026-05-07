@@ -1,5 +1,7 @@
 # CLAUDE.md
 
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 ## Project Overview
 
 Hugo static site for Ride Westside, a Portland westside cycling community focused on rides originating from the Beaverton / Tigard / Hillsboro area. Deployed to GitHub Pages at https://beta.ridewestside.org/.
@@ -55,7 +57,10 @@ mage addRecurringEvents 2027     # Generate a year of recurring happy hours (ide
   - `magefile.go` — Build, serve, clean targets
   - `checklinks.go` — Link validation with Shift2Bikes API awareness
   - `addevent.go` — Event creation (single + recurring)
+  - `buildpdf.go` — Generates `public/events.pdf` via `cmd/buildpdf`
+- `scripts/ical_events.py` — Fetch and filter events from an iCal file or URL (see below)
 - `.github/workflows/` — CI/CD + event management workflows
+- `.claude/commands/` — Project-specific Claude Code slash commands
 
 ## Key Patterns
 
@@ -113,16 +118,12 @@ New tags can be added freely — the frontend discovers all tags at runtime and 
 
 ### events.md Sections
 
-Events are grouped by YAML comment headers. The `addEvent` wizard uses these headers to find the right insertion point. Sections in order:
+Events are grouped by YAML comment headers. Sections in order:
 
 - `# Beaverton Bike Happy Hours` — 2nd and 4th Mondays; managed by `addRecurringEvents`
 - `# Tigard Happy Hours - 2nd and 4th Thursdays` — 2nd and 4th Thursdays; managed by `addRecurringEvents`
-- `# Ride to ride` — rides that travel to another event
-- `# Causes` — charity and cause rides
-- `# Special Rides` — featured or challenging rides
-- `# Memes` — test and joke events
-- `# Critical Mass` — (reserved)
-- `# Festivals` — festivals and community events
+- `# Festivals` — community events, festivals, not-RWS rides
+- `# Rides` — all other rides; append new rides here
 
 ### File Manipulation
 
@@ -145,6 +146,24 @@ Managed via `mise.toml`: Go 1.25.5, Node 22, mage (latest), esbuild (latest), Ty
 
 TypeScript → esbuild (bundle/minify/sourcemap) → `themes/linkpage/static/js/main.js` → Hugo (--gc --minify) → `public/`
 
+## scripts/ical_events.py
+
+Fetches and filters events from the Shift2Bikes iCal feed (or any `.ics` file/URL). Useful for enriching manually-described events with Shift2Bikes URLs, addresses, and metadata before adding them to `events.md`.
+
+```bash
+# Requires: pip install recurring-ical-events icalendar
+python3 scripts/ical_events.py "webcal://www.shift2bikes.org/cal/shift-calendar.php" \
+  -k "keyword" --start 2026-06-01 --end 2026-09-01
+```
+
+- `-k WORD` — keyword filter (repeatable; all must match); searches summary, contact, description, location
+- `-f FIELD` — restrict search to a specific field (`summary`, `contact`, `description`, `location`, `all`)
+- `--start` / `--end` — date range (default: today + 1 year)
+- `--count` — print count only
+- `-v` — show cache status (responses are cached via ETag/Last-Modified at `~/.cache/ical_events/`)
+
+Output includes event title, date/time, location, contact, Shift2Bikes URL, and truncated description.
+
 ## GitHub Workflows
 
 - **hugo.yml** — Deploy to Pages on push to `main`
@@ -153,7 +172,13 @@ TypeScript → esbuild (bundle/minify/sourcemap) → `themes/linkpage/static/js/
 
 Event workflows create PRs (not direct pushes) for review before publishing.
 
+## Deployment
+
+- **GitHub Pages** — primary deployment, triggered on push to `main` via `hugo.yml`
+- **Netlify** — deploy previews for PRs; `netlify.toml` sets build command and Hugo version
+
 ## External Integrations
 
-- **Shift2Bikes API** (`https://www.shift2bikes.org/api/manage_event.php`) — Event creation. Requires email confirmation after API submission.
-- **Shift2Bikes event validation** — `checkLinks` validates event URLs via API at `shift2bikes.org/api/events.php?id=` instead of scraping the SPA.
+- **Shift2Bikes iCal** (`webcal://www.shift2bikes.org/cal/shift-calendar.php`) — community calendar; use `scripts/ical_events.py` to query it
+- **Shift2Bikes API** (`https://www.shift2bikes.org/api/manage_event.php`) — event creation; requires email confirmation after API submission
+- **Shift2Bikes event validation** — `checkLinks` validates event URLs via API at `shift2bikes.org/api/events.php?id=` instead of scraping the SPA
