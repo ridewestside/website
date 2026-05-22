@@ -550,6 +550,14 @@ events:
     end: "Portland"
     tags: [festival, ride, not-rws, family-friendly]
 
+  - title: "6/28 Pride in the Park 2026"
+    date: "June 28, 2026"
+    url: "https://pridebeaverton.org/"
+    start: "Beaverton"
+    end: "Beaverton"
+    start_address: "SW 5th St & SW Hall Blvd, Beaverton, OR 97005"
+    tags: [festival, not-rws, family-friendly]
+
   - title: "8/2 North Portland Sunday Parkways"
     date: "August 2, 2026"
     url: "https://www.portland.gov/sunday-parkways/north-event-2026"
@@ -727,5 +735,12 @@ events:
   - title: "6/7 The 67 Ride"
     date: "June 7, 2026"
     tags: [ride]
+
+  - title: "8/8 Beaverton Night Market Bike Bus"
+    date: "August 8, 2026"
+    url: "https://shift2bikes.org/calendar/event-24146"
+    start: "Beaverton"
+    end: "Beaverton"
+    tags: [ride, family-friendly]
 
 ---
