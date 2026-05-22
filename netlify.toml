@@ -1,8 +1,9 @@
 [build]
-  command = "npm install && npx esbuild src/main.ts --bundle --minify --sourcemap --target=es2020 --outfile=themes/linkpage/static/js/main.js && hugo --gc --minify --baseURL ${DEPLOY_URL:-https://ridewestside.org}/ && go run ./cmd/buildpdf"
+  command = "scripts/install_typst.sh && npm install && npx esbuild src/main.ts --bundle --minify --sourcemap --target=es2020 --outfile=themes/linkpage/static/js/main.js && hugo --gc --minify --baseURL ${DEPLOY_URL:-https://ridewestside.org}/ && go run ./cmd/buildpdf"
   publish = "public"
 
 [build.environment]
   HUGO_VERSION = "0.140.1"
   TZ = "America/Los_Angeles"
   GO_VERSION = "1.21"
+  TYPST_VERSION = "0.14.2"

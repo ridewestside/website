@@ -57,7 +57,7 @@ mage addRecurringEvents 2027     # Generate a year of recurring happy hours (ide
   - `magefile.go` — Build, serve, clean targets
   - `checklinks.go` — Link validation with Shift2Bikes API awareness
   - `addevent.go` — Event creation (single + recurring)
-  - `buildpdf.go` — Generates `public/events.pdf` via `cmd/buildpdf`
+  - `buildpdf.go` — Generates `public/events.pdf` via `cmd/buildpdf` (renders a Typst template; requires the `typst` CLI on PATH)
 - `scripts/ical_events.py` — Fetch and filter events from an iCal file or URL (see below)
 - `.github/workflows/` — CI/CD + event management workflows
 - `.claude/commands/` — Project-specific Claude Code slash commands
@@ -141,6 +141,8 @@ events.md is edited line-by-line (not YAML-parsed) to preserve comments and form
 ## Tool Versions
 
 Managed via `mise.toml`: Go 1.25.5, Node 22, mage (latest), esbuild (latest), TypeScript (latest).
+
+The PDF builder also requires the `typst` CLI on PATH. Install via `mise use -g typst@0.14.2`, your package manager, or `scripts/install_typst.sh` (used by the Netlify build).
 
 ## Build Pipeline
 
