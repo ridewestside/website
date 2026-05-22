@@ -1,6 +1,15 @@
 {{ define "main" }}
-<article>
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
+<article class="single-page">
+    <a href="{{ "/" | relURL }}" class="back-home" data-goatcounter-click="{{ with urls.Parse $.Site.BaseURL }}{{ .Host }}{{ end }}-back-home-from-{{ .File.BaseFileName }}">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+        </svg>
+        Back to Ride Westside
+    </a>
+    <h1 class="single-title">{{ .Title }}</h1>
+    {{ with .Params.description }}<p class="single-description">{{ . }}</p>{{ end }}
+    <div class="about-content single-content">
+        {{ .Content }}
+    </div>
 </article>
 {{ end }}

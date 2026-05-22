@@ -411,6 +411,65 @@ hr {
     color: var(--text-primary);
 }
 
+.about-content a {
+    color: var(--accent-color);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.about-content a:hover {
+    color: var(--text-primary);
+}
+
+.about-content hr {
+    border: none;
+    border-top: 1px solid var(--button-border);
+    margin: 2rem 0 1.25rem;
+}
+
+.about-content em {
+    color: var(--text-secondary);
+}
+
+/* Single Page (jurisdictions, engagement, etc.) */
+.single-page {
+    padding-top: 0.5rem;
+}
+
+.back-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    padding: 0.4rem 0.75rem 0.4rem 0.5rem;
+    border-radius: 999px;
+    background: var(--button-bg);
+    border: 1px solid var(--button-border);
+    transition: all 0.2s ease;
+}
+
+.back-home:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-color);
+}
+
+.single-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.single-description {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
 /* Gallery */
 .gallery {
     display: grid;
