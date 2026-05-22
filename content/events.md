@@ -550,6 +550,13 @@ events:
     end: "Portland"
     tags: [festival, ride, not-rws, family-friendly]
 
+  - title: "6/28 Pride Beaverton"
+    date: "June 28, 2026"
+    url: "https://pridebeaverton.org/"
+    start: "Beaverton"
+    end: "Beaverton"
+    tags: [festival, not-rws]
+
   - title: "8/2 North Portland Sunday Parkways"
     date: "August 2, 2026"
     url: "https://www.portland.gov/sunday-parkways/north-event-2026"
