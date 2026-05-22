@@ -728,4 +728,11 @@ events:
     date: "June 7, 2026"
     tags: [ride]
 
+  - title: "8/8 Beaverton Night Market Bike Bus"
+    date: "August 8, 2026"
+    url: "https://shift2bikes.org/calendar/event-24146"
+    start: "Beaverton"
+    end: "Beaverton"
+    tags: [ride]
+
 ---
