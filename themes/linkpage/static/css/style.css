@@ -481,7 +481,11 @@ hr {
     text-transform: uppercase;
     letter-spacing: 0.12em;
     color: var(--text-secondary);
-    margin-bottom: 0.75rem;
+    margin: 1.25rem 0 0.75rem;
+}
+
+.project-group-title:first-child {
+    margin-top: 0;
 }
 
 .project-card {

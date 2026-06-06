@@ -83,6 +83,94 @@
 </section>
 {{ end }}
 
+<!-- Projects Section -->
+{{ $projects := .Site.GetPage "/projects" }}
+{{ if $projects }}
+{{ $projectPages := $projects.Pages }}
+{{ if $projectPages }}
+<section class="link-section">
+    <button class="collapsible-toggle" aria-expanded="false" aria-controls="projects-container">
+        <h2 class="section-title">
+            Westside Projects
+            <span class="toggle-icon">+</span>
+        </h2>
+    </button>
+    <div class="collapsible-container" id="projects-container">
+        {{ $inprogress := where $projectPages "Params.status" "in-progress" }}
+        {{ $proposed   := where $projectPages "Params.status" "proposed" }}
+        {{ $completed  := where $projectPages "Params.status" "completed" }}
+        {{ if $inprogress }}
+        <p class="project-group-title">In Progress</p>
+        {{ range $inprogress.ByTitle }}
+        <a href="{{ .RelPermalink }}" class="link-button project-card" data-goatcounter-click="{{ with urls.Parse $.Site.BaseURL }}{{ .Host }}{{ end }}-project-{{ .File.BaseFileName }}">
+            <span class="project-card-header">
+                <span class="link-title">{{ .Title }}</span>
+                <span class="project-status project-status--in-progress">In Progress</span>
+            </span>
+            {{ with .Params.description }}<span class="link-subtitle">{{ . }}</span>{{ end }}
+            {{ with .Params.agency }}<span class="project-agency">{{ . }}</span>{{ end }}
+        </a>
+        {{ end }}
+        {{ end }}
+        {{ if $proposed }}
+        <p class="project-group-title">Proposed</p>
+        {{ range $proposed.ByTitle }}
+        <a href="{{ .RelPermalink }}" class="link-button project-card" data-goatcounter-click="{{ with urls.Parse $.Site.BaseURL }}{{ .Host }}{{ end }}-project-{{ .File.BaseFileName }}">
+            <span class="project-card-header">
+                <span class="link-title">{{ .Title }}</span>
+                <span class="project-status project-status--proposed">Proposed</span>
+            </span>
+            {{ with .Params.description }}<span class="link-subtitle">{{ . }}</span>{{ end }}
+            {{ with .Params.agency }}<span class="project-agency">{{ . }}</span>{{ end }}
+        </a>
+        {{ end }}
+        {{ end }}
+        {{ if $completed }}
+        <p class="project-group-title">Completed</p>
+        {{ range $completed.ByTitle }}
+        <a href="{{ .RelPermalink }}" class="link-button project-card" data-goatcounter-click="{{ with urls.Parse $.Site.BaseURL }}{{ .Host }}{{ end }}-project-{{ .File.BaseFileName }}">
+            <span class="project-card-header">
+                <span class="link-title">{{ .Title }}</span>
+                <span class="project-status project-status--completed">Completed</span>
+            </span>
+            {{ with .Params.description }}<span class="link-subtitle">{{ . }}</span>{{ end }}
+            {{ with .Params.agency }}<span class="project-agency">{{ . }}</span>{{ end }}
+        </a>
+        {{ end }}
+        {{ end }}
+    </div>
+</section>
+{{ end }}
+{{ end }}
+
+<!-- Advocacy & Resources Section -->
+{{ $jurisdictions := .Site.GetPage "/jurisdictions" }}
+{{ $engagement := .Site.GetPage "/engagement" }}
+{{ if or $jurisdictions $engagement }}
+<section class="link-section">
+    <button class="collapsible-toggle" aria-expanded="false" aria-controls="advocacy-container">
+        <h2 class="section-title">
+            Advocacy &amp; Resources
+            <span class="toggle-icon">+</span>
+        </h2>
+    </button>
+    <div class="collapsible-container" id="advocacy-container">
+        {{ with $jurisdictions }}
+        <a href="{{ .RelPermalink }}" class="link-button" data-goatcounter-click="{{ with urls.Parse $.Site.BaseURL }}{{ .Host }}{{ end }}-page-jurisdictions">
+            <span class="link-title">Report Infrastructure Issues</span>
+            <span class="link-subtitle">Who to call for potholes, blocked bike lanes, and broken signals across the westside</span>
+        </a>
+        {{ end }}
+        {{ with $engagement }}
+        <a href="{{ .RelPermalink }}" class="link-button" data-goatcounter-click="{{ with urls.Parse $.Site.BaseURL }}{{ .Host }}{{ end }}-page-engagement">
+            <span class="link-title">Get Involved</span>
+            <span class="link-subtitle">Committees, meetings, and projects shaping westside cycling</span>
+        </a>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
+
 <hr />
 
 <!-- Upcoming Events Section -->
@@ -221,39 +309,6 @@
     <div class="collapsible-container" id="past-events-container">
         <!-- Past events will be moved here by JavaScript -->
     </div>
-</section>
-{{ end }}
-
-<!-- Projects Section -->
-{{ $projects := .Site.GetPage "/projects" }}
-{{ if $projects }}
-<section class="link-section">
-    <h2 class="section-title">Westside Projects</h2>
-    <a href="{{ $projects.RelPermalink }}" class="link-button" data-goatcounter-click="{{ with urls.Parse $.Site.BaseURL }}{{ .Host }}{{ end }}-page-projects">
-        <span class="link-title">Infrastructure Projects</span>
-        <span class="link-subtitle">Trails, corridors, and improvements proposed, in progress, or completed on the westside</span>
-    </a>
-</section>
-{{ end }}
-
-<!-- Advocacy & Resources Section -->
-{{ $jurisdictions := .Site.GetPage "/jurisdictions" }}
-{{ $engagement := .Site.GetPage "/engagement" }}
-{{ if or $jurisdictions $engagement }}
-<section class="link-section">
-    <h2 class="section-title">Advocacy &amp; Resources</h2>
-    {{ with $jurisdictions }}
-    <a href="{{ .RelPermalink }}" class="link-button" data-goatcounter-click="{{ with urls.Parse $.Site.BaseURL }}{{ .Host }}{{ end }}-page-jurisdictions">
-        <span class="link-title">Report Infrastructure Issues</span>
-        <span class="link-subtitle">Who to call for potholes, blocked bike lanes, and broken signals across the westside</span>
-    </a>
-    {{ end }}
-    {{ with $engagement }}
-    <a href="{{ .RelPermalink }}" class="link-button" data-goatcounter-click="{{ with urls.Parse $.Site.BaseURL }}{{ .Host }}{{ end }}-page-engagement">
-        <span class="link-title">Get Involved</span>
-        <span class="link-subtitle">Committees, meetings, and projects shaping westside cycling</span>
-    </a>
-    {{ end }}
 </section>
 {{ end }}
 
