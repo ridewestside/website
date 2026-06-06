@@ -8,14 +8,20 @@ draft: false
 
 The Westside Trail is a 20-mile north–south multi-use path running through the Tualatin Hills from Beaverton to Lake Oswego. THPRD is the primary builder and operator. Most segments are built, but critical gaps—including a freeway crossing—remain unfunded or in design.
 
-## What's Built
+## Why It Matters
+
+The Westside Trail is the only continuous north-south off-street route through the Tualatin Hills. Completing it would give cyclists a protected spine connecting communities from Beaverton to Lake Oswego without using arterials like Murray, Hall, or Scholls Ferry.
+
+## Current Status
+
+### What's Built
 
 Most of the trail corridor through the Tualatin Hills is open. Notable completed sections include:
 
 - **Segment 18** (1 mile, Rock Creek Trail to Kaiser Road) — open, with over 400 feet of raised wooden boardwalk through Bronson Creek wetlands
 - Segments through Westside Linear Park, Murrayhill Park, Hart Meadows, Summercrest, and Barrows parks
 
-## Key Gaps and Active Projects
+### Key Gaps and Active Projects
 
 ### Bridge over US-26 *(in design — $18M estimated, construction ~2030)*
 The biggest gap is a crossing of US Highway 26 (Sunset Highway) between SW Greenbrier Parkway and NW Cornell Road. THPRD is designing a dedicated pedestrian and bicycle bridge with $1.9M in Metro Parks Bond funding secured. See the [Westside Trail Bridge](/projects/thprd-bridge/) project page for full details.

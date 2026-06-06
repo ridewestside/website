@@ -8,14 +8,16 @@ draft: false
 
 The Council Creek Regional Trail will convert a former railroad corridor into a 15-mile shared-use path connecting downtown Hillsboro, Cornelius, and Forest Grove. The corridor has been inactive since 2015. When complete, it will be the only off-street trail connection across the far western side of Washington County.
 
-## Funding
+## Why It Matters
+
+Hillsboro to Forest Grove is currently served only by OR-8 (TV Highway) and rural roads. A protected trail along this corridor would open cycling access across the western county for commuting, school trips, and recreation — serving communities that currently have very little protected infrastructure.
+
+## Current Status
 
 Total project cost is currently estimated at **$28 million**. To date, **$19 million in committed funding** from multiple sources, including:
 
 - **$12.2 million RAISE grant** (Rebuilding American Infrastructure with Sustainability and Equity) from the U.S. Department of Transportation
 - Metro, regional, and local matching funds
-
-## Construction Timeline
 
 **Initial 6-mile segment** — Pacific University in Forest Grove to the Hatfield Government Center MAX Station in downtown Hillsboro:
 - **Construction start: summer 2026**
@@ -24,10 +26,6 @@ Total project cost is currently estimated at **$28 million**. To date, **$19 mil
 **North-south segment** connecting Forest Grove to Banks: design beginning spring 2026.
 
 Washington County invited public feedback on trail plans in April 2026.
-
-## Why It Matters
-
-Hillsboro to Forest Grove is currently served only by OR-8 (TV Highway) and rural roads. A protected trail along this corridor would open cycling access across the western county for commuting, school trips, and recreation — serving communities that currently have very little protected infrastructure.
 
 ## Get Involved
 

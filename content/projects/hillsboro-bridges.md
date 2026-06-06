@@ -8,6 +8,14 @@ draft: false
 
 Hillsboro's trail network runs along creek greenways, but key crossings are missing, leaving trail segments disconnected. Completing these bridges would join existing segments into continuous routes and extend access across the city.
 
+## Why It Matters
+
+Connected trail corridors are rare in Hillsboro. Without bridges at creek crossings, trail segments dead-end at water, pushing people back onto arterial roads. Each crossing completed multiplies the usable trail on both sides of it.
+
+## Current Status
+
+The Rock Creek Trail extension and associated crossings are in the long-range planning stage. No funded construction timeline has been established for the southern extension segments. Hillsboro Parks & Recreation and Washington County are the primary agencies.
+
 ## Rock Creek Trail — Southern Extension
 
 The Rock Creek Trail currently runs from north of US-26 in the Rock Creek area south to Noble Woods Park. Future plans call for extending the trail an additional **6 miles south to Rood Bridge Park**, where it would connect to the Tualatin River Water Trail. This extension requires several bridge crossings of Rock Creek along the corridor.
@@ -21,10 +29,6 @@ Rood Bridge Park sits at the south end of the planned Rock Creek Trail extension
 ## Other Creek Corridors
 
 Hillsboro has additional creek corridors — including Dairy Creek — where trail planning and crossing gaps exist. Specific projects and timelines for these crossings are still being developed.
-
-## Current Status
-
-The Rock Creek Trail extension and associated crossings are in the long-range planning stage. No funded construction timeline has been established for the southern extension segments. Hillsboro Parks & Recreation and Washington County are the primary agencies.
 
 ## Get Involved
 

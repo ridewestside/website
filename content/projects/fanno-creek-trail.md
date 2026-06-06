@@ -8,7 +8,11 @@ draft: false
 
 The Fanno Creek Trail runs approximately 15 miles from the Tualatin River in Tualatin, north through Tigard and Beaverton, to the Willamette River in southwest Portland. It is one of the most-used multi-use trails on the westside. Multiple agencies maintain different segments; the trail vision dates to 1975.
 
-## Recent Completions
+## Why It Matters
+
+The Fanno Creek Trail is the primary off-street north-south route through the central westside. Gaps and road crossings without protection limit who can use it. A fully connected, continuous trail would link Tualatin, Tigard, and Beaverton without requiring arterial road exposure.
+
+## Current Status
 
 Tigard completed a major four-segment construction effort in late 2024 / early 2025:
 

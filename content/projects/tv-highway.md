@@ -8,7 +8,13 @@ draft: false
 
 Tualatin Valley Highway (OR-8) is the main commercial corridor across the westside, running roughly 20 miles from Portland through Beaverton, Hillsboro, Cornelius, and Forest Grove. It is one of the most dangerous roads for people walking and cycling in the region. Multiple overlapping projects are active along the corridor.
 
-## TV Highway Transit & Safety Project — BRT *(in planning)*
+## Why It Matters
+
+For most of its length, cycling on TV Highway is effective only for people comfortable riding with fast, heavy traffic. Bus stops are often inaccessible by bike without arterial road exposure. A complete, connected protected lane along the corridor — paired with BRT — would transform access to jobs, services, and the MAX Blue Line (which runs parallel) for people across the westside who don't drive.
+
+## Current Status
+
+### TV Highway Transit & Safety Project — BRT *(in planning)*
 
 A major multi-agency project is designing **Bus Rapid Transit (BRT)** along the full OR-8 corridor, paired with safety and bike/pedestrian improvements at every station. Key facts:
 
@@ -23,7 +29,7 @@ This is a long-range project; a construction timeline has not been set. The LPA 
 **[TV Highway Transit & Safety Project — TriMet](https://www.trimet.org/tvhighway/)**  
 **[TV Highway project — Washington County](https://www.washingtoncountyor.gov/lut/tv-highway-transit-safety-project)**
 
-## Completed: SW 153rd–182nd Ave Pedestrian Safety Project *(finished 2025)*
+### Completed: SW 153rd–182nd Ave Pedestrian Safety Project *(finished 2025)*
 
 ODOT completed a targeted safety project on OR-8 between SW 153rd Drive and SW 182nd Avenue in Aloha/Beaverton:
 
@@ -32,10 +38,6 @@ ODOT completed a targeted safety project on OR-8 between SW 153rd Drive and SW 1
 - **Construction:** January–September 2025
 
 **[ODOT project details](https://www.oregon.gov/odot/projects/pages/project-details.aspx?project=20328)**
-
-## Why the Full Corridor Matters
-
-For most of its length, cycling on TV Highway is effective only for people comfortable riding with fast, heavy traffic. Bus stops are often inaccessible by bike without arterial road exposure. A complete, connected protected lane along the corridor — paired with BRT — would transform access to jobs, services, and the MAX Blue Line (which runs parallel) for people across the westside who don't drive.
 
 ## Get Involved
 
