@@ -109,7 +109,32 @@ Meets at: Tualatin Valley Water District HQ, 1850 SW 170th Ave, Beaverton
 
 ### City councils
 
-Meet 1–2× per month. Beaverton, Tigard, Hillsboro, Tualatin, Sherwood, Forest Grove, and Cornelius all have regular sessions. Check each city's website for current schedules.
+#### City of Beaverton
+
+- Meets: **first three Tuesdays of each month**
+- Location: Beaverton Council Chambers, 12725 SW Millikan Way, Beaverton
+- Full schedule: <https://www.beavertonoregon.gov/789/City-Council>
+
+#### City of Tigard
+
+- Meets: **most Tuesdays**, business meetings at **6:30 pm** (study sessions begin earlier at 5:35 pm)
+- Location: City Hall, 13125 SW Hall Blvd, Tigard
+- Submit written comment by Monday at noon (the day before each meeting)
+- Full schedule: <https://www.tigard-or.gov/your-government/council/council-meetings>
+
+#### City of Hillsboro
+
+- Meets: **1st and 3rd Tuesdays at 7:00 pm** (work sessions at 6:00 pm)
+- Location: Hillsboro Civic Center, Conference Room 113 B&C, 150 E Main St, Hillsboro
+- Full schedule: <https://www.hillsboro-oregon.gov/our-city/city-council/council-meetings>
+
+#### City of Tualatin
+
+- Meets: **2nd and 4th Mondays at 7:00 pm** (work session begins at 5:00 pm)
+- Location: Tualatin City Services Building, 10699 SW Herman Road, Tualatin
+- Full schedule: <https://www.tualatinoregon.gov/citycouncil/council-meetings>
+
+Sherwood, Forest Grove, and Cornelius all have regular sessions as well — check each city's website for current schedules.
 
 ### Metro Council
 
