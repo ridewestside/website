@@ -144,6 +144,7 @@ These groups track meetings and produce testimony. Joining or following them mul
 - **The Street Trust**: statewide active transportation advocacy: <https://thestreettrust.org/>
 - **BikeLoud PDX**: Portland metro cycling advocacy, frequent testimony: <https://bikeloudpdx.org/>
 - **Oregon Walks**: pedestrian and walkability advocacy: <https://oregonwalks.org/>
+- **Oregon Trails Coalition**: statewide trails advocacy, funding, and policy — fiscally sponsored by Trailkeepers of Oregon; relevant for trail corridor projects like the Westside and Council Creek trails: <https://www.oregontrailscoalition.org/>
 - **BikePortland**: news, action alerts, project tracking: <https://bikeportland.org/>
 
 ## Giving public comment
