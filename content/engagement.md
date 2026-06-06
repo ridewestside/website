@@ -139,6 +139,7 @@ See the [Westside Projects](/projects/) page for current status and resources on
 
 These groups track meetings and produce testimony. Joining or following them multiplies your impact.
 
+- **Westside Transportation Alliance (WTA)**: Washington County TDM nonprofit that advocates for bike, walk, and transit options with employers and public agencies; runs commuter incentive programs and participates in Metro and county planning forums: <https://www.wta-tma.org/>
 - **Washington County Bicycle Transportation Coalition (WashCo BTC)**: local county-focused group, tracks LUT decisions: <https://washcobtc.org/>
 - **The Street Trust**: statewide active transportation advocacy: <https://thestreettrust.org/>
 - **BikeLoud PDX**: Portland metro cycling advocacy, frequent testimony: <https://bikeloudpdx.org/>
