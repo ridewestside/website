@@ -1,7 +1,7 @@
 ---
 title: "Westside Trail Bridge over US-26"
 description: "A planned pedestrian and bicycle bridge crossing US Highway 26 to close a critical gap in the Westside Trail between SW Greenbrier Parkway and NW Cornell Road."
-status: "in-progress"
+status: "in-design"
 agency: "THPRD"
 draft: false
 ---

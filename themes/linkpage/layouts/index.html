@@ -96,16 +96,44 @@
         </h2>
     </button>
     <div class="collapsible-container" id="projects-container">
-        {{ $inprogress := where $projectPages "Params.status" "in-progress" }}
-        {{ $proposed   := where $projectPages "Params.status" "proposed" }}
-        {{ $completed  := where $projectPages "Params.status" "completed" }}
-        {{ if $inprogress }}
-        <p class="project-group-title">In Progress</p>
-        {{ range $inprogress.ByTitle }}
+        {{ $underconstruction := where $projectPages "Params.status" "under-construction" }}
+        {{ $funded            := where $projectPages "Params.status" "funded" }}
+        {{ $indesign          := where $projectPages "Params.status" "in-design" }}
+        {{ $proposed          := where $projectPages "Params.status" "proposed" }}
+        {{ $completed         := where $projectPages "Params.status" "completed" }}
+        {{ if $underconstruction }}
+        <p class="project-group-title">Under Construction</p>
+        {{ range $underconstruction.ByTitle }}
         <a href="{{ .RelPermalink }}" class="link-button project-card" data-goatcounter-click="{{ with urls.Parse $.Site.BaseURL }}{{ .Host }}{{ end }}-project-{{ .File.BaseFileName }}">
             <span class="project-card-header">
                 <span class="link-title">{{ .Title }}</span>
-                <span class="project-status project-status--in-progress">In Progress</span>
+                <span class="project-status project-status--under-construction">Under Construction</span>
+            </span>
+            {{ with .Params.description }}<span class="link-subtitle">{{ . }}</span>{{ end }}
+            {{ with .Params.agency }}<span class="project-agency">{{ . }}</span>{{ end }}
+        </a>
+        {{ end }}
+        {{ end }}
+        {{ if $funded }}
+        <p class="project-group-title">Funded</p>
+        {{ range $funded.ByTitle }}
+        <a href="{{ .RelPermalink }}" class="link-button project-card" data-goatcounter-click="{{ with urls.Parse $.Site.BaseURL }}{{ .Host }}{{ end }}-project-{{ .File.BaseFileName }}">
+            <span class="project-card-header">
+                <span class="link-title">{{ .Title }}</span>
+                <span class="project-status project-status--funded">Funded</span>
+            </span>
+            {{ with .Params.description }}<span class="link-subtitle">{{ . }}</span>{{ end }}
+            {{ with .Params.agency }}<span class="project-agency">{{ . }}</span>{{ end }}
+        </a>
+        {{ end }}
+        {{ end }}
+        {{ if $indesign }}
+        <p class="project-group-title">In Design</p>
+        {{ range $indesign.ByTitle }}
+        <a href="{{ .RelPermalink }}" class="link-button project-card" data-goatcounter-click="{{ with urls.Parse $.Site.BaseURL }}{{ .Host }}{{ end }}-project-{{ .File.BaseFileName }}">
+            <span class="project-card-header">
+                <span class="link-title">{{ .Title }}</span>
+                <span class="project-status project-status--in-design">In Design</span>
             </span>
             {{ with .Params.description }}<span class="link-subtitle">{{ . }}</span>{{ end }}
             {{ with .Params.agency }}<span class="project-agency">{{ . }}</span>{{ end }}

@@ -1,7 +1,7 @@
 ---
 title: "Westside Trail"
 description: "A planned 20-mile regional trail connecting Beaverton to Lake Oswego through the Tualatin Hills, with most segments built but key gaps remaining."
-status: "in-progress"
+status: "in-design"
 agency: "THPRD / Washington County"
 draft: false
 ---

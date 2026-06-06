@@ -1,7 +1,7 @@
 ---
 title: "Tigard Trail Crossings"
 description: "Road crossing improvements on the Fanno Creek Trail through Tigard, including the Scholls Ferry Road grade crossing and Hall Boulevard RRFB beacons."
-status: "in-progress"
+status: "funded"
 agency: "City of Tigard / ODOT / THPRD"
 draft: false
 ---

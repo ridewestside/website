@@ -1,7 +1,7 @@
 ---
 title: "Red Electric Trail"
 description: "A 16-mile planned rail-trail along the former Southern Pacific Red Electric interurban corridor connecting the Tualatin River to the Willamette River through Beaverton and SW Portland."
-status: "in-progress"
+status: "funded"
 agency: "Portland Parks & Recreation / City of Beaverton / TriMet / Metro"
 draft: false
 ---

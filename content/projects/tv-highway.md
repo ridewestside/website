@@ -1,7 +1,7 @@
 ---
 title: "TV Highway Corridor"
 description: "Multi-jurisdictional safety, transit, and bike infrastructure improvements along OR-8 (Tualatin Valley Highway) from Beaverton to Forest Grove."
-status: "in-progress"
+status: "in-design"
 agency: "ODOT / Washington County / TriMet / Metro / Cities of Beaverton and Hillsboro"
 draft: false
 ---

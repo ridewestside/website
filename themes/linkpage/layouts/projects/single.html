@@ -15,7 +15,7 @@
     <header class="project-header">
         <h1 class="single-title">{{ .Title }}</h1>
         {{ with .Params.status }}
-        <span class="project-status project-status--{{ . }}">{{ if eq . "in-progress" }}In Progress{{ else if eq . "proposed" }}Proposed{{ else if eq . "completed" }}Completed{{ else }}{{ . }}{{ end }}</span>
+        <span class="project-status project-status--{{ . }}">{{ if eq . "under-construction" }}Under Construction{{ else if eq . "funded" }}Funded{{ else if eq . "in-design" }}In Design{{ else if eq . "proposed" }}Proposed{{ else if eq . "completed" }}Completed{{ else }}{{ . }}{{ end }}</span>
         {{ end }}
     </header>
     {{ with .Params.description }}<p class="single-description">{{ . }}</p>{{ end }}

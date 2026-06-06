@@ -1,7 +1,7 @@
 ---
 title: "Fanno Creek Trail"
 description: "A 15-mile multi-city greenway trail following Fanno Creek from Tualatin through Tigard and Beaverton to southwest Portland, with several segments recently completed and crossings still being improved."
-status: "in-progress"
+status: "funded"
 agency: "THPRD / City of Tigard / City of Tualatin / Portland Parks"
 draft: false
 ---

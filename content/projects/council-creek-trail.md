@@ -1,7 +1,7 @@
 ---
 title: "Council Creek Regional Trail"
 description: "A 15-mile planned rail-trail connecting Hillsboro, Cornelius, and Forest Grove along a former railroad corridor, with construction beginning summer 2026."
-status: "in-progress"
+status: "funded"
 agency: "Washington County / City of Hillsboro / City of Forest Grove"
 draft: false
 ---
