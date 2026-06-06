@@ -629,8 +629,8 @@ events:
     start_address: "10470 SW Barnes Road, Portland, OR 97225"
     tags: [ride, r2r]
 
-  - title: "6/6 Gaston Tornado Siren Adventure Ride"
-    date: "June 6, 2026"
+  - title: "6/20 Gaston Tornado Siren Adventure Ride"
+    date: "June 20, 2026"
     url: "https://shift2bikes.org/calendar/event-23789"
     start: "Hillsboro"
     end: "Hillsboro"
