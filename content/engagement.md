@@ -123,17 +123,20 @@ Watch agency websites and [BikePortland](https://bikeportland.org/) for open hou
 
 ## Plans and projects to watch
 
-- Washington County TSP: on its own update cycle; watch washingtoncountyor.gov/lut
-- City TSP updates: each city runs its own update cycle (Tigard's E-Go Strategic Transportation Plan is the current active process)
+- Washington County TSP: watch washingtoncountyor.gov/lut
+- City TSP updates: each city on its own cycle
 - Metro Regional Transportation Plan: updated every ~5 years
-- [TV Highway corridor improvements](/projects/tv-highway/): BRT locally preferred alternative selected Feb 2025; bike lane details in design
 - OR-217 improvements: ongoing ODOT project
-- [Westside Trail](/projects/westside-trail/) completion: US-26 bridge in design, construction ~2030
-- [Fanno Creek Trail](/projects/fanno-creek-trail/) completion: Scholls Ferry and Hall Blvd crossings active
-- [Red Electric Trail](/projects/red-electric-trail/): 2025 funding secured for 2-mile gap in SW Portland hills
-- [Council Creek Trail](/projects/council-creek-trail/): $19M committed, construction starting summer 2026
+- [TV Highway Corridor](/projects/tv-highway/)
+- [Westside Trail](/projects/westside-trail/)
+- [Fanno Creek Trail](/projects/fanno-creek-trail/)
+- [Red Electric Trail](/projects/red-electric-trail/)
+- [Council Creek Trail](/projects/council-creek-trail/)
+- [THPRD Westside Trail Bridge](/projects/thprd-bridge/)
+- [Hillsboro Trail Bridges](/projects/hillsboro-bridges/)
+- [Tigard Trail Crossings](/projects/tigard-bridges/)
 
-See the [Westside Projects](/projects/) page for current status and resources on each.
+See the [Westside Projects](/projects/) page for current status on each.
 
 ## Advocacy groups
 
