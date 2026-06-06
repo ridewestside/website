@@ -224,6 +224,27 @@
 </section>
 {{ end }}
 
+<!-- Advocacy & Resources Section -->
+{{ $jurisdictions := .Site.GetPage "/jurisdictions" }}
+{{ $engagement := .Site.GetPage "/engagement" }}
+{{ if or $jurisdictions $engagement }}
+<section class="link-section">
+    <h2 class="section-title">Advocacy &amp; Resources</h2>
+    {{ with $jurisdictions }}
+    <a href="{{ .RelPermalink }}" class="link-button" data-goatcounter-click="{{ with urls.Parse $.Site.BaseURL }}{{ .Host }}{{ end }}-page-jurisdictions">
+        <span class="link-title">Report Infrastructure Issues</span>
+        <span class="link-subtitle">Who to call for potholes, blocked bike lanes, and broken signals across the westside</span>
+    </a>
+    {{ end }}
+    {{ with $engagement }}
+    <a href="{{ .RelPermalink }}" class="link-button" data-goatcounter-click="{{ with urls.Parse $.Site.BaseURL }}{{ .Host }}{{ end }}-page-engagement">
+        <span class="link-title">Get Involved</span>
+        <span class="link-subtitle">Committees, meetings, and projects shaping westside cycling</span>
+    </a>
+    {{ end }}
+</section>
+{{ end }}
+
 <!-- Press/Articles Section -->
 {{ $articles := .Site.GetPage "/articles" }}
 {{ if $articles }}
