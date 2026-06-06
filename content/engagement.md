@@ -73,12 +73,14 @@ No appointment needed. Three minutes of public comment from a real cyclist with 
 - Washington County TSP: *(TODO: status)*
 - City TSP updates: each city on its own cycle
 - Metro Regional Transportation Plan: updated every ~5 years
-- TV Highway corridor improvements: ongoing, multi-jurisdictional
+- [TV Highway corridor improvements](/projects/tv-highway/): ongoing, multi-jurisdictional
 - OR-217 improvements: ongoing ODOT project
-- Westside Trail completion: gaps being closed in phases
-- Fanno Creek Trail completion: gaps being closed in phases
-- Red Electric Trail: planned east-west connector through Beaverton
-- Council Creek Trail: planned Hillsboro-to-Forest Grove rail trail
+- [Westside Trail](/projects/westside-trail/) completion: gaps being closed in phases
+- [Fanno Creek Trail](/projects/fanno-creek-trail/) completion: gaps being closed in phases
+- [Red Electric Trail](/projects/red-electric-trail/): planned east-west connector through Beaverton
+- [Council Creek Trail](/projects/council-creek-trail/): planned Hillsboro-to-Forest Grove rail trail
+
+See the [Westside Projects](/projects/) page for current status and resources on each.
 
 ## Advocacy groups
 

@@ -224,6 +224,18 @@
 </section>
 {{ end }}
 
+<!-- Projects Section -->
+{{ $projects := .Site.GetPage "/projects" }}
+{{ if $projects }}
+<section class="link-section">
+    <h2 class="section-title">Westside Projects</h2>
+    <a href="{{ $projects.RelPermalink }}" class="link-button" data-goatcounter-click="{{ with urls.Parse $.Site.BaseURL }}{{ .Host }}{{ end }}-page-projects">
+        <span class="link-title">Infrastructure Projects</span>
+        <span class="link-subtitle">Trails, corridors, and improvements proposed, in progress, or completed on the westside</span>
+    </a>
+</section>
+{{ end }}
+
 <!-- Advocacy & Resources Section -->
 {{ $jurisdictions := .Site.GetPage "/jurisdictions" }}
 {{ $engagement := .Site.GetPage "/engagement" }}

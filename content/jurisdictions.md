@@ -94,6 +94,10 @@ TV Hwy, 217, US-26, 99W, Beaverton-Hillsdale, and Scholls Ferry are ODOT, even i
 - Report twice if nothing happens in two weeks. Cc your councilor or commissioner for recurring problems.
 - Tagging the agency on social media after a written report often speeds things up.
 
+## Want to go further?
+
+Reporting a problem gets it fixed. Showing up to planning meetings is how the infrastructure gets built right in the first place. See [Get Involved](/engagement/) for committees and public comment opportunities, and [Westside Projects](/projects/) for the major infrastructure efforts underway.
+
 ---
 
 *Spotted a broken link or know of a portal we should add? See the [About](/about/) section for ways to reach us.*
