@@ -579,6 +579,31 @@ events:
     end: "Portland"
     tags: [festival, ride, not-rws, family-friendly]
 
+  # Activism & Engagement
+  - title: "6/17 Westside Trail Community Meeting"
+    date: "June 17, 2026"
+    url: "https://www.tualatinhillsparks.org/Calendar.aspx?EID=12839"
+    start: "Beaverton"
+    end: "Beaverton"
+    start_address: "15707 SW Walker Road, Beaverton, OR 97006"
+    tags: [not-rws, advocacy]
+
+  - title: "9/9 Westside Trail Draft Plan — THPRD Board Presentation"
+    date: "September 9, 2026"
+    url: "https://www.thprd.org/parks-in-progress/westside-trail-bridge/"
+    start: "Beaverton"
+    end: "Beaverton"
+    start_address: "15707 SW Walker Road, Beaverton, OR 97006"
+    tags: [not-rws, advocacy]
+
+  - title: "11/11 Westside Trail Final Plan — THPRD Board Approval"
+    date: "November 11, 2026"
+    url: "https://www.thprd.org/parks-in-progress/westside-trail-bridge/"
+    start: "Beaverton"
+    end: "Beaverton"
+    start_address: "15707 SW Walker Road, Beaverton, OR 97006"
+    tags: [not-rws, advocacy]
+
   # Rides
   - title: "4/11 The Ladds 500 R2R"
     date: "April 11, 2026"
