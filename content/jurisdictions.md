@@ -4,95 +4,107 @@ description: "Who to contact for potholes, blocked bike lanes, and broken signal
 draft: true
 ---
 
-*Draft. Confirm every link and phone number before publishing.*
+*Draft. Confirm links and phone numbers before publishing.*
 
-Westside roads are maintained by many different agencies. A road inside Beaverton might be county, state, or Metro property. Report to the right agency the first time.
+Westside roads are maintained by many different agencies. A road inside Beaverton might be county, state, or TriMet property. Report to the right agency the first time.
 
 ## Who owns what
 
-- **State highways** (TV Hwy / OR-8, OR-217, US-26, OR-99W, Beaverton-Hillsdale, Scholls Ferry): ODOT
-- **Major county arterials** (Walker, Cornell, Murray, Farmington, Hall, Bull Mountain): Washington County
+- **State highways** (TV Hwy / OR-8, OR-217, US-26, OR-99W, Beaverton-Hillsdale Hwy, Scholls Ferry Rd): ODOT
+- **Major county arterials** (Walker, Cornell, Murray, Farmington, Hall, Bull Mountain Rd): Washington County
 - **City streets inside city limits**: the city
-- **Regional trails** (Westside, Fanno Creek, Rock Creek, Waterhouse): usually THPRD or the city/county; check trail signage
+- **Regional trails** (Westside, Fanno Creek, Rock Creek, Waterhouse): usually THPRD or the city/county — check trail signage
 - **Park paths**: THPRD or city parks
-- **Bus stops and transit signals**: TriMet
+- **Bus stops, shelters, and transit signals**: TriMet
 
-Not sure? Report to the city or county the road runs through. They'll forward it.
+Not sure? Report to the city or county the road runs through — they'll forward it.
 
 ## Washington County
 
 Most arterials connecting westside cities are county-maintained, even inside city limits.
 
-- Online: Land Use & Transportation "Report a Concern" *(TODO: confirm URL)*
-- Phone: *(TODO)*
-- Website: <https://www.washingtoncountyor.gov/>
+- **Online:** [Road Maintenance — Washington County](https://www.washingtoncountyor.gov/lut/road-maintenance)
+- **Phone:** 503-846-ROAD (503-846-7623), Mon–Fri 8 am–5 pm
+- **Email:** lutops@washingtoncountyor.gov
+- **Website:** <https://www.washingtoncountyor.gov/lut>
 
 ## City of Beaverton
 
-- Online: Beaverton Public Works service request *(TODO: confirm URL)*
-- Phone: *(TODO)*
-- Website: <https://www.beavertonoregon.gov/>
+- **Online:** [Report a Problem — Beaverton](https://www.beavertonoregon.gov/1076/Report-a-Problem)
+- **Direct form:** [Public Works service request](https://apps2.beavertonoregon.gov/co/reportproblem/reportproblempublicworks.aspx)
+- **Website:** <https://www.beavertonoregon.gov/>
 
 ## City of Tigard
 
-- Online: Tigard "Report a Problem" *(TODO: confirm URL)*
-- Phone: *(TODO)*
-- Website: <https://www.tigard-or.gov/>
+- **Online:** [Service Request — Tigard](https://www.tigard-or.gov/community-support/service-request)
+- **Phone:** 503-718-2591, Mon–Thu 8 am–5 pm
+- **After-hours emergency** (street hazard, water, sewer): 503-639-1554
+- **Streetlight / signal issues:** [Report a signal concern — Tigard](https://www.tigard-or.gov/your-government/departments/public-works/streets/streetlight-traffic-signal-concern)
+- **Website:** <https://www.tigard-or.gov/>
 
 ## City of Hillsboro
 
-- Online: Hillsboro service request portal *(TODO: confirm URL)*
-- Phone: *(TODO)*
-- Website: <https://www.hillsboro-oregon.gov/>
+- **Online (streets and sewers):** [Report issues with streets and sewers — Hillsboro](https://www.hillsboro-oregon.gov/our-city/departments/public-works/contact-us/report-issues-with-streets-and-sewers)
+- **Online (traffic and signals):** [Report traffic and signal safety concerns — Hillsboro](https://www.hillsboro-oregon.gov/our-city/departments/public-works/contact-us/report-traffic-and-signal-issues)
+- **Phone:** 503-615-6509
+- **Website:** <https://www.hillsboro-oregon.gov/>
 
 ## Smaller cities
 
-- Tualatin: <https://www.tualatinoregon.gov/>
-- Sherwood: <https://www.sherwoodoregon.gov/>
-- Forest Grove: <https://www.forestgrove-or.gov/>
-- Cornelius: <https://www.ci.cornelius.or.us/>
-- King City: <https://www.ci.king-city.or.us/>
-- Durham, North Plains, Banks, Gaston: *(TODO)*
+- **Tualatin:** <https://www.tualatinoregon.gov/>
+- **Sherwood:** <https://www.sherwoodoregon.gov/>
+- **Forest Grove:** <https://www.forestgrove-or.gov/>
+- **Cornelius:** <https://www.ci.cornelius.or.us/>
+- **King City:** <https://www.ci.king-city.or.us/>
+- **North Plains:** <https://northplainsoregon.gov/>
+- **Durham:** <https://www.durham-or.gov/>
+- **Banks:** <https://banksoregon.gov/>
+- **Gaston:** very small city; contact Washington County LUT if unsure
 
 ## ODOT (state highways)
 
-TV Hwy, 217, US-26, 99W, Beaverton-Hillsdale, and Scholls Ferry are ODOT, even inside a city.
+TV Hwy, OR-217, US-26, OR-99W, Beaverton-Hillsdale Hwy, and Scholls Ferry Rd are ODOT facilities, even where they run through a city.
 
-- Ask ODOT: 1-888-275-6368
-- Online: ODOT / TripCheck report form *(TODO: confirm URL)*
-- Website: <https://www.oregon.gov/odot/>
+- **Phone:** 1-888-275-6368 (1-888-ASK-ODOT)
+- **Road information / 511:** dial 511 in Oregon, or 800-977-6368 outside Oregon
+- **Online:** [Contact ODOT](https://www.oregon.gov/odot/about/pages/contact-us.aspx)
+- **Website:** <https://www.oregon.gov/odot/>
 
 ## THPRD
 
-- Online: THPRD contact / report form *(TODO: confirm URL)*
-- Phone: *(TODO)*
-- Website: <https://www.thprd.org/>
-- For: regional trails, park paths, trail surface issues, downed trees, lighting
+THPRD maintains most of the regional trail network on the urban westside, including the Westside Trail, Fanno Creek Trail (Beaverton segments), Rock Creek Trail, and Waterhouse Trail.
+
+- **Online:** [Report Feedback — THPRD](https://www.thprd.org/connect/report-feedback)
+- **Phone:** 503-645-6433, Mon–Fri 8 am–5 pm
+- **Website:** <https://www.thprd.org/>
+- For: trail surface issues, downed trees, graffiti, lighting outages, trail closures
 
 ## Metro
 
-- Website: <https://www.oregonmetro.gov/>
-- For: regional facilities, multi-jurisdiction issues
+Metro owns and manages some regional natural areas and trail connections.
+
+- **Website:** <https://www.oregonmetro.gov/>
+- For: Metro-owned natural areas and regional facilities
 
 ## TriMet
 
-- Customer service: 503-238-7433
-- Online: <https://trimet.org/contact/>
-- For: bus stops, shelters, bike racks, transit signals
+- **Customer service:** 503-238-7433
+- **Online:** <https://trimet.org/contact/>
+- For: bus stops, shelters, bike racks at stops, transit signal issues
 
 ## Emergencies
 
-- **Active hazard** (downed wire, car blocking a lane, missing manhole cover): 911.
-- **Crash**: 911 if anyone is hurt, otherwise the local police non-emergency line.
-- **Blocked bike lane**: report to the road owner. For a parked car, police non-emergency is usually faster than public works.
+- **Active hazard** (downed wire, car blocking a lane, missing manhole cover): 911
+- **Crash**: 911 if anyone is hurt; local police non-emergency line otherwise
+- **Blocked bike lane by a parked car**: police non-emergency is often faster than public works
 
 ## Tips
 
-- Be specific. Nearest cross street, mile marker, or a dropped pin.
-- Include a photo if the portal allows it.
+- Be specific. Include the nearest cross street, mile marker, or drop a pin in a maps app.
+- Include a photo if the portal allows it — it speeds up triage significantly.
 - Note direction of travel for bike-lane issues.
-- Report twice if nothing happens in two weeks. Cc your councilor or commissioner for recurring problems.
-- Tagging the agency on social media after a written report often speeds things up.
+- If nothing happens in two weeks, report again and CC your city councilor or county commissioner.
+- Tagging the agency on social media after a written report often accelerates action.
 
 ## Want to go further?
 
@@ -100,4 +112,4 @@ Reporting a problem gets it fixed. Showing up to planning meetings is how the in
 
 ---
 
-*Spotted a broken link or know of a portal we should add? See the [About](/about/) section for ways to reach us.*
+*Spotted a broken link or know of a portal we should add? See the [About](/) section for ways to reach us.*
