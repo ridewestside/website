@@ -1,46 +1,57 @@
 ---
 title: "TV Highway Corridor"
-description: "Multi-jurisdictional safety and access improvements along OR-8 through Hillsboro, Beaverton, and unincorporated Washington County."
+description: "Multi-jurisdictional safety, transit, and bike infrastructure improvements along OR-8 (Tualatin Valley Highway) from Beaverton to Forest Grove."
 status: "in-progress"
-agency: "ODOT / Washington County / City of Beaverton / City of Hillsboro"
+agency: "ODOT / Washington County / TriMet / Metro / Cities of Beaverton and Hillsboro"
 draft: false
 ---
 
-Tualatin Valley Highway (OR-8) is the main commercial corridor across the westside, running from Portland through Beaverton to Forest Grove. It is also one of the most dangerous roads for cyclists and pedestrians in the region. A series of improvement projects are underway or planned along the corridor.
+Tualatin Valley Highway (OR-8) is the main commercial corridor across the westside, running roughly 20 miles from Portland through Beaverton, Hillsboro, Cornelius, and Forest Grove. It is one of the most dangerous roads for people walking and cycling in the region. Multiple overlapping projects are active along the corridor.
 
-## Why It Matters
+## TV Highway Transit & Safety Project — BRT *(in planning)*
 
-TV Highway carries tens of thousands of vehicles per day across a 20+ mile stretch. Cycling on it in most segments is effectively impossible for the majority of riders. Improvements here would unlock access to jobs, transit (the MAX Blue Line runs parallel), and commercial areas for people who don't drive.
+A major multi-agency project is designing **Bus Rapid Transit (BRT)** along the full OR-8 corridor, paired with safety and bike/pedestrian improvements at every station. Key facts:
 
-## Current Status
+- **Route:** Beaverton Transit Center to 19th & B Street in Forest Grove — **16.2 miles**
+- **Stations:** 85 locations (41 paired stops + Beaverton TC, Hillsboro TC, Forest Grove terminus)
+- **Locally preferred alternative (LPA) selected:** February 13, 2025 by the project steering committee
+- **Bike lane details:** Under active design. Community input consistently identified **continuous protected bike lanes** as a top priority. The project is exploring specific bike lane and intersection treatments at each station.
+- Lead agencies: Washington County, TriMet, Metro, ODOT
 
-Improvement work is ongoing in segments and phases, managed by multiple agencies depending on the segment:
+This is a long-range project; a construction timeline has not been set. The LPA selection is an early milestone. Funding for construction is not yet secured.
 
-- **ODOT** manages the state highway classification portions
-- **Washington County** manages portions outside city limits
-- **Beaverton and Hillsboro** manage portions inside their city limits
+**[TV Highway Transit & Safety Project — TriMet](https://www.trimet.org/tvhighway/)**  
+**[TV Highway project — Washington County](https://www.washingtoncountyor.gov/lut/tv-highway-transit-safety-project)**
 
-Active projects include intersection safety improvements, bus stop upgrades, and sidewalk gap closure. Protected bike lane installation has been limited.
+## Completed: SW 153rd–182nd Ave Pedestrian Safety Project *(finished 2025)*
 
-## Segments to Watch
+ODOT completed a targeted safety project on OR-8 between SW 153rd Drive and SW 182nd Avenue in Aloha/Beaverton:
 
-- **Beaverton segment (Allen to Farmington)** — historically missing protected facilities
-- **Unincorporated sections** — county-managed, often lower priority for bike improvements
-- **Hillsboro segment** — OR-8 enters the city at SE 10th; improvements ongoing
+- **New RRFB crosswalk** at SW 174th Avenue with pedestrian refuge island
+- **Buffered bicycle lanes** added with green striping along this segment
+- **Construction:** January–September 2025
+
+**[ODOT project details](https://www.oregon.gov/odot/projects/pages/project-details.aspx?project=20328)**
+
+## Why the Full Corridor Matters
+
+For most of its length, cycling on TV Highway is effective only for people comfortable riding with fast, heavy traffic. Bus stops are often inaccessible by bike without arterial road exposure. A complete, connected protected lane along the corridor — paired with BRT — would transform access to jobs, services, and the MAX Blue Line (which runs parallel) for people across the westside who don't drive.
 
 ## Get Involved
 
-- ODOT holds open houses for major project phases; watch ODOT Region 1 communications
-- Washington County Transportation Advisory Committee (WCTAC) *(confirm name)* advises on county portions
-- Beaverton and Hillsboro city councils control funding in their segments
-- See [Get Involved](/engagement/) and [Report Infrastructure Issues](/jurisdictions/) for next steps
+- **Washington County** Transportation Advisory Committee advises on county portions of the corridor
+- **ODOT Region 1** holds open houses for project phases — watch ODOT and Metro communications
+- **Beaverton and Hillsboro city councils** control funding and design decisions within their city limits
+- A **TV Highway Equity Coalition** (coordinated by Unite Oregon) has been actively tracking this project
+- See [Get Involved](/engagement/) for how to show up and [Report Infrastructure Issues](/jurisdictions/) for existing hazards
 
 ## Resources
 
-- [ODOT Region 1](https://www.oregon.gov/odot/regions/region1/)
-- [Washington County Transportation](https://www.washingtoncountyor.gov/)
-- [City of Beaverton Transportation](https://www.beavertonoregon.gov/)
-- [City of Hillsboro Transportation](https://www.hillsboro-oregon.gov/)
+- [TV Highway Transit & Safety Project — TriMet](https://www.trimet.org/tvhighway/)
+- [TV Highway Transit & Safety Project — Washington County](https://www.washingtoncountyor.gov/lut/tv-highway-transit-safety-project)
+- [TV Highway Transit & Safety Project — Metro](https://www.oregonmetro.gov/projects/tualatin-valley-highway-transit-and-safety-project)
+- [SW 153rd–182nd Ave Safety Project — ODOT](https://www.oregon.gov/odot/projects/pages/project-details.aspx?project=20328)
+- [TV Highway Equity Coalition — Unite Oregon](https://www.uniteoregon.org/tvhwyequitycoalition)
 
 ---
 

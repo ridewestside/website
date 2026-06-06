@@ -1,43 +1,45 @@
 ---
 title: "Hillsboro Trail Bridges"
-description: "Several bridge crossings needed to complete trail gaps along creek corridors through Hillsboro."
+description: "Bridge and crossing projects needed to complete trail gaps along creek corridors through Hillsboro, including the Rock Creek Trail's planned 6-mile southern extension to Rood Bridge Park."
 status: "proposed"
 agency: "City of Hillsboro / Washington County / THPRD"
 draft: false
 ---
 
-Hillsboro has multiple trail corridors interrupted by creek crossings without dedicated bridge infrastructure. Completing these crossings would significantly extend the usable off-street trail network in Washington County's largest city.
+Hillsboro's trail network runs along creek greenways, but key crossings are missing, leaving trail segments disconnected. Completing these bridges would join existing segments into continuous routes and extend access across the city.
 
-*(TODO: confirm the specific crossings, their status, and which agency owns each.)*
+## Rock Creek Trail — Southern Extension
 
-## Known Gap Crossings
+The Rock Creek Trail currently runs from north of US-26 in the Rock Creek area south to Noble Woods Park. Future plans call for extending the trail an additional **6 miles south to Rood Bridge Park**, where it would connect to the Tualatin River Water Trail. This extension requires several bridge crossings of Rock Creek along the corridor.
 
-- **Tualatin River crossing** — *(TODO: confirm location and project status)*
-- **Rock Creek crossing(s)** — Rock Creek runs through Hillsboro; several trail gaps exist near creek crossings *(TODO: confirm specific locations)*
-- **Dairy Creek crossing** — *(TODO: confirm status and agency)*
-- **Additional crossings** — *(TODO: enumerate)*
+The trail would eventually stretch from north of US-26 all the way to the Tualatin River — a continuous greenway through the heart of Hillsboro's eastern neighborhoods.
 
-## Why It Matters
+## Rood Bridge Park and the Tualatin River Connection
 
-Hillsboro's trail network is largely built along creek greenways, but gaps at creek crossings disconnect segments that would otherwise form continuous routes. These crossings are disproportionately high-value: one bridge can unlock miles of trail on both sides.
+Rood Bridge Park sits at the south end of the planned Rock Creek Trail extension, at the Tualatin River. A crossing here would tie the Rock Creek corridor into the broader regional trail network and the Tualatin River Regional Water Trail.
+
+## Other Creek Corridors
+
+Hillsboro has additional creek corridors — including Dairy Creek — where trail planning and crossing gaps exist. Specific projects and timelines for these crossings are still being developed.
 
 ## Current Status
 
-Projects are at various stages. Some crossings may be in active design; others are unfunded long-range plan items. *(TODO: confirm status of each crossing.)*
+The Rock Creek Trail extension and associated crossings are in the long-range planning stage. No funded construction timeline has been established for the southern extension segments. Hillsboro Parks & Recreation and Washington County are the primary agencies.
 
 ## Get Involved
 
-- Hillsboro City Council controls city transportation and parks capital budgets
-- Washington County manages some crossings on county-owned land
-- THPRD may be a partner for crossings that connect to regional trails
-- See [Get Involved](/engagement/) for how to show up effectively
-- See [Report Infrastructure Issues](/jurisdictions/) to report hazards on existing trail segments
+- Hillsboro City Council controls parks and transportation capital budgets
+- Washington County Land Use & Transportation manages county-owned trail corridors
+- THPRD may partner on segments connecting to regional trails
+- See [Get Involved](/engagement/) for how to participate in planning processes
+- See [Report Infrastructure Issues](/jurisdictions/) to report hazards on existing segments
 
 ## Resources
 
-- [City of Hillsboro Transportation](https://www.hillsboro-oregon.gov/)
+- [Rock Creek Trail — City of Hillsboro](https://www.hillsboro-oregon.gov/our-city/departments/parks-recreation/parks-nature/rock-creek-trail)
+- [Rood Bridge Park — City of Hillsboro](https://www.hillsboro-oregon.gov/our-city/departments/parks-recreation/parks-nature/rood-bridge-park)
+- [City of Hillsboro Parks Planning](https://www.hillsboro-oregon.gov/our-city/departments/parks-recreation/about-us/planning-development)
 - [Washington County Transportation](https://www.washingtoncountyor.gov/)
-- [THPRD Trails](https://www.thprd.org/)
 
 ---
 
