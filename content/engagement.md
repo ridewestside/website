@@ -111,7 +111,7 @@ Meets at: Tualatin Valley Water District HQ, 1850 SW 170th Ave, Beaverton
 
 #### City of Beaverton
 
-- Meets: **first three Tuesdays of each month**
+- Meets: **first Thursday of each month, 7:00 pm**
 - Location: Beaverton Council Chambers, 12725 SW Millikan Way, Beaverton
 - Full schedule: <https://www.beavertonoregon.gov/789/City-Council>
 
