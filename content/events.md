@@ -586,7 +586,7 @@ events:
     start: "Beaverton"
     end: "Beaverton"
     start_address: "15707 SW Walker Road, Beaverton, OR 97006"
-    tags: [not-rws]
+    tags: [not-rws, advocacy]
 
   - title: "9/9 Westside Trail Draft Plan — THPRD Board Presentation"
     date: "September 9, 2026"
@@ -594,7 +594,7 @@ events:
     start: "Beaverton"
     end: "Beaverton"
     start_address: "15707 SW Walker Road, Beaverton, OR 97006"
-    tags: [not-rws]
+    tags: [not-rws, advocacy]
 
   - title: "11/11 Westside Trail Final Plan — THPRD Board Approval"
     date: "November 11, 2026"
@@ -602,7 +602,7 @@ events:
     start: "Beaverton"
     end: "Beaverton"
     start_address: "15707 SW Walker Road, Beaverton, OR 97006"
-    tags: [not-rws]
+    tags: [not-rws, advocacy]
 
   # Rides
   - title: "4/11 The Ladds 500 R2R"
