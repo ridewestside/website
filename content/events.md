@@ -579,6 +579,15 @@ events:
     end: "Portland"
     tags: [festival, ride, not-rws, family-friendly]
 
+  # Activism & Engagement
+  - title: "6/17 Westside Trail Community Meeting"
+    date: "June 17, 2026"
+    url: "https://www.tualatinhillsparks.org/Calendar.aspx?EID=12839"
+    start: "Beaverton"
+    end: "Beaverton"
+    start_address: "15707 SW Walker Road, Beaverton, OR 97006"
+    tags: [not-rws]
+
   # Rides
   - title: "4/11 The Ladds 500 R2R"
     date: "April 11, 2026"
