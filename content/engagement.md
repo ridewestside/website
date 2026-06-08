@@ -1,10 +1,8 @@
 ---
 title: "Get Involved"
 description: "Committees, meetings, and projects shaping westside cycling."
-draft: true
+draft: false
 ---
-
-*Draft. Meeting schedules and committee names change — confirm before sharing.*
 
 Reporting a pothole gets a pothole fixed. Showing up to meetings is how we get protected bike lanes, safer crossings, and connected trails. The westside has more seats at the table than people realize, and many sit empty.
 
