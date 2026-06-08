@@ -31,7 +31,6 @@ Most arterials connecting westside cities are county-maintained, even inside cit
 ## City of Beaverton
 
 - **Online:** [Report a Problem — Beaverton](https://www.beavertonoregon.gov/1076/Report-a-Problem)
-- **Direct form:** [Public Works service request](https://apps2.beavertonoregon.gov/co/reportproblem/reportproblempublicworks.aspx)
 - **Website:** <https://www.beavertonoregon.gov/>
 
 ## City of Tigard
