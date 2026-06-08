@@ -1,10 +1,8 @@
 ---
 title: "Report Infrastructure Issues"
 description: "Who to contact for potholes, blocked bike lanes, and broken signals across the westside."
-draft: true
+draft: false
 ---
-
-*Draft. Confirm links and phone numbers before publishing.*
 
 Westside roads are maintained by many different agencies. A road inside Beaverton might be county, state, or TriMet property. Report to the right agency the first time.
 
