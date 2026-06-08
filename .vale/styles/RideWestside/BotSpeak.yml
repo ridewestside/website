@@ -1,0 +1,20 @@
+extends: existence
+message: "Bot-speak: avoid '%s' — prefer more direct language."
+level: warning
+ignorecase: true
+tokens:
+  - delve
+  - seamlessly
+  - pivotal
+  - groundbreaking
+  - holistic
+  - synergy
+  - synergistic
+  - actionable
+  - impactful
+  - transformative
+  - empower
+  - supercharge
+  - game-changing
+  - cutting-edge
+  - state-of-the-art

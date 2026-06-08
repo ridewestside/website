@@ -37,6 +37,7 @@ mage watch          # Watch TypeScript for changes (run in separate terminal)
 mage buildTS        # Compile TypeScript only
 mage clean          # Remove public/ directory
 mage checkLinks     # Validate all external links in built site
+mage checkProse     # Vale prose linting (bot-speak, hedge phrases, word substitutions)
 ```
 
 ### Event Management
