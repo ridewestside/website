@@ -55,8 +55,8 @@ Most arterials connecting westside cities are county-maintained, even inside cit
 - **Forest Grove:** <https://www.forestgrove-or.gov/>
 - **Cornelius:** <https://www.ci.cornelius.or.us/>
 - **King City:** <https://www.ci.king-city.or.us/>
-- **North Plains:** <https://northplainsoregon.gov/>
-- **Durham:** <https://www.durham-or.gov/>
+- **North Plains:** <https://northplains.gov/>
+- **Durham:** <https://durham-oregon.us/>
 - **Banks:** <https://banksoregon.gov/>
 - **Gaston:** very small city; contact Washington County LUT if unsure
 
