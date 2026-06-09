@@ -723,7 +723,6 @@ events:
     url: "https://www.shift2bikes.org/calendar/event-24313"
     start: "Beaverton"
     end: "Beaverton"
-    start_address: "12600 SW Crescent St, Beaverton, OR 97005"
     tags: [ride, r2r]
 
   - title: "7/25 Kidical Mass #4: Frozen Fun"
