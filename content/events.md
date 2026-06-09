@@ -718,6 +718,13 @@ events:
     start_address: "16950 SW Lisa Ct, Beaverton, OR 97006"
     tags: [ride, family-friendly]
 
+  - title: "7/11 Bike Bus to Ten Tiny Dances"
+    date: "July 11, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-24313"
+    start: "Beaverton"
+    end: "Beaverton"
+    tags: [ride, r2r]
+
   - title: "7/25 Kidical Mass #4: Frozen Fun"
     date: "July 25, 2026"
     url: "https://shift2bikes.org/calendar/event-23803"
