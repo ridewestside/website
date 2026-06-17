@@ -4,7 +4,7 @@ description: "Who to contact for potholes, blocked bike lanes, and broken signal
 draft: false
 ---
 
-Westside roads are maintained by many different agencies. A road inside Beaverton might be county, state, or TriMet property. Report to the right agency the first time.
+Westside roads and trails are maintained by many different agencies. A road inside Beaverton might be county, state, or TriMet property. This is a guide on how to report issues so that they are fixed.
 
 ## Who owns what
 
@@ -51,19 +51,19 @@ Most arterials connecting westside cities are county-maintained, even inside cit
 - **Tualatin:** <https://www.tualatinoregon.gov/>
 - **Sherwood:** <https://www.sherwoodoregon.gov/>
 - **Forest Grove:** <https://www.forestgrove-or.gov/>
-- **Cornelius:** <https://www.ci.cornelius.or.us/>
+- **Cornelius:** <https://www.corneliusor.gov/>
 - **King City:** <https://www.ci.king-city.or.us/>
 - **North Plains:** <https://northplains.gov/>
 - **Durham:** <https://durham-oregon.us/>
-- **Banks:** <https://banksoregon.gov/>
-- **Gaston:** very small city; contact Washington County LUT if unsure
+- **Banks:** <https://www.cityofbanks.org/>
+- **Gaston:** <https://www.cityofgaston.com/>
 
 ## ODOT (state highways)
 
 TV Hwy, OR-217, US-26, OR-99W, Beaverton-Hillsdale Hwy, and Scholls Ferry Rd are ODOT facilities, even where they run through a city.
 
 - **Phone:** 1-888-275-6368 (1-888-ASK-ODOT)
-- **Road information / 511:** dial 511 in Oregon, or 800-977-6368 outside Oregon
+- **Road information:** dial 511 in Oregon, or 800-977-6368 outside Oregon
 - **Online:** [Contact ODOT](https://www.oregon.gov/odot/about/pages/contact-us.aspx)
 - **Website:** <https://www.oregon.gov/odot/>
 
@@ -71,7 +71,7 @@ TV Hwy, OR-217, US-26, OR-99W, Beaverton-Hillsdale Hwy, and Scholls Ferry Rd are
 
 THPRD maintains most of the regional trail network on the urban westside, including the Westside Trail, Fanno Creek Trail (Beaverton segments), Rock Creek Trail, and Waterhouse Trail.
 
-- **Online:** [Report Feedback — THPRD](https://www.thprd.org/connect/report-feedback)
+- **Online:** [Report Feedback — THPRD](https://www.tualatinhillsparks.org/535/Report-Feedback)
 - **Phone:** 503-645-6433, Mon–Fri 8 am–5 pm
 - **Website:** <https://www.thprd.org/>
 - For: trail surface issues, downed trees, graffiti, lighting outages, trail closures
@@ -93,7 +93,7 @@ Metro owns and manages some regional natural areas and trail connections.
 
 - **Active hazard** (downed wire, car blocking a lane, missing manhole cover): 911
 - **Crash**: 911 if anyone is hurt; local police non-emergency line otherwise
-- **Blocked bike lane by a parked car**: police non-emergency is often faster than public works
+- **Blocked bike lane by a parked car**: 503-629-0111 police non-emergency is often faster than public works
 
 ## Tips
 
