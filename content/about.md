@@ -45,8 +45,11 @@ Whether you're a daily commuter, weekend warrior, or just bike-curious, you're w
 
 Have a question, suggestion, or want to get more involved? Send us a message.
 
-<form name="contact" method="POST" data-netlify="true" class="contact-form">
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true" class="contact-form">
   <input type="hidden" name="form-name" value="contact">
+  <p class="contact-honeypot">
+    <label>Don't fill this out if you're human: <input name="bot-field" type="text"></label>
+  </p>
   <div class="contact-field">
     <label for="contact-name">Name</label>
     <input type="text" id="contact-name" name="name" required placeholder="Your name">
@@ -59,5 +62,6 @@ Have a question, suggestion, or want to get more involved? Send us a message.
     <label for="contact-message">Message</label>
     <textarea id="contact-message" name="message" required rows="5" placeholder="What's on your mind?"></textarea>
   </div>
+  <div data-netlify-recaptcha="true"></div>
   <button type="submit" class="contact-submit">Send Message</button>
 </form>

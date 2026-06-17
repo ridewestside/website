@@ -431,6 +431,11 @@ hr {
     color: var(--text-secondary);
 }
 
+/* Contact Form — honeypot */
+.contact-honeypot {
+    display: none;
+}
+
 /* Contact Form */
 .contact-form {
     display: flex;
