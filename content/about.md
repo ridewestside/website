@@ -41,6 +41,10 @@ We believe that bikes build community. Our mission is to:
 
 Whether you're a daily commuter, weekend warrior, or just bike-curious, you're welcome to join any of our rides. No membership required, no fees, just show up and ride!
 
+## Website Issue
+
+If you encounter any issues with the website, please either use the contact form below or [open an issue on GitHub](https://github.com/ridewestside/website/issues).
+
 ## Get In Touch
 
 Have a question, suggestion, or want to get more involved? Send us a message.

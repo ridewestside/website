@@ -6,7 +6,7 @@ draft: false
 
 Reporting a pothole gets a pothole fixed. Showing up to meetings is how we get protected bike lanes, safer crossings, and connected trails. The westside has more seats at the table than people realize, and many sit empty.
 
-## High-leverage moments
+## Showing up
 
 Projects are shaped years before the orange cones show up. By construction, the design is locked. Where to focus:
 
