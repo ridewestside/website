@@ -411,6 +411,257 @@ hr {
     color: var(--text-primary);
 }
 
+.about-content a {
+    color: var(--accent-color);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.about-content a:hover {
+    color: var(--text-primary);
+}
+
+.about-content hr {
+    border: none;
+    border-top: 1px solid var(--button-border);
+    margin: 2rem 0 1.25rem;
+}
+
+.about-content em {
+    color: var(--text-secondary);
+}
+
+/* Contact Form — honeypot */
+.contact-honeypot {
+    display: none;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+}
+
+.contact-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+}
+
+.contact-field label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.contact-field input,
+.contact-field textarea {
+    background: var(--button-bg);
+    border: 1px solid var(--button-border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 0.9375rem;
+    padding: 0.625rem 0.875rem;
+    width: 100%;
+    transition:
+        border-color 0.2s,
+        background 0.2s;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.contact-field textarea {
+    resize: vertical;
+    min-height: 7rem;
+}
+
+.contact-submit {
+    align-self: flex-start;
+    background: var(--accent-color);
+    border: none;
+    border-radius: 8px;
+    color: #111;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    padding: 0.625rem 1.5rem;
+    transition: opacity 0.2s;
+}
+
+.contact-submit:hover {
+    opacity: 0.85;
+}
+
+/* Single Page (jurisdictions, engagement, etc.) */
+.single-page {
+    padding-top: 0.5rem;
+}
+
+.back-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    padding: 0.4rem 0.75rem 0.4rem 0.5rem;
+    border-radius: 999px;
+    background: var(--button-bg);
+    border: 1px solid var(--button-border);
+    transition: all 0.2s ease;
+}
+
+.back-home:hover {
+    color: var(--text-primary);
+    border-color: var(--accent-color);
+}
+
+.single-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.single-description {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* Projects */
+.project-group {
+    margin-bottom: 2rem;
+}
+
+.project-group-title {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-secondary);
+    margin: 1.25rem 0 0.75rem;
+}
+
+.project-group-title:first-child {
+    margin-top: 0;
+}
+
+.project-card {
+    display: block;
+}
+
+.project-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.project-card-header .link-title {
+    flex: 1;
+}
+
+.project-status {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.2em 0.6em;
+    border-radius: 999px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.project-status--in-design {
+    background: rgba(167, 139, 250, 0.15);
+    color: #a78bfa;
+    border: 1px solid rgba(167, 139, 250, 0.3);
+}
+
+.project-status--funded {
+    background: rgba(34, 211, 238, 0.12);
+    color: #22d3ee;
+    border: 1px solid rgba(34, 211, 238, 0.25);
+}
+
+.project-status--under-construction {
+    background: rgba(251, 146, 60, 0.15);
+    color: #fb923c;
+    border: 1px solid rgba(251, 146, 60, 0.3);
+}
+
+.project-status--proposed {
+    background: rgba(251, 191, 36, 0.12);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.25);
+}
+
+.project-status--completed {
+    background: rgba(74, 222, 128, 0.12);
+    color: #4ade80;
+    border: 1px solid rgba(74, 222, 128, 0.25);
+}
+
+.project-agency {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    margin-top: 0.3rem;
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+.project-header .single-title {
+    margin-bottom: 0;
+}
+
+.project-agency-detail {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.project-agency-detail strong {
+    color: var(--text-primary);
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.breadcrumb-sep {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
 /* Gallery */
 .gallery {
     display: grid;
@@ -637,7 +888,9 @@ hr {
     color: var(--text-secondary);
     text-decoration: none;
     opacity: 0.65;
-    transition: opacity 0.2s ease, color 0.2s ease;
+    transition:
+        opacity 0.2s ease,
+        color 0.2s ease;
 }
 
 .calendar-subscribe-link:hover {

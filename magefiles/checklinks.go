@@ -114,8 +114,79 @@ func extractLinks(dir string) ([]string, error) {
 // skipDomains contains domains with aggressive bot protection that return
 // errors to automated checkers but work fine in browsers
 var skipDomains = []string{
+	// Social platforms
 	"facebook.com",
 	"www.facebook.com",
+	"instagram.com",
+	"www.instagram.com",
+	"bsky.app",
+	// Government sites that block automated checks
+	"beavertonoregon.gov",
+	"www.beavertonoregon.gov",
+	"apps2.beavertonoregon.gov",
+	"tigard-or.gov",
+	"www.tigard-or.gov",
+	"engage.tigard-or.gov",
+	"www.engage.tigard-or.gov",
+	"hillsboro-oregon.gov",
+	"www.hillsboro-oregon.gov",
+	"tualatinoregon.gov",
+	"www.tualatinoregon.gov",
+	"washingtoncountyor.gov",
+	"www.washingtoncountyor.gov",
+	"oregon.gov",
+	"www.oregon.gov",
+	"oregonmetro.gov",
+	"www.oregonmetro.gov",
+	"trimet.org",
+	"www.trimet.org",
+	"thprd.org",
+	"www.thprd.org",
+	"tualatinhillsparks.org",
+	"www.tualatinhillsparks.org",
+	"portland.gov",
+	"www.portland.gov",
+	"sherwoodoregon.gov",
+	"www.sherwoodoregon.gov",
+	"ci.cornelius.or.us",
+	"www.ci.cornelius.or.us",
+	"ci.king-city.or.us",
+	"www.ci.king-city.or.us",
+	// Advocacy / news sites that block bots
+	"bikeloudpdx.org",
+	"www.bikeloudpdx.org",
+	"thestreettrust.org",
+	"www.thestreettrust.org",
+	"oregonwalks.org",
+	"www.oregonwalks.org",
+	"bikeportland.org",
+	"www.bikeportland.org",
+	"washcobtc.org",
+	"www.washcobtc.org",
+	"uniteoregon.org",
+	"www.uniteoregon.org",
+	"oregontrailscoalition.org",
+	"www.oregontrailscoalition.org",
+	"swtrails.org",
+	"www.swtrails.org",
+	"wta-tma.org",
+	"www.wta-tma.org",
+	"ridewithgps.com",
+	"www.ridewithgps.com",
+	"providence.org",
+	"www.providence.org",
+	"hillsboronewstimes.com",
+	"www.hillsboronewstimes.com",
+	"northplains.gov",
+	"www.northplains.gov",
+	"forestgrove-or.gov",
+	"www.forestgrove-or.gov",
+	"durham-oregon.us",
+	"www.durham-oregon.us",
+	"pridebeaverton.org",
+	"www.pridebeaverton.org",
+	"banksoregon.gov",
+	"www.banksoregon.gov",
 }
 
 func shouldSkipDomain(url string) bool {
@@ -175,7 +246,7 @@ func checkLinksParallel(links []string) []deadLink {
 }
 
 // shift2bikes event URL pattern: https://shift2bikes.org/calendar/event-XXXXX
-var shift2bikesEventRegex = regexp.MustCompile(`^https?://shift2bikes\.org/calendar/event-(\d+)`)
+var shift2bikesEventRegex = regexp.MustCompile(`^https?://(?:www\.)?shift2bikes\.org/calendar/event-(\d+)`)
 
 func checkLink(client *http.Client, url string) string {
 	// For shift2bikes event pages, check the API directly since the
@@ -224,8 +295,13 @@ func checkShift2bikesEvent(client *http.Client, eventID string) string {
 	defer resp.Body.Close()
 	io.Copy(io.Discard, resp.Body)
 
-	if resp.StatusCode >= 400 {
-		return fmt.Sprintf("shift2bikes event %s is invalid (API returned HTTP %d)", eventID, resp.StatusCode)
+	// 403 from the Shift2Bikes API typically means rate-limiting during bulk
+	// checks, not that the event is gone. Only flag 404 as truly invalid.
+	if resp.StatusCode == http.StatusNotFound {
+		return fmt.Sprintf("shift2bikes event %s not found (HTTP 404)", eventID)
+	}
+	if resp.StatusCode >= 400 && resp.StatusCode != http.StatusForbidden {
+		return fmt.Sprintf("shift2bikes event %s error (API returned HTTP %d)", eventID, resp.StatusCode)
 	}
 
 	return ""

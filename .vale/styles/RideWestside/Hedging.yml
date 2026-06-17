@@ -1,0 +1,14 @@
+extends: existence
+message: "Filler phrase: remove or rewrite '%s'."
+level: warning
+ignorecase: true
+tokens:
+  - "it(?:'s| is) worth noting"
+  - "it is important to note"
+  - "it should be noted"
+  - "needless to say"
+  - "in conclusion"
+  - "to summarize"
+  - "in summary"
+  - "as you can imagine"
+  - "it goes without saying"
