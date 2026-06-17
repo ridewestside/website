@@ -14,9 +14,9 @@ Most protected east-west trail connections on the westside are missing or incomp
 
 ## Current Status
 
-A **pedestrian and bicycle bridge** between SW Beaverton-Hillsdale Highway and SW Capitol Highway is now open, completing one of the key crossings along the corridor.
+A **pedestrian and bicycle bridge** between SW Beaverton-Hillsdale Highway and SW Capitol Highway opened in **2022**, completing one of the key crossings along the corridor.
 
-In **2025**, the Red Electric Trail received funding through the **Oregon Community Paths Program** and **Metro's Regional Flexible Funds Allocation** to close a remaining **2-mile gap** in the regional trail network through Portland's southwest hills.
+A roughly **2-mile gap** remains in the regional trail network through Portland's southwest hills. Metro and Portland Parks & Recreation have identified the corridor as a priority for future funding through programs like the Oregon Community Paths Program and Metro's Regional Flexible Funds Allocation, though full funding to close the gap has not yet been secured.
 
 The trail connects to the Fanno Creek Trail at Alpenrose Dairy on its western end and to the Willamette Greenway Trail at South Waterfront on its eastern end.
 

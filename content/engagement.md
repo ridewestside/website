@@ -48,7 +48,7 @@ Acts as an advisory body to Tigard City Council on transportation matters. Eleve
 - Meets: **first Wednesday of each month, 6:00 pm**
 - Location: Tigard Public Library, 2nd floor Conference Room, 13500 SW Hall Blvd
 - Staff liaison: Sean Farrelly, 503-718-2420, sean@tigard-or.gov
-- Apply via: [Boards & Committees — City of Tigard](https://www.tigard-or.gov/Home/Components/Calendar/Event/9001/62)
+- Apply via: [Boards & Committees — City of Tigard](https://www.tigard-or.gov/Home/Components/Calendar/Event/8035/62)
 
 ### City of Hillsboro
 
@@ -65,7 +65,7 @@ THPRD operates parks and most regional trails on the urban westside. Three advis
 - **Parks & Facilities Advisory Committee** — parks capital and maintenance
 - **Equity & Engagement Advisory Committee** — programs and community access
 
-All three committees meet on the **third Wednesday of the month**. Applications open each fall (typically September). Board meetings are the **second Wednesday of each month**.
+All three committees meet on the **third Wednesday of the month**. Applications open each fall. Board meetings are the **second Wednesday of each month**.
 
 - Advisory committees: <https://www.thprd.org/district-information/advisory-committees>
 - Apply: <https://www.thprd.org/district-information/advisory-committees>
@@ -80,7 +80,7 @@ Regional transportation policy. JPACT is elected officials; TPAC is staff and st
 
 Advises ODOT on state highway priorities for the Portland metro area, including state highways in Washington County (TV Hwy, US-26, OR-217, OR-99W).
 
-- Website: <https://www.oregon.gov/odot/get-involved/pages/obpac.aspx>
+- Website: <https://www.oregon.gov/odot/get-involved/pages/act-r1.aspx>
 
 ## Public meetings
 
@@ -109,7 +109,7 @@ Meets at: Tualatin Valley Water District HQ, 1850 SW 170th Ave, Beaverton
 
 #### City of Beaverton
 
-- Meets: **first Thursday of each month, 7:00 pm**
+- Meets: **1st and 3rd Tuesday of each month, 6:00 pm**
 - Location: Beaverton Council Chambers, 12725 SW Millikan Way, Beaverton
 - Full schedule: <https://www.beavertonoregon.gov/789/City-Council>
 

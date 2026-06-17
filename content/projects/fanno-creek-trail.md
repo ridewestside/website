@@ -50,7 +50,7 @@ The Beaverton segment — particularly near Hall Boulevard and Scholls Ferry —
 ## Resources
 
 - [Fanno Creek Trail — City of Tigard](https://www.tigard-or.gov/your-government/departments/public-works/parks-recreation/trails/fanno-creek-trail)
-- [Fanno Creek Trail — THPRD](https://www.thprd.org/parks-and-trails/fanno-creek-trail)
+- [Fanno Creek Trail — THPRD](https://www.tualatinhillsparks.org/396/Fanno-Creek-Trail)
 - [Fanno Creek Trail Crossing at Scholls Ferry Road — Tigard](https://www.engage.tigard-or.gov/crossing)
 - [Hall Blvd / Omara St pedestrian improvements — ODOT](https://www.oregon.gov/odot/projects/pages/project-details.aspx?project=23509)
 

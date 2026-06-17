@@ -73,7 +73,7 @@ THPRD maintains most of the regional trail network on the urban westside, includ
 
 - **Online:** [Report Feedback — THPRD](https://www.tualatinhillsparks.org/535/Report-Feedback)
 - **Phone:** 503-645-6433, Mon–Fri 8 am–5 pm
-- **Website:** <https://www.thprd.org/>
+- **Website:** <https://www.tualatinhillsparks.org/>
 - For: trail surface issues, downed trees, graffiti, lighting outages, trail closures
 
 ## Metro

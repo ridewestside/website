@@ -1,6 +1,6 @@
 ---
 title: "Hillsboro Trail Bridges"
-description: "Bridge and crossing projects needed to complete trail gaps along creek corridors through Hillsboro, including the Rock Creek Trail's planned 6-mile southern extension to Rood Bridge Park."
+description: "Bridge and crossing projects needed to complete trail gaps along creek corridors through Hillsboro, including disconnected Rock Creek Trail segments at Noble Woods and Rood Bridge Park."
 status: "proposed"
 agency: "City of Hillsboro / Washington County / THPRD"
 draft: false
@@ -18,9 +18,9 @@ The Rock Creek Trail extension and associated crossings are in the long-range pl
 
 ## Rock Creek Trail — Southern Extension
 
-The Rock Creek Trail currently runs from north of US-26 in the Rock Creek area south to Noble Woods Park. Future plans call for extending the trail an additional **6 miles south to Rood Bridge Park**, where it would connect to the Tualatin River Water Trail. This extension requires several bridge crossings of Rock Creek along the corridor.
+The Rock Creek Trail currently runs **3.1 miles** from Rock Creek Boulevard (north of US-26) south to NW Wilkins Street, with a short on-street connection continuing to a separate paved segment through Orenco Woods Nature Park. Two more sections — at Noble Woods Park and Rood Bridge Park — are planned but not yet connected to the rest of the trail. Closing those gaps requires several new bridge crossings of Rock Creek along the corridor.
 
-The trail would eventually stretch from north of US-26 all the way to the Tualatin River — a continuous greenway through the heart of Hillsboro's eastern neighborhoods.
+Once complete, the full corridor would stretch **about 8 miles** from north of US-26 to Rood Bridge Park on the Tualatin River — a continuous greenway through the heart of Hillsboro's eastern neighborhoods.
 
 ## Rood Bridge Park and the Tualatin River Connection
 

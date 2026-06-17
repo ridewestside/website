@@ -40,9 +40,9 @@ A 1.5-mile off-street trail connecting the Westside Trail to SW Hocken Avenue th
 
 ## Resources
 
-- [THPRD Westside Trail](https://www.thprd.org/parks-and-trails/westside-trail)
-- [THPRD: Westside Trail Bridge over US-26](https://www.thprd.org/parks-in-progress/westside-trail-bridge/)
-- [THPRD: Beaverton Creek Trail Segments 3 & 4](https://www.thprd.org/parks-in-progress/beaverton-creek-trail/)
+- [THPRD Westside Trail](https://www.tualatinhillsparks.org/314/Westside-Trail)
+- [THPRD: Westside Trail Bridge over US-26](https://www.tualatinhillsparks.org/415/Future-Westside-Trail-Bridge-over-US-Hwy)
+- [THPRD: Beaverton Creek Trail Segments 3 & 4](https://www.tualatinhillsparks.org/614/Future-Beaverton-Creek-Trail-from-Westsi)
 - [Washington County Transportation](https://www.washingtoncountyor.gov/)
 
 ---

@@ -29,7 +29,7 @@ The project has earned over **$1.9 million in Metro 2019 Parks and Nature Bond T
 
 ## Related THPRD Project: Beaverton Creek Trail (Segments 3 & 4)
 
-A separate but related THPRD project will build a **1.5-mile off-street trail** connecting the Westside Trail to SW Hocken Avenue through central Beaverton, running alongside the TriMet MAX corridor and Beaverton Creek. Metro approved **$2,055,647** from its 2025–2027 Regional Flexible Funds for this project. **Construction was planned to begin in 2025.** See the [Westside Trail](/projects/westside-trail/) page for full trail context.
+A separate but related THPRD project will build a **1.5-mile off-street trail** connecting the Westside Trail to SW Hocken Avenue through central Beaverton, running alongside the TriMet MAX corridor and Beaverton Creek. Metro approved **$2,055,647** from its 2025–2027 Regional Flexible Funds for this project. **Construction is planned for 2025–2026.** See the [Westside Trail](/projects/westside-trail/) page for full trail context.
 
 ## Get Involved
 
@@ -39,9 +39,9 @@ A separate but related THPRD project will build a **1.5-mile off-street trail** 
 
 ## Resources
 
-- [THPRD: Westside Trail Bridge project page](https://www.thprd.org/parks-in-progress/westside-trail-bridge/)
-- [THPRD: Beaverton Creek Trail Segments 3 & 4](https://www.thprd.org/parks-in-progress/beaverton-creek-trail/)
-- [THPRD Westside Trail](https://www.thprd.org/parks-and-trails/westside-trail)
+- [THPRD: Westside Trail Bridge project page](https://www.tualatinhillsparks.org/415/Future-Westside-Trail-Bridge-over-US-Hwy)
+- [THPRD: Beaverton Creek Trail Segments 3 & 4](https://www.tualatinhillsparks.org/614/Future-Beaverton-Creek-Trail-from-Westsi)
+- [THPRD Westside Trail](https://www.tualatinhillsparks.org/314/Westside-Trail)
 
 ---
 
