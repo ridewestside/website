@@ -40,3 +40,24 @@ We believe that bikes build community. Our mission is to:
 ## Join Us
 
 Whether you're a daily commuter, weekend warrior, or just bike-curious, you're welcome to join any of our rides. No membership required, no fees, just show up and ride!
+
+## Get In Touch
+
+Have a question, suggestion, or want to get more involved? Send us a message.
+
+<form name="contact" method="POST" data-netlify="true" class="contact-form">
+  <input type="hidden" name="form-name" value="contact">
+  <div class="contact-field">
+    <label for="contact-name">Name</label>
+    <input type="text" id="contact-name" name="name" required placeholder="Your name">
+  </div>
+  <div class="contact-field">
+    <label for="contact-email">Email</label>
+    <input type="email" id="contact-email" name="email" required placeholder="you@example.com">
+  </div>
+  <div class="contact-field">
+    <label for="contact-message">Message</label>
+    <textarea id="contact-message" name="message" required rows="5" placeholder="What's on your mind?"></textarea>
+  </div>
+  <button type="submit" class="contact-submit">Send Message</button>
+</form>
