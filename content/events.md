@@ -775,4 +775,12 @@ events:
     end: "Beaverton"
     tags: [ride, family-friendly]
 
+  - title: "6/27 Live Music Ride (Shantel Fitz) with a Chai Stop"
+    date: "June 27, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-24419"
+    start: "Beaverton"
+    end: "Beaverton"
+    start_address: "12375 SW 5th St, Beaverton, OR 97005"
+    tags: [ride, music]
+
 ---
