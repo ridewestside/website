@@ -783,4 +783,10 @@ events:
     start_address: "12375 SW 5th St, Beaverton, OR 97005"
     tags: [ride, music]
 
+  - title: "7/11 Data Center Bike Tour"
+    date: "July 11, 2026"
+    start: "Hillsboro"
+    start_address: "Pavillion Park, Hillsboro, OR"
+    tags: [ride, cause, not-rws]
+
 ---
