@@ -789,4 +789,12 @@ events:
     start_address: "Pavillion Park, Hillsboro, OR"
     tags: [ride, cause, not-rws]
 
+  - title: "7/19 BIKETOWN World Record E-bike Ride"
+    date: "July 19, 2026"
+    url: "https://axiomeventproductions.regfox.com/biketown-world-record"
+    start: "Portland"
+    end: "Portland"
+    start_address: "Naito Parkway & SW Salmon St, Portland, OR"
+    tags: [ride, not-rws, family-friendly]
+
 ---
