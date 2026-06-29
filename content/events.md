@@ -785,6 +785,7 @@ events:
 
   - title: "7/11 Data Center Bike Tour"
     date: "July 11, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-24510"
     start: "Hillsboro"
     start_address: "Pavillion Park, Hillsboro, OR"
     tags: [ride, cause, not-rws]
