@@ -408,6 +408,71 @@ events:
     start_address: "4250 SW Rose Biggi Ave, Beaverton, OR 97005"
     tags: [ride]
 
+  # Tanasbourne Bike Happy Hour + Post Ride - 1st, 3rd, and 5th Mondays (June-August 2026 trial)
+  - title: "6/1 Tanasbourne Bike Happy Hour + Post Ride"
+    date: "June 1, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-23767"
+    start: "Tanasbourne"
+    end: "Tanasbourne"
+    start_address: "1896 NE 106th Ave, Beaverton, OR 97006"
+    tags: [happy-hour, ride]
+
+  - title: "6/15 Tanasbourne Bike Happy Hour + Post Ride"
+    date: "June 15, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-23767"
+    start: "Tanasbourne"
+    end: "Tanasbourne"
+    start_address: "1896 NE 106th Ave, Beaverton, OR 97006"
+    tags: [happy-hour, ride]
+
+  - title: "6/29 Tanasbourne Bike Happy Hour + Post Ride"
+    date: "June 29, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-23767"
+    start: "Tanasbourne"
+    end: "Tanasbourne"
+    start_address: "1896 NE 106th Ave, Beaverton, OR 97006"
+    tags: [happy-hour, ride]
+
+  - title: "7/6 Tanasbourne Bike Happy Hour + Post Ride"
+    date: "July 6, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-23767"
+    start: "Tanasbourne"
+    end: "Tanasbourne"
+    start_address: "1896 NE 106th Ave, Beaverton, OR 97006"
+    tags: [happy-hour, ride]
+
+  - title: "7/20 Tanasbourne Bike Happy Hour + Post Ride"
+    date: "July 20, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-23767"
+    start: "Tanasbourne"
+    end: "Tanasbourne"
+    start_address: "1896 NE 106th Ave, Beaverton, OR 97006"
+    tags: [happy-hour, ride]
+
+  - title: "8/3 Tanasbourne Bike Happy Hour + Post Ride"
+    date: "August 3, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-23767"
+    start: "Tanasbourne"
+    end: "Tanasbourne"
+    start_address: "1896 NE 106th Ave, Beaverton, OR 97006"
+    tags: [happy-hour, ride]
+
+  - title: "8/17 Tanasbourne Bike Happy Hour + Post Ride"
+    date: "August 17, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-23767"
+    start: "Tanasbourne"
+    end: "Tanasbourne"
+    start_address: "1896 NE 106th Ave, Beaverton, OR 97006"
+    tags: [happy-hour, ride]
+
+  - title: "8/31 Tanasbourne Bike Happy Hour + Post Ride"
+    date: "August 31, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-23767"
+    start: "Tanasbourne"
+    end: "Tanasbourne"
+    start_address: "1896 NE 106th Ave, Beaverton, OR 97006"
+    tags: [happy-hour, ride]
+
   # Tigard Happy Hours - 2nd and 4th Thursdays
   - title: "4/9 Tigard Bike Happy Hour"
     date: "April 9, 2026"

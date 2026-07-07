@@ -140,6 +140,7 @@ events.md is edited line-by-line (not YAML-parsed) to preserve comments and form
 
 - **Beaverton Happy Hours**: 2nd and 4th Monday of each month
 - **Tigard Happy Hours**: 2nd and 4th Thursday of each month (Cooper Mountain Ale Works, Tigard)
+- **Tanasbourne Bike Happy Hour + Post Ride** (RWS, Prime Tap House, 1896 NE 106th Ave, Beaverton): 1st, 3rd, and 5th (if applicable) Monday, 4:30–7:00 PM Happy Hour followed by a 10–20 mile ride at 7:00 PM. Currently a June–August 2026 trial; all occurrences share one Shift2Bikes event link. Not managed by `addRecurringEvents` — add/remove occurrences manually in the `# Tanasbourne Bike Happy Hour + Post Ride` section of `content/events.md` depending on whether the trial continues.
 - **Downtown Hillsboro Bike Happy Hour** (`not-rws` — organized independently, not by Ride Westside): 1st and 3rd Tuesday of each month, 4:30–7:00 PM, WashCo Bikes shop, 137 NE 3rd Ave, Hillsboro. Not managed by `addRecurringEvents`; add future occurrences manually to the `# Hillsboro Bike Happy Hours` section in `content/events.md` as Shift2Bikes links become available.
 
 ## Tool Versions
