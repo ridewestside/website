@@ -24,4 +24,23 @@ END:VEVENT
 {{ end }}
 {{- end }}
 {{- end }}
+{{- with .Site.Data.generated_events }}
+{{- range .events }}
+{{- if .date }}
+{{- $parts := split .date " " }}
+{{- $month := index $months (index $parts 0) }}
+{{- $day := index $parts 1 | replaceRE "," "" | int }}
+{{- $year := index $parts 2 }}
+{{- if and $month $year }}
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:{{ $year }}{{ $month }}{{ printf "%02d" $day }}
+SUMMARY:{{ replaceRE `;` `\;` (replaceRE `,` `\,` (replaceRE `\\` `\\\\` .title)) }}{{ with .start_address }}
+LOCATION:{{ replaceRE `;` `\;` (replaceRE `,` `\,` (replaceRE `\\` `\\\\` .)) }}{{ end }}{{ with .url }}
+URL:{{ . }}{{ end }}
+UID:{{ $year }}{{ $month }}{{ printf "%02d" $day }}-{{ .title | urlize }}@ridewestside.org
+END:VEVENT
+{{ end }}
+{{- end }}
+{{- end }}
+{{- end }}
 END:VCALENDAR

@@ -1,6 +1,9 @@
 # Hugo build output
 /public/
 
+# Generated at build time from the `recurring` rules in content/events.md
+/data/generated_events.yaml
+
 # Claude Code local state
 .claude/
 !.claude/commands/

@@ -294,6 +294,15 @@ function initEventFiltering(): void {
     if (!eventDate) return;
 
     if (isBefore(eventDate, now)) {
+      // Recurring-generated occurrences are only ever built forward from
+      // "today" as of the last site build. Once that date has actually
+      // passed, drop the card instead of dumping it into Past Rides, so a
+      // stretch of un-rebuilt time doesn't clutter the historical view with
+      // routine happy hours.
+      if (card.hasAttribute("data-recurring")) {
+        card.remove();
+        return;
+      }
       pastEvents.push({ element: card, date: eventDate });
     } else if (isAfter(eventDate, futureThreshold)) {
       futureEvents.push({ element: card, date: eventDate });
