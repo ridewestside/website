@@ -521,6 +521,15 @@ events:
     start_address: "12562 SW Main St, Tigard, OR 97223"
     tags: [happy-hour]
 
+  # Hillsboro Bike Happy Hours (not RWS) - 1st and 3rd Tuesdays
+  - title: "7/7 Downtown Hillsboro Bike Happy Hour"
+    date: "July 7, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-24513"
+    start: "Hillsboro"
+    end: "Hillsboro"
+    start_address: "137 NE 3rd Ave, Hillsboro, OR 97124"
+    tags: [happy-hour, not-rws]
+
   # Festivals
   - title: "Bike Beaverton"
     date: "May 3, 2026"
