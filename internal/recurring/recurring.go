@@ -7,6 +7,7 @@ package recurring
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 	"sort"
 	"strings"
 	"time"
@@ -220,4 +221,41 @@ func ExpandAll(rules []Rule, now time.Time) ([]Event, error) {
 		all = append(all, events...)
 	}
 	return all, nil
+}
+
+// GenerateDataFile reads eventsPath's `recurring` rules, expands them as of
+// now, and writes the result to outPath as a Hugo data file. It's the single
+// implementation shared by the mage build step and cmd/generate-events, so
+// every place that builds the site (local dev, GitHub Actions, Netlify)
+// produces the same generated events regardless of which of those entry
+// points it uses.
+func GenerateDataFile(eventsPath, outPath string, now time.Time) (int, error) {
+	fm, err := LoadFrontMatter(eventsPath)
+	if err != nil {
+		return 0, fmt.Errorf("failed to read %s: %w", eventsPath, err)
+	}
+
+	events, err := ExpandAll(fm.Recurring, now)
+	if err != nil {
+		return 0, err
+	}
+
+	if dir := filepath.Dir(outPath); dir != "." {
+		if err := os.MkdirAll(dir, 0755); err != nil {
+			return 0, err
+		}
+	}
+
+	out, err := yaml.Marshal(struct {
+		Events []Event `yaml:"events"`
+	}{Events: events})
+	if err != nil {
+		return 0, fmt.Errorf("failed to marshal generated events: %w", err)
+	}
+
+	if err := os.WriteFile(outPath, out, 0644); err != nil {
+		return 0, fmt.Errorf("failed to write %s: %w", outPath, err)
+	}
+
+	return len(events), nil
 }

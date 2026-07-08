@@ -54,17 +54,18 @@ mage generateRecurringEvents     # Expand `recurring` rules into data/generated_
 ## Project Structure
 
 - `content/events.md` — Event database: hand-authored one-off events (YAML front matter, section comments) plus `recurring` rules for series like happy hours
-- `internal/recurring/` — Shared Go package that expands a `recurring` rule into concrete dated events; used by both the Hugo data generator and `cmd/buildpdf`, so they always agree on what's scheduled
+- `internal/recurring/` — Shared Go package that expands a `recurring` rule into concrete dated events and writes `data/generated_events.yaml` (`GenerateDataFile`); used by the mage build step, `cmd/generate-events`, and `cmd/buildpdf`, so every build path agrees on what's scheduled
 - `src/main.ts` — Client-side TypeScript (event filtering, collapsible sections, share buttons, dropping stale recurring cards)
 - `themes/linkpage/` — Custom Hugo theme (layouts, CSS, compiled JS)
   - `layouts/partials/event-card.html` — Shared card markup, used for both hand-authored and generated events
-- `magefiles/` — Mage build tasks (Go)
+- `magefiles/` — Mage build tasks (Go), used for local dev (`mage build`/`serve`/`dev`)
   - `magefile.go` — Build, serve, clean targets
   - `checklinks.go` — Link validation with Shift2Bikes API awareness
   - `addevent.go` — One-off event creation wizard
   - `recurring.go` — `GenerateRecurringEvents`, the build step that writes `data/generated_events.yaml`
   - `buildpdf.go` — Generates `public/events.pdf` via `cmd/buildpdf`
-- `data/generated_events.yaml` — Build-generated, gitignored; Hugo data file produced by `mage generateRecurringEvents`, consumed by `layouts/index.html` and `layouts/index.ics`
+- `cmd/generate-events/` — Plain Go binary wrapping the same `internal/recurring.GenerateDataFile` call as the mage target, for CI pipelines (GitHub Actions, Netlify) that build the site without mage installed — see the Build Pipeline note below
+- `data/generated_events.yaml` — Build-generated, gitignored; Hugo data file produced by `mage generateRecurringEvents` or `go run ./cmd/generate-events`, consumed by `layouts/index.html` and `layouts/index.ics`
 - `scripts/ical_events.py` — Fetch and filter events from an iCal file or URL (see below)
 - `.github/workflows/` — CI/CD + event management workflows
 - `.claude/commands/` — Project-specific Claude Code slash commands
@@ -168,7 +169,9 @@ Managed via `mise.toml`: Go 1.25.5, Node 22, mage (latest), esbuild (latest), Ty
 
 ## Build Pipeline
 
-TypeScript → esbuild (bundle/minify/sourcemap) → `themes/linkpage/static/js/main.js`, plus `recurring` rules → `mage generateRecurringEvents` → `data/generated_events.yaml` → Hugo (--gc --minify) → `public/`
+TypeScript → esbuild (bundle/minify/sourcemap) → `themes/linkpage/static/js/main.js`, plus `recurring` rules → `mage generateRecurringEvents` (or `go run ./cmd/generate-events`) → `data/generated_events.yaml` → Hugo (--gc --minify) → `public/`
+
+**Three separate pipelines build this site** — local dev (`mage build`/`serve`/`dev`), GitHub Actions (`.github/workflows/hugo.yml`), and Netlify (`netlify.toml`, the actual production deploy) — and none of them delegate to another. Netlify and GitHub Actions can't just shell out to `mage build`: mage's `Build` target hardcodes `hugo --gc --minify` with no way to pass Netlify's per-context flags (`--baseURL`, `--buildDrafts --buildFuture` for previews/branch deploys), and it calls the bare `esbuild` binary rather than `npx esbuild`. So each pipeline reimplements the same steps by hand, which means **any new build step (like recurring event generation) has to be added to all three explicitly** — it was initially only wired into `mage build`, which silently broke recurring events on the live (Netlify) site until `go run ./cmd/generate-events` was added to `netlify.toml` and `hugo.yml` too. `cmd/generate-events` and `cmd/buildpdf` exist specifically so CI can reuse the exact same Go logic as the mage targets without needing mage installed.
 
 ## scripts/ical_events.py
 
