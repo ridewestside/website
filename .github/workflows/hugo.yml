@@ -64,6 +64,9 @@ jobs:
             --target=es2020 \
             --outfile=themes/linkpage/static/js/main.js
 
+      - name: Generate recurring events
+        run: go run ./cmd/generate-events
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5

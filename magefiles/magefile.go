@@ -14,7 +14,7 @@ var Default = Build
 
 // Build builds TypeScript, Hugo site, and PDF
 func Build() error {
-	mg.Deps(BuildTS)
+	mg.Deps(BuildTS, GenerateRecurringEvents)
 	fmt.Println("Building Hugo site...")
 	if err := sh.RunV("hugo", "--gc", "--minify"); err != nil {
 		return err
@@ -51,13 +51,13 @@ func BuildTS() error {
 
 // Serve starts the Hugo development server (builds TS first)
 func Serve() error {
-	mg.Deps(BuildTS)
+	mg.Deps(BuildTS, GenerateRecurringEvents)
 	return sh.RunV("hugo", "server", "-D")
 }
 
 // Dev runs TypeScript in watch mode alongside Hugo server
 func Dev() error {
-	mg.Deps(BuildTS)
+	mg.Deps(BuildTS, GenerateRecurringEvents)
 	fmt.Println("Starting development server...")
 	fmt.Println("Note: Run 'mage buildts' after TypeScript changes, or use 'mage watch' in another terminal")
 	return sh.RunV("hugo", "server", "-D")

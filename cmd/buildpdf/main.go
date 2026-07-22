@@ -10,8 +10,8 @@ import (
 	"time"
 
 	"github.com/jung-kurt/gofpdf"
+	"github.com/ridewestside/website/internal/recurring"
 	"github.com/skip2/go-qrcode"
-	"gopkg.in/yaml.v3"
 )
 
 const (
@@ -30,20 +30,6 @@ const (
 	headerQRX  = pageW - marginR - headerQRSz // x=166mm
 )
 
-type frontMatter struct {
-	Events []event `yaml:"events"`
-}
-
-type event struct {
-	Title        string   `yaml:"title"`
-	Date         string   `yaml:"date"`
-	URL          string   `yaml:"url"`
-	Start        string   `yaml:"start"`
-	End          string   `yaml:"end"`
-	StartAddress string   `yaml:"start_address"`
-	Tags         []string `yaml:"tags"`
-}
-
 func main() {
 	if err := run(); err != nil {
 		log.Fatal(err)
@@ -51,24 +37,19 @@ func main() {
 }
 
 func run() error {
-	raw, err := os.ReadFile("content/events.md")
+	fm, err := recurring.LoadFrontMatter("content/events.md")
 	if err != nil {
-		return fmt.Errorf("reading events.md: %w", err)
+		return fmt.Errorf("reading content/events.md: %w", err)
 	}
 
-	parts := strings.SplitN(string(raw), "---", 3)
-	if len(parts) < 3 {
-		return fmt.Errorf("no YAML front matter in events.md")
-	}
-
-	var fm frontMatter
-	if err := yaml.Unmarshal([]byte(parts[1]), &fm); err != nil {
-		return fmt.Errorf("parsing events YAML: %w", err)
+	generatedEvents, err := recurring.ExpandAll(fm.Recurring, time.Now())
+	if err != nil {
+		return fmt.Errorf("expanding recurring rules: %w", err)
 	}
 
 	today := time.Now().Truncate(24 * time.Hour)
-	var upcoming []event
-	for _, e := range fm.Events {
+	var upcoming []recurring.Event
+	for _, e := range append(fm.Events, generatedEvents...) {
 		if e.Date == "" {
 			continue
 		}
