@@ -298,6 +298,15 @@ events:
     start_address: "Naito Parkway & SW Salmon St, Portland, OR"
     tags: [ride, not-rws, family-friendly]
 
+  - title: "8/23 Beaverton Murals and Public Art Ride"
+    date: "August 23, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-24427"
+    route: "https://ridewithgps.com/routes/55703040"
+    start: "Beaverton"
+    end: "Beaverton"
+    start_address: "12725 SW Millikan Way, Beaverton, OR 97005"
+    tags: [ride, family-friendly]
+
 recurring:
   # Beaverton Bike Happy Hours - 2nd and 4th Monday
   - title: "Bike Happy Hour"
