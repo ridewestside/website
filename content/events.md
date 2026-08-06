@@ -276,9 +276,13 @@ events:
   - title: "8/8 Beaverton Night Market Bike Bus"
     date: "August 8, 2026"
     url: "https://shift2bikes.org/calendar/event-24146"
+    route: "https://ridewithgps.com/routes/55906980"
     start: "Beaverton"
     end: "Beaverton"
-    tags: [ride, family-friendly]
+    start_address: "7000 SW Wilson Ave, Beaverton, OR 97008"
+    start_time: "4:00 PM"
+    end_time: "5:00 PM"
+    tags: [ride, r2r, family-friendly]
 
   - title: "8/8 Bike Bus to the Beaverton Night Market (From the North)"
     date: "August 8, 2026"
