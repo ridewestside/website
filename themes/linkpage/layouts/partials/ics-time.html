@@ -1,0 +1,20 @@
+{{- /*
+Converts a "year"/"month"/"day" (from index.ics's date parsing) plus a
+12-hour "time" string like "4:30 PM" into a UTC ICS date-time
+(e.g. "20260808T233000Z"). Parsed as America/Los_Angeles so DST is handled
+via Go's tzdata rather than a hardcoded offset.
+*/ -}}
+{{- $parts := split .time " " -}}
+{{- $hm := split (index $parts 0) ":" -}}
+{{- $hour := index $hm 0 | int -}}
+{{- $minute := index $hm 1 | int -}}
+{{- $ampm := index $parts 1 -}}
+{{- if and (eq $ampm "PM") (ne $hour 12) -}}
+  {{- $hour = add $hour 12 -}}
+{{- end -}}
+{{- if and (eq $ampm "AM") (eq $hour 12) -}}
+  {{- $hour = 0 -}}
+{{- end -}}
+{{- $iso := printf "%s-%s-%02dT%02d:%02d:00" .year .month (.day | int) $hour $minute -}}
+{{- $parsed := time.AsTime $iso "America/Los_Angeles" -}}
+{{- $parsed.UTC.Format "20060102T150405Z" -}}

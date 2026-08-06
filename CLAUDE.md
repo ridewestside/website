@@ -100,6 +100,8 @@ Recurring series (happy hours, etc.) go in the separate `recurring:` list instea
 | `start` | No | Starting location name (e.g. `"Beaverton"`, `"Tigard"`, `"Quatama"`). Populates the Start filter dropdown and the location display on the card |
 | `end` | No | Ending location name. Populates the End filter dropdown. If equal to `start`, shown once; if different, shown as `Start → End` |
 | `start_address` | No | Full street address of the start location (e.g. `"12725 SW Millikan Way, Beaverton, OR 97005"`). When present, adds a navigation button that opens the address in the user's map app (Apple Maps, Google Maps, or OpenStreetMap based on device/settings) |
+| `start_time` | No | 12-hour clock string, e.g. `"4:30 PM"`. When set, the generated calendar (`layouts/index.ics`) renders the event as a timed entry (parsed as America/Los_Angeles) instead of an all-day one. Doesn't affect the on-page card, only the `.ics` export |
+| `end_time` | No | 12-hour clock string, e.g. `"7:00 PM"`. Only used if `start_time` is also set; adds a `DTEND` to the calendar entry. An event with `start_time` but no `end_time` gets a `DTSTART` only |
 | `tags` | No | YAML list of tag strings. Rendered as clickable filter chips on the card. See tag reference below |
 
 ### Tags
@@ -146,6 +148,8 @@ recurring:
     start: "Beaverton"
     end: "Beaverton"
     start_address: "4250 SW Rose Biggi Ave, Beaverton, OR"
+    start_time: "4:30 PM"            # optional; same meaning as an events: entry's start_time (timed .ics entry vs. all-day)
+    end_time: "7:00 PM"               # optional; same meaning as an events: entry's end_time
     tags: [happy-hour]
     url: "https://shift2bikes.org/..."   # optional default URL for every occurrence (e.g. one shared Shift2Bikes recurring-series link)
     since: "2026-06-01"              # optional; don't generate before this date

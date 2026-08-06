@@ -14,8 +14,9 @@ METHOD:PUBLISH
 {{- $day := index $parts 1 | replaceRE "," "" | int }}
 {{- $year := index $parts 2 }}
 {{- if and $month $year }}
+{{- $dtLines := partial "ics-datetime.html" (dict "year" $year "month" $month "day" $day "startTime" .start_time "endTime" .end_time) }}
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:{{ $year }}{{ $month }}{{ printf "%02d" $day }}
+{{ $dtLines }}
 SUMMARY:{{ replaceRE `;` `\;` (replaceRE `,` `\,` (replaceRE `\\` `\\\\` .title)) }}{{ with .start_address }}
 LOCATION:{{ replaceRE `;` `\;` (replaceRE `,` `\,` (replaceRE `\\` `\\\\` .)) }}{{ end }}{{ with .url }}
 URL:{{ . }}{{ end }}
@@ -32,8 +33,9 @@ END:VEVENT
 {{- $day := index $parts 1 | replaceRE "," "" | int }}
 {{- $year := index $parts 2 }}
 {{- if and $month $year }}
+{{- $dtLines := partial "ics-datetime.html" (dict "year" $year "month" $month "day" $day "startTime" .start_time "endTime" .end_time) }}
 BEGIN:VEVENT
-DTSTART;VALUE=DATE:{{ $year }}{{ $month }}{{ printf "%02d" $day }}
+{{ $dtLines }}
 SUMMARY:{{ replaceRE `;` `\;` (replaceRE `,` `\,` (replaceRE `\\` `\\\\` .title)) }}{{ with .start_address }}
 LOCATION:{{ replaceRE `;` `\;` (replaceRE `,` `\,` (replaceRE `\\` `\\\\` .)) }}{{ end }}{{ with .url }}
 URL:{{ . }}{{ end }}
