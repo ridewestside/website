@@ -275,6 +275,15 @@ events:
     end: "Beaverton"
     tags: [ride, family-friendly]
 
+  - title: "8/8 Bike Bus to the Beaverton Night Market (From the North)"
+    date: "August 8, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-24725"
+    route: "https://ridewithgps.com/trips/400907316"
+    start: "Beaverton"
+    end: "Beaverton"
+    start_address: "15707 SW Walker Rd, Beaverton, OR 97006"
+    tags: [ride, r2r, family-friendly]
+
   - title: "6/27 Live Music Ride (Shantel Fitz) with a Chai Stop"
     date: "June 27, 2026"
     url: "https://www.shift2bikes.org/calendar/event-24419"
