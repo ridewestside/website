@@ -246,9 +246,9 @@ events:
     start_address: "120 E Main St, Hillsboro, OR 97123"
     tags: [ride, challenging]
 
-  - title: "8/8 Kidical Mass #5: Library Fun"
-    date: "August 8, 2026"
-    url: "https://shift2bikes.org/calendar/event-23807"
+  - title: "8/22 Kidical Mass #5: Library Fun"
+    date: "August 22, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-24711"
     start: "Hillsboro"
     end: "Hillsboro"
     start_address: "6200 NE Brighton Drive, Hillsboro, OR 97124"
