@@ -7,6 +7,11 @@ title: "Upcoming Events"
 # - route: (optional) RideWithGPS route URL
 # - start: (optional) Starting location
 # - end: (optional) Ending location
+# - start_time: (optional) 12-hour clock, e.g. "4:30 PM" - when set, the
+#   generated calendar (.ics) file shows this as a timed event instead of
+#   an all-day one
+# - end_time: (optional) 12-hour clock, e.g. "7:00 PM" - only used if
+#   start_time is also set
 #
 # Events are displayed in the order listed below.
 events:
@@ -282,6 +287,8 @@ events:
     start: "Beaverton"
     end: "Beaverton"
     start_address: "15707 SW Walker Rd, Beaverton, OR 97006"
+    start_time: "4:30 PM"
+    end_time: "5:50 PM"
     tags: [ride, r2r, family-friendly]
 
   - title: "6/27 Live Music Ride (Shantel Fitz) with a Chai Stop"
@@ -417,6 +424,8 @@ recurring:
     start: "Tanasbourne"
     end: "Tanasbourne"
     start_address: "1896 NE 106th Ave, Beaverton, OR 97006"
+    start_time: "4:30 PM"
+    end_time: "7:00 PM"
     tags: [happy-hour, ride]
     url: "https://www.shift2bikes.org/calendar/event-23767"
     since: "2026-06-01"

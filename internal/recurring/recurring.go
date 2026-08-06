@@ -25,6 +25,8 @@ type Event struct {
 	Start        string   `yaml:"start,omitempty"`
 	End          string   `yaml:"end,omitempty"`
 	StartAddress string   `yaml:"start_address,omitempty"`
+	StartTime    string   `yaml:"start_time,omitempty"`
+	EndTime      string   `yaml:"end_time,omitempty"`
 	Tags         []string `yaml:"tags,omitempty"`
 	Recurring    bool     `yaml:"recurring,omitempty"`
 }
@@ -48,6 +50,8 @@ type Rule struct {
 	Start        string              `yaml:"start,omitempty"`
 	End          string              `yaml:"end,omitempty"`
 	StartAddress string              `yaml:"start_address,omitempty"`
+	StartTime    string              `yaml:"start_time,omitempty"`
+	EndTime      string              `yaml:"end_time,omitempty"`
 	Tags         []string            `yaml:"tags,omitempty"`
 	URL          string              `yaml:"url,omitempty"`
 	Since        string              `yaml:"since,omitempty"`
@@ -202,6 +206,8 @@ func buildEvent(rule Rule, d time.Time) Event {
 		Start:        rule.Start,
 		End:          rule.End,
 		StartAddress: rule.StartAddress,
+		StartTime:    rule.StartTime,
+		EndTime:      rule.EndTime,
 		Tags:         rule.Tags,
 		Recurring:    true,
 	}

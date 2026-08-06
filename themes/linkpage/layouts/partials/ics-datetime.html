@@ -1,0 +1,14 @@
+{{- /*
+Emits the DTSTART (and, if an end time is given, DTEND) line(s) for a
+VEVENT. Events with a start_time render as timed entries; events without
+one fall back to an all-day DTSTART;VALUE=DATE entry.
+*/ -}}
+{{- $day := printf "%02d" (.day | int) -}}
+{{- if .startTime -}}
+DTSTART:{{ partial "ics-time.html" (dict "year" .year "month" .month "day" .day "time" .startTime) }}
+{{- if .endTime }}
+DTEND:{{ partial "ics-time.html" (dict "year" .year "month" .month "day" .day "time" .endTime) }}
+{{- end -}}
+{{- else -}}
+DTSTART;VALUE=DATE:{{ .year }}{{ .month }}{{ $day }}
+{{- end -}}
