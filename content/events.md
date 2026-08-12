@@ -326,6 +326,8 @@ events:
     end: "Beaverton"
     start_address: "12725 SW Millikan Way, Beaverton, OR 97005"
     tags: [ride, family-friendly]
+    info_url: "/events/beavertonmuralspublicart/"
+    info_label: "Photo Giveaway"
 
 recurring:
   # Beaverton Bike Happy Hours - 2nd and 4th Monday
