@@ -103,6 +103,8 @@ Recurring series (happy hours, etc.) go in the separate `recurring:` list instea
 | `start_time` | No | 12-hour clock string, e.g. `"4:30 PM"`. When set, the generated calendar (`layouts/index.ics`) renders the event as a timed entry (parsed as America/Los_Angeles) instead of an all-day one. Doesn't affect the on-page card, only the `.ics` export |
 | `end_time` | No | 12-hour clock string, e.g. `"7:00 PM"`. Only used if `start_time` is also set; adds a `DTEND` to the calendar entry. An event with `start_time` but no `end_time` gets a `DTSTART` only |
 | `tags` | No | YAML list of tag strings. Rendered as clickable filter chips on the card. See tag reference below |
+| `info_url` | No | Link to a related page (e.g. a giveaway rules page under `content/events/`, or an external URL). Renders a secondary button styled like Route |
+| `info_label` | No | Button label for `info_url`. Defaults to "More Info" if omitted |
 
 ### Tags
 
