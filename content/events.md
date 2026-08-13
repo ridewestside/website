@@ -336,7 +336,7 @@ events:
     end: "Orenco"
     start_address: "6420 NE Oelrich St, Hillsboro, OR 97124"
     start_time: "5:00 PM"
-    tags: [ride, r2r, family-friendly]
+    tags: [ride, bike-bus, r2r, family-friendly]
 
 recurring:
   # Beaverton Bike Happy Hours - 2nd and 4th Monday
