@@ -329,6 +329,15 @@ events:
     info_url: "/events/beavertonmuralspublicart/"
     info_label: "Photo Giveaway"
 
+  - title: "9/18 Bike Bus to Orenco Elementary Back to School Night"
+    date: "September 18, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-24775"
+    start: "Orenco"
+    end: "Orenco"
+    start_address: "6420 NE Oelrich St, Hillsboro, OR 97124"
+    start_time: "5:00 PM"
+    tags: [ride, bike-bus, r2r, family-friendly]
+
 recurring:
   # Beaverton Bike Happy Hours - 2nd and 4th Monday
   - title: "Bike Happy Hour"

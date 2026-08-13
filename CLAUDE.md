@@ -115,6 +115,7 @@ Tags appear as clickable chips on each event card and populate the Tag filter dr
 | `happy-hour` | Bike Happy Hour social event |
 | `ride` | Group ride |
 | `r2r` | Ride to Ride — the group rides to attend another event |
+| `bike-bus` | A group ride escorting riders (often families/students) to a specific destination event |
 | `not-rws` | Not a Ride Westside event; listed for community awareness |
 | `cause` | Charity or cause-related ride |
 | `festival` | Cycling festival or community event |
