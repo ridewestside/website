@@ -327,7 +327,7 @@ events:
     start_address: "12725 SW Millikan Way, Beaverton, OR 97005"
     tags: [ride, family-friendly]
     info_url: "/events/beavertonmuralspublicart/"
-    info_label: "Photo Giveaway"
+    info_label: "Gift Card Drawing"
 
   - title: "9/18 Bike Bus to Orenco Elementary Back to School Night"
     date: "September 18, 2026"

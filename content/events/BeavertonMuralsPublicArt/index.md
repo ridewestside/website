@@ -1,6 +1,6 @@
 ---
-title: "Beaverton Murals and Public Art Ride Photo Giveaway"
-description: "Official rules for the Beaverton Murals and Public Art Ride photo giveaway."
+title: "Beaverton Murals and Public Art Ride Photo Drawing"
+description: "Official rules for the Beaverton Murals and Public Art Ride photo drawing."
 draft: false
 ---
 
@@ -18,9 +18,9 @@ Entries must be posted by **11:59 p.m. on August 24, 2026**.
 
 After entries close, we’ll compile all eligible entries and randomly select three winners. Each winner will receive a **$10 gift card to Fly Chai**.
 
-## Giveaway Rules
+## Drawing Rules
 
-**Eligibility:** The giveaway is open to participants in the Beaverton Murals and Public Art Ride. No residency requirement. Participants under 18 must have permission from a parent or guardian to enter. No purchase is necessary.
+**Eligibility:** The drawing is open to participants in the Beaverton Murals and Public Art Ride. No residency requirement. Participants under 18 must have permission from a parent or guardian to enter. No purchase is necessary.
 
 **How to enter:** Post a photo of local art taken during the Beaverton Murals and Public Art Ride to your Instagram feed or Story and include **#BeavertonArtDrawing**. Your post or Story must be visible to Ride Westside so that we can verify your entry.
 
@@ -32,6 +32,6 @@ After entries close, we’ll compile all eligible entries and randomly select th
 
 **Winner selection:** After the entry period closes, all eligible entrants will be collected and three winners will be selected at random. Winners will be contacted through Instagram.
 
-Participants are not required to express any particular opinion about the artwork, Ride Westside, the Beaverton Arts Commission, Fly Chai, or any other organization or business in order to enter. This giveaway is organized by volunteers with Ride Westside.
+Participants are not required to express any particular opinion about the artwork, Ride Westside, the Beaverton Arts Commission, Fly Chai, or any other organization or business in order to enter. This drawing is organized by volunteers with Ride Westside.
 
 This promotion is in no way sponsored, endorsed, administered by, or associated with Instagram. By participating, entrants release Instagram from any responsibility related to the promotion.
