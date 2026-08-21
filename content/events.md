@@ -329,8 +329,8 @@ events:
     info_url: "/events/beavertonmuralspublicart/"
     info_label: "Gift Card Drawing"
 
-  - title: "9/18 Bike Bus to Orenco Elementary Back to School Night"
-    date: "September 18, 2026"
+  - title: "9/17 Bike Bus to Orenco Elementary Back to School Night"
+    date: "September 17, 2026"
     url: "https://www.shift2bikes.org/calendar/event-24775"
     start: "Orenco"
     end: "Orenco"
