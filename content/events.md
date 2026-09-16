@@ -347,6 +347,16 @@ events:
     start_time: "9:30 AM"
     tags: [ride]
 
+  - title: "9/19 Ride to Afghan Cultural Celebration 2026"
+    date: "September 19, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-24987"
+    start: "Beaverton"
+    end: "Beaverton"
+    start_address: "10865 SW 5th St, Beaverton, OR 97005"
+    start_time: "4:00 PM"
+    end_time: "4:30 PM"
+    tags: [family-friendly, ride]
+
 recurring:
   # Beaverton Bike Happy Hours - 2nd and 4th Monday
   - title: "Bike Happy Hour"
