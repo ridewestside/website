@@ -367,6 +367,15 @@ events:
     end_time: "1:00 PM"
     tags: [clinic]
 
+  - title: "10/31 First Annual Ride Westside Cargo Bike Harvest"
+    date: "October 31, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-25173"
+    start: "Beaverton"
+    start_address: "15707 SW Walker Road, Beaverton, OR 97006"
+    start_time: "10:30 AM"
+    end_time: "12:30 PM"
+    tags: [ride, cause]
+
 recurring:
   # Beaverton Bike Happy Hours - 2nd and 4th Monday
   - title: "Bike Happy Hour"
