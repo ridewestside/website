@@ -376,6 +376,15 @@ events:
     end_time: "12:30 PM"
     tags: [ride, cause]
 
+  - title: "11/7 Ride Westside to Every Day is a Doughnut Day"
+    date: "November 7, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-25159"
+    start: "Beaverton"
+    end: "Beaverton"
+    start_address: "12600 SW Crescent St, Beaverton, OR 97005"
+    start_time: "9:30 AM"
+    tags: [ride]
+
 recurring:
   # Beaverton Bike Happy Hours - 2nd and 4th Monday
   - title: "Bike Happy Hour"
