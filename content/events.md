@@ -385,6 +385,16 @@ events:
     start_time: "9:30 AM"
     tags: [ride]
 
+  - title: "11/27 Ride to Record Store Day at 503 Records (Then Breakfast)"
+    date: "November 27, 2026"
+    url: "https://www.shift2bikes.org/calendar/event-25234"
+    start: "Beaverton"
+    end: "Beaverton"
+    start_address: "4655 SW Hall Blvd, Beaverton, OR 97005"
+    start_time: "7:00 AM"
+    end_time: "8:41 AM"
+    tags: [ride]
+
 recurring:
   # Beaverton Bike Happy Hours - 2nd and 4th Monday
   - title: "Bike Happy Hour"
